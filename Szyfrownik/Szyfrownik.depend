@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1674757031 source:c:\users\tymon\desktop\programowanie\szyfrownik\main.cpp
+	<iostream>
+	<iomanip>
+	<Windows.h>
+
