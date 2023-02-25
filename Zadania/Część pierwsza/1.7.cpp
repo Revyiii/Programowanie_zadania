@@ -1,26 +1,24 @@
 #include <iostream>
-#include <iomanip>
 #include <locale.h>
-
+#include <iomanip>
 using namespace std;
 
 int main()
 {
 setlocale(LC_CTYPE,"Polish");
-float a;
-float b;
-float c;
 
-cout<<"Prosze podac bok a:";
-cin >> a;
-cout <<"Prosze podac bok b:"; 
-cin >> b;
-cout <<"Prosze podac bok c:";
-cin >> c;
+float r;
+float h;
+const float pi=3.14;
 
-float p = a*b*c;
-float obj = 2*(a*b+a*c+b*c);
-float kraw = 4*(a+b+c); 	
+cout<<"Prosze podaæ promieñ:";
+cin >> r;
+cout <<"Prosze podac wysokosc:"; 
+cin >> h;
+
+float p = 2*pi*r*(r+h);
+float obj = pi*r*r*h;
+float kraw = 4*pi*r; 	
 
 cout<<fixed<<setprecision(2)<<\
 "Objetosc jest równa="<<obj<<endl<<\
