@@ -6,7 +6,11 @@
 #include <string>
 #include <cstring>
 #include <Windows.h>
+#include <locale.h>//do zawarcia polskicg znaków
 using namespace std;
+
+/polskie znaki 
+setlocale(LC_CTYPE,"Polish");
 
 //zmienne
 int n=0;
@@ -23,6 +27,8 @@ cout << pow_arr[n]; // wyświetl na konsoli
 system("cls");//czyszczenie konsoli
 cout << setprecision(5) << "p="<< pole << "; obj=" << obj; //wyświetl zmienną z precyzją do n liczb po przecinky
 return 0; // zwróć zero (kniec)
+cin.get();// czeka na enter #iostream
+getch(); // ndk #conio.h
 
 //pętle
 while(n<=pow.length()){} //pętla 
