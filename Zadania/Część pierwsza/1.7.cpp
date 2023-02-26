@@ -6,24 +6,16 @@ using namespace std;
 int main()
 {
 setlocale(LC_CTYPE,"Polish");
-
 float r;
 float h;
 const float pi=3.14;
 
-cout<<"Prosze podaæ promieñ:";
-cin >> r;
-cout <<"Prosze podac wysokosc:"; 
-cin >> h;
-
-float p = 2*pi*r*(r+h);
-float obj = pi*r*r*h;
-float kraw = 4*pi*r; 	
-
+cout<<"Prosze podać promień:"; cin >> r;
+cout <<"Prosze podac wysokosc:"; cin >> h;
 cout<<fixed<<setprecision(2)<<\
-"Objetosc jest równa="<<obj<<endl<<\
-"pole jest równe="<<p<<endl<<\
-"Suma dlugosci krawedzi to="<<kraw;
+"Objetosc jest równa="<<pi*r*r*h<<endl<<\
+"pole jest równe="<<2*pi*r*(r+h)<<endl<<\
+"Suma dlugosci krawedzi to="<<4*pi*r;
 
 cin.get();
 return 0;

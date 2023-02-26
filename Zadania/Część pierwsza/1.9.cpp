@@ -12,7 +12,6 @@ float bok;
 float pole=1.0;
 for(int i=0;i<boki;i++)
 {
-
 cout<<"prosze podac boku " << b <<":";
 cin >> bok;
 if (bok<0 ){i--;b--;cout<<"podana wartosc jest niepoprawna"<<endl;}

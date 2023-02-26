@@ -18,15 +18,12 @@ float a;
 float b;
 float c;
 /*string name;
-cout<<"Podaj imiê u¿ytkownika:";
+cout<<"Podaj imię użytkownika:";
 cin >> name;
 */
-cout<<"Prosze podać pierwszą liczbę:";
-cin >> a;
-cout<<"Prosze podać drugą liczbę:";
-cin >> b;
-cout<<"Prosze podać trzecią liczbę:";
-cin >> c;
+cout<<"Prosze podać pierwszą liczbę:"; cin >> a;
+cout<<"Prosze podać drugą liczbę:"; cin >> b;
+cout<<"Prosze podać trzecią liczbę:"; cin >> c;
 
 float ave = (a+b+c)/3;	
 
