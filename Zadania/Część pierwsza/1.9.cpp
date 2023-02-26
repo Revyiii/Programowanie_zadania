@@ -21,4 +21,5 @@ b++;
 }
 cout <<"pole prostokat to: "<<pole<<endl;
 cin.get();
+return 0;
 }

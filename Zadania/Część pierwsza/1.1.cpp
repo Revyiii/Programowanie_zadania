@@ -8,4 +8,7 @@ int main()
 {
     double num = (2*3+17)/9.0;
     cout <<setprecision(3)<<num;
+	
+	cin.get();
+	return 0;
 }

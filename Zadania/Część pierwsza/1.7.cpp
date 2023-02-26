@@ -26,4 +26,5 @@ cout<<fixed<<setprecision(2)<<\
 "Suma dlugosci krawedzi to="<<kraw;
 
 cin.get();
+return 0;
 }

@@ -34,4 +34,5 @@ cout<<"średnia jest równa ="<<ave<<endl;
 cout<<"Imie użytkownika to: "<<username<<endl;
 //cout<<":albo:"<<name<<endl; 
 cin.get();
+return 0;
 }

@@ -1,10 +1,5 @@
 #include <iostream>
-//#include <cstdlib>
 #include <iomanip>
-//#include <conio.h>
-//#include <math.h>
-//#include <string>
-//#include <cstring>
 #include <Windows.h>
 using namespace std;
 
@@ -31,6 +26,7 @@ int main()
     float obj = 1.0*bok*bok*bok;
 
     cout << setprecision(5) << "p="<< pole << "; obj=" << obj;
-
+	
+	cin.get();
     return 0;
 }
