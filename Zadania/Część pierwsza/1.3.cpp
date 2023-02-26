@@ -25,7 +25,7 @@ int main()
     float pole = 6.0*bok*bok;
     float obj = 1.0*bok*bok*bok;
 
-    cout << setprecision(5) << "p="<< pole << "; obj=" << obj;
+    cout << setprecision(3) << "p="<< pole << "; obj=" << obj;
 	
 	cin.get();
     return 0;

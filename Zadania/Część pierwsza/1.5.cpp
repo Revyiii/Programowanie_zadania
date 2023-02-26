@@ -11,7 +11,8 @@ using namespace std;
 int main() 
 {
 setlocale(LC_CTYPE,"Polish");
-double sr = (a+b+c)/3.0;cout << fixed <<setprecision(2)<<"Œrednia: " << sr << endl
+double sr = (a+b+c)/3.0;
+cout << fixed <<setprecision(2)<<"Œrednia: " << sr << endl
 
 getch();
 return 0;
