@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_CTYPE,"Polish");
     cout << "Witam w programie" << endl<< endl << endl;
     cout << "Nacisnij dowolny kalwisz";
     getch();

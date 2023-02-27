@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
+#include <conio.h>
 #include <locale.h>
+
 
 using namespace std;
 

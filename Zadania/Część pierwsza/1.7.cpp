@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 #include <locale.h>
 #include <iomanip>
 using namespace std;
