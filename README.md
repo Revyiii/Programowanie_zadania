@@ -1,2 +1,2 @@
 # Programowanie_zadania
- Zbiór zadań z programowania u naszego szanownego profesora
+ Zbiór zadań z programowania od naszego szanownego profesora
