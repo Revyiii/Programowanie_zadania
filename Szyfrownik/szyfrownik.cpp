@@ -150,10 +150,12 @@ void cezar(int arrtemp[],int sizetemp)
 	{
         while (n<sizetemp)
         {
-            p=(arrtemp[n]+k)/d;
-            p=(arrtemp[n]+k)-d*p;
-            
-            arrtemp[n]= {p};
+   			p=n-k;
+            while(p<0)
+            {
+                p=p+d;
+            }
+            arr[p]={arrtemp[n]};
             //cout<< arrtemp[p] <<", " << p <<endl;
             n++;
         }
@@ -211,7 +213,6 @@ int main()
         {
             cout << "prosze podac text do przesuniecia:";
             cin >> text;
-            //cout<<"test"<<endl;
 			int* nym;
             nym=asciitonum(text);
             //animat_num_arr(nym,text.length());
