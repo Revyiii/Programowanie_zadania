@@ -101,7 +101,7 @@ void cyclicop(int arrtemp[],int sizetemp)
 	cin >> k;
 	cout << "podaj kierunek przesuniecia(L/P):";
 	cin >> direc;
-	if(direc==76)
+	if(direc==76 || direc==108 )//l
 	{
         while (n<sizetemp)
         {
@@ -124,8 +124,8 @@ void cyclicop(int arrtemp[],int sizetemp)
             {
                 p=p-sizetemp;
             }
-            arr[n]={arrtemp[p]};
-            //cout<< arrtemp[p] <<", " << p <<endl;
+            
+			arr[n]={arrtemp[p]};
             n++;
         }
 
@@ -146,15 +146,13 @@ void cezar(int arrtemp[],int sizetemp)
 	cin >> k;
 	cout << "szyfrowac czy rozszyfrowac(S/R):";
 	cin >> szyr;
-	if(szyr==82 || szyr==114)
+	if(szyr==82 || szyr==114)//rozszyfroa
 	{
         while (n<sizetemp)
         {
-            p=arrtemp[n]-k;
-            while(p>=25)
-            {
-                p=p-25;
-            }
+            p=(arrtemp[n]+k)/d;
+            p=(arrtemp[n]+k)-d*p;
+            
             arrtemp[n]= {p};
             //cout<< arrtemp[p] <<", " << p <<endl;
             n++;
@@ -164,17 +162,17 @@ void cezar(int arrtemp[],int sizetemp)
     {
         while (n<sizetemp)
         {
-            p=arrtemp[n]+k;
-            
-            
-            
+			p=arrtemp[n]+k;   
+			p=(arrtemp[n]+k)/d;
+			p=(arrtemp[n]+k)-d*p;           
             arrtemp[n]={p};
+            animat_num_arr(arrtemp,sizetemp);
             //cout<< arrtemp[p] <<", " << p <<endl;
             n++;
         }
 
 	}
-	num_to_ascii(arr,sizetemp);
+	num_to_ascii(arrtemp,sizetemp);
 }
 int main()
 {
@@ -193,7 +191,7 @@ int main()
             cout << "\
             1.Menu\n\
             2.Szyfr cezara\n\
-            3.Deszyr cezar\n\
+            3.revolver\n\
             4.\n\
             5.\n\
              .Aby zamknoc program wpisz negatywna wartosc"\
@@ -213,7 +211,8 @@ int main()
         {
             cout << "prosze podac text do przesuniecia:";
             cin >> text;
-            int* nym;
+            //cout<<"test"<<endl;
+			int* nym;
             nym=asciitonum(text);
             //animat_num_arr(nym,text.length());
             cyclicop(nym,text.length());
