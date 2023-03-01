@@ -22,14 +22,12 @@ void animat_string(string pow) //funkcja do animacji
     delete[] pow_arr;
 
 }
-
 void animat_char_arr(char* temp_arr)// funkcja do animacji arr
 {
     string tempst = temp_arr;
     animat_string(tempst);
 
 }
-
 void animat_num_arr(int temp_arr[],int l)// funkcja do animacji arr
 {
     int n=0;
@@ -41,7 +39,6 @@ void animat_num_arr(int temp_arr[],int l)// funkcja do animacji arr
 	}
 	cout<<endl;
 }
-
 void ascitest(string plain)
 {
     char* text_arr = new char[plain.length()];
@@ -78,7 +75,6 @@ int* asciitonum (string ascii)
     //animat_num_arr(numarr,sizeof(numarr)/sizeof(numarr[0]));
     return numarr;
 }
-
 void num_to_ascii(int* arr,int l)
 {
 
@@ -140,21 +136,21 @@ void cyclicop(int arrtemp[],int sizetemp)
 }
 void cezar(int arrtemp[],int sizetemp)
 {
-
 	int arr[sizetemp];
 	int n = 0;
 	int p = 0;
 	int k = 0;
+	int d = 24;
 	char szyr;
 	cout << "podaj przesunieci:";
 	cin >> k;
 	cout << "szyfrowac czy rozszyfrowac(S/R):";
 	cin >> szyr;
-	if(szyr==82)
+	if(szyr==82 || szyr==114)
 	{
         while (n<sizetemp)
         {
-            p=arrtemp[n]+k;
+            p=arrtemp[n]-k;
             while(p>=25)
             {
                 p=p-25;
@@ -168,22 +164,18 @@ void cezar(int arrtemp[],int sizetemp)
     {
         while (n<sizetemp)
         {
-            p=arrtemp[n]-k;
-            while(p<0)
-            {
-                p=p+25;
-            }
+            p=arrtemp[n]+k;
+            
+            
+            
             arrtemp[n]={p};
             //cout<< arrtemp[p] <<", " << p <<endl;
             n++;
         }
 
 	}
-
 	num_to_ascii(arr,sizetemp);
-
 }
-
 int main()
 {
 

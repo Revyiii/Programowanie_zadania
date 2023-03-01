@@ -2,6 +2,7 @@
 #include <locale.h>
 #include <cmath>
 #include <windows.h>
+#include <iomanip>
 using namespace std;
 void gotoxy(int x, int y)
 {
@@ -35,7 +36,7 @@ int main()
 	
 	while(c==1)
 	{
-	
+	system("cls");
 	for(int i=0;i<n;i++)
 	{	
 		a[i-1]={ceil((rand()/ double(RAND_MAX))*100)/10+1};
