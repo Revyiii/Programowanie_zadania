@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <cmath>
 
 using namespace std;
 
@@ -51,7 +52,7 @@ void animat_plane_b(int pla[])
 	cout<<endl<<"   h,g,f,e,d,c,b,a"<<endl;
 }
 
-float white_move(string pow,plane[])
+float white_move(string pow,int plane[])
 {
     char* pow_arr = new char[pow.length()];
     strcpy(pow_arr, pow.c_str());
@@ -71,14 +72,14 @@ float white_move(string pow,plane[])
 	}
 	else if (plane[pole-16]==1) 
 	{
-		if
-		plane[pole]=1;
-		plane[pole-16]=0;
+		//if
+		plane[pole]={1};
+		plane[pole-16]={0};
 		animat_plane_w(plane);
 		gotoxy(0,13);	
 	}
 	else{cout<<"bad move"<< endl;return-1;}
-	
+	delete[] pow_arr;
 }
 
 
@@ -98,6 +99,8 @@ int main()
 	float pole = 0;
 	bool mate=false;
 	string pow;
+	int p1=0;
+	int p2=0;
 	
 	while (mate==false)
 	{
@@ -105,14 +108,16 @@ int main()
 	system("cls");
 	gotoxy(0,0);
 	animat_plane_w(plane);
-	
+	pole=-1;
 	while(pole<0)
 	{
 	cout <<"w:";
 	cin>>pow;
-	}
 	pole=white_move(pow,plane);
-	plane[floor(pole)]=plane[pole-floor(pole)];
+	}
+	p1=floor(pole);
+	p2=pole-floor(pole);
+	plane[p1]=plane[p2];
 	animat_plane_w(plane);	
 	
 	//-------------ruch-------------
@@ -128,7 +133,7 @@ int main()
 	
 	
 	
-	delete[] pow_arr;
+	
 	}
 
 	
