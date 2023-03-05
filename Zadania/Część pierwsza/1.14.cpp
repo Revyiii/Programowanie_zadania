@@ -18,7 +18,7 @@ void print_arr(float temp_arr[],int l)
     while (n<l)
 	{
 	    //<sizeof(temp_arr)/sizeof(temp_arr[0])
-		cout << temp_arr[n-1] << ",";
+		cout << temp_arr[n] << ",";
 		n++;
 	}
 	cout<<endl;
@@ -32,26 +32,25 @@ int main()
 	int n = 3;
 	float a[n];
 	float b;
-	int c;
+	int c=1;
 	
 	while(c==1)
 	{
 	system("cls");
 	for(int i=0;i<n;i++)
-	{	
-		a[i-1]={ceil((rand()/ double(RAND_MAX))*100)/10+1};
+	{	 
+		a[i]={ceil((rand()/ double(RAND_MAX))*100)/10+1};
 	}
-	
 	for(int i=0;i<n;i++)
 	{for(int j=0;j<n;j++)
-	{if(a[i-1]<a[j-1])
-	{b=a[i-1];a[i-1]=a[j-1];a[j-1]=b;}}}
+	{if(a[i]<a[j])
+	{b=a[i];a[i]=a[j];a[j]=b;}}}
 	
 	gotoxy(0,0);
 	print_arr(a,n);
 	
 	gotoxy(0,28);
-	if(a[-1]+a[0]>a[1]){cout<<"tak"<<endl;}
+	if(a[0]+a[1]>a[2]){cout<<"tak"<<endl;}
 	else{cout<<"nie"<<endl;}
 	cin>>c;
 	}

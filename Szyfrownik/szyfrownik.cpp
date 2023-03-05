@@ -75,15 +75,39 @@ int* asciitonum (string ascii)
     //animat_num_arr(numarr,sizeof(numarr)/sizeof(numarr[0]));
     return numarr;
 }
+int* asciitonum_ul (string ascii)
+{
+    int lenght = ascii.length();
+	char* text_arr = new char[ascii.length()];
+    strcpy(text_arr, ascii.c_str());
+    int n=0;
+    static int numarr[100];
+	while(n<=ascii.length())
+    {
+        int tn = text_arr[n];
+        if(tn>=65 && tn<81){tn=tn-65;}
+        else if (tn>81 && tn<=90){tn=tn-66;}
+        else if (tn>=97 && tn<113){tn=tn-97;}
+        else if (tn>113 && tn<=122){tn=tn-98;}
+        else{tn=25;}
+        numarr[n] = {tn};
+        n++;
+    }
+
+	delete[] text_arr;
+    //animat_num_arr(numarr,sizeof(numarr)/sizeof(numarr[0]));
+    return numarr;
+}
 void num_to_ascii(int* arr,int l)
 {
 
     char temp;
     int n=0;
-    while(n<l)
+    int ul = 98;
+    while(n<l)//apper case 65, lover case 98
         {
-        if(arr[n]<16){temp=arr[n]+65;}
-        else if(arr[n]>=16 && arr[n]<25){temp=arr[n]+66;}
+        if(arr[n]<16){temp=arr[n]+ul;}
+        else if(arr[n]>=16 && arr[n]<25){temp=arr[n]+ul;}
         else{temp=35;}
         cout << temp;
         n++;
@@ -150,12 +174,11 @@ void cezar(int arrtemp[],int sizetemp)
 	{
         while (n<sizetemp)
         {
-   			p=n-k;
-            while(p<0)
-            {
-                p=p+d;
-            }
-            arr[p]={arrtemp[n]};
+			p=arrtemp[n]+k;   
+			p=(arrtemp[n]+k)/d;
+			p=(arrtemp[n]+k)-d*p;
+			if()
+            arrtemp[n]={p};
             //cout<< arrtemp[p] <<", " << p <<endl;
             n++;
         }
@@ -168,7 +191,6 @@ void cezar(int arrtemp[],int sizetemp)
 			p=(arrtemp[n]+k)/d;
 			p=(arrtemp[n]+k)-d*p;           
             arrtemp[n]={p};
-            animat_num_arr(arrtemp,sizetemp);
             //cout<< arrtemp[p] <<", " << p <<endl;
             n++;
         }
