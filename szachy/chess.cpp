@@ -1,6 +1,8 @@
 #include <iostream>
 #include <windows.h>
 #include <cmath>
+#include <io.h>
+#include <fcntl.h>
 
 using namespace std;
 
@@ -24,6 +26,7 @@ cord.Y = y;
 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cord);
 }
 
+
 void animat_plane()
 {
 	gotoxy(0,0);
@@ -38,11 +41,12 @@ void animat_plane()
 	{
 		c=r;
 		n=0;
-		cout<<(r+1)/9-((color+1)/2-1)<<"  ";//round(pow(1/2,color))-1
+		cout<<(r+1)/8+((color+1)/2)<<"  ";//round(pow(1/2,color))-1
+		//cout<<-((color+1)/2-1)<<"  ";
 		while(n<8)
 		{
 		c=c+1*color;
-		cout<<plane[c] <<",";		
+		wcout<<L"\u2654"+(0*plane[c]) <<",";		
 		n++;
 		}
 		r=r-8*color;
@@ -58,18 +62,19 @@ void animat_plane()
 }
 void move()
 {
+	//zbieranie danych
     char letter=98-((color+1)/2-1);//a
 	string pow;
-	cout << letter<<":";
+	wcout << letter<<":";
 	cin>>pow;
-	
+	//tworzenie nitki
 	char* pow_arr = new char[pow.length()];
     strcpy(pow_arr, pow.c_str());
     
-    int figure=0;
-    int colum=pow_arr[0]-96;
-    int row=pow_arr[pow.length()-1]-48;
-    int pole=8*(row-1)+colum-1;
+    //int figure=0;
+    //int colum=pow_arr[0]-96;
+    //int row=pow_arr[pow.length()-1]-48;
+    //int pole=8*(row-1)+colum-1;
 	
 	delete[] pow_arr;
 }
@@ -77,12 +82,16 @@ void move()
 
 int main()
 {
+	_setmode(_fileno(stdout), _O_U16TEXT);
+	
+	
 	bool mate=false;	
 	while (mate==false)
 	{
 	color=1;//białe
 	system("cls");
 	animat_plane();
+	wcout << L"Hello, ♘ ♞!\n";
 	move();
 
 	color=-1;//czarne
