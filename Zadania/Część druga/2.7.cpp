@@ -5,6 +5,8 @@ int main()
 {
 int sum=0;
 cout<<"program do liczenie liczb trzy cyfrowych ktorych suma jest rowna n:"<<endl;
+do{
+sum=0;
 cout<<"podaj n: ";int n;cin>>n;
 for (int a = 1; a < 10; a++)
 {for (int b = 0; b < 10; b++)
@@ -13,7 +15,7 @@ for (int a = 1; a < 10; a++)
     if(a+b+c==n){cout<<a*100+b*10+c<<", ";sum++;}
 }}}
 cout<<"liczb trzy czyfrowych o sumie "<<n<<" jest: "<<sum<<endl;
-
+}while(true);
     cin.get();
     return 0;
 }

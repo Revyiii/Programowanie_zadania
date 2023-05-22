@@ -1,9 +1,21 @@
 #include <iostream>
 #include <conio.h>
+#include <ctime>
+
 using namespace std;
 
-int arr[] = {6,87,345,545,3};
+int arr[100] = {};
+	
+//int arr[] = {6,87,345,545,3};
 int k;
+
+void fill_arr_rand()
+{
+	for (int ii = 0; ii < sizeof(arr)/sizeof(arr[0]); ii++)
+	{
+		arr[ii]={(rand()/ double(RAND_MAX))*100};
+	}
+}
 
 void display_arr(int arrtemp[],int sizetemp)
 {
@@ -40,7 +52,8 @@ void cyc(int arrtemp[],int sizetemp)
 
 int main() 
 {
-	
+	srand(time(NULL));
+	fill_arr_rand();
 	int n =0;
 	int size = sizeof(arr)/sizeof(arr[0]);
 	display_arr(arr,size);
