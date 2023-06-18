@@ -9,6 +9,7 @@ int main()
 	cout<<"podaj n: ";int n=0;cin>>n;
 	float sum=0;	
 	float e=0;
+	//
 
 	for(int i=1;i<=n;i++)
 	{
