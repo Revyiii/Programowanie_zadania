@@ -4,6 +4,7 @@ using namespace std;
 int main()
 {
 int sum=0;
+char d='N';
 cout<<"program do liczenie liczb trzy cyfrowych ktorych suma jest rowna n:"<<endl;
 do{
 sum=0;
@@ -15,7 +16,15 @@ for (int a = 1; a < 10; a++)
     if(a+b+c==n){cout<<a*100+b*10+c<<", ";sum++;}
 }}}
 cout<<"liczb trzy czyfrowych o sumie "<<n<<" jest: "<<sum<<endl;
-}while(true);
+cout<<"jeszcze raz? T/N: ";
+	do{
+	cin.clear();cin.sync();
+	cin>>d;
+	d=toupper(d);
+	if(d=='T'||d=='N'){break;}
+	else{cout<<"podana wartoœæ jest nie poprawna. Ponów prubê"<<endl;}
+	}while(true);
+}while(d!='N');
     cin.get();
     return 0;
 }

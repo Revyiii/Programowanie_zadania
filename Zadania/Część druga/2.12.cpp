@@ -15,16 +15,16 @@ int main()
     cout<<"podaj b:";
     int b=0;cin>>b;
     if(cin.fail()){r=false;cout<<endl<<"podana wartość jest nie poprawna"<<endl;}
-    int c;
+    
     int x=a;
     int y=b;
     
-	do
-    {
-        c=a%b;
-        a=b;
-        b=c;
-    }while (b!=0);
+	while(a!=b)
+	{
+		if(a>b){a=a-b;}
+		else{b=b-a;}
+	}
+    
     x=(x*y)/a;
     
     cout<<"nwd:"<<a<<" nww:"<<x<<endl;

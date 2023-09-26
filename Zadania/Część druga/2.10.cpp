@@ -5,7 +5,7 @@ int main()
 {
     bool r = true;  
     char d;
-	cout<<"program do nwd i nww"<<endl;  
+	cout<<"program tabliczka mno�enie od do. Prog"<<endl;  
     while(r==true)
     {
     
@@ -15,17 +15,9 @@ int main()
     cout<<"podaj b:";
     int b=0;cin>>b;
     if(cin.fail()){r=false;cout<<endl<<"podana wartość jest nie poprawna"<<endl;}
-    int c;
-    int x=a;
-    int y=b;
     
-	do
-    {
-        c=a%b;
-        a=b;
-        b=c;
-    }while (b!=0);
-    x=(x*y)/a;
+    
+    //progam tu
     
     cout<<"nwd:"<<a<<" nww:"<<x<<endl;
     
