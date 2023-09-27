@@ -1,34 +1,109 @@
 #include <iostream>
+#include <math.h>
+#define _WIN32_WINNT 0x0500
+#include <windows.h>
+#include <stdlib.h>
 using namespace std;
+
+void gotoxy(int x, int y)
+{
+COORD cord;
+cord.X = x;
+cord.Y = y;
+SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cord);
+}
+int wherey()
+{
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    COORD                      result;
+    if (!GetConsoleScreenBufferInfo(
+        GetStdHandle( STD_OUTPUT_HANDLE ),
+        &csbi
+        ))
+    return -1;
+    return result.Y;
+  }
 
 int main()
 {
-    bool r = true;  
+   /*
+    HWND console = GetConsoleWindow();
+    RECT r;
+     GetWindowRect(console, &r); //stores the console's current dimensions
+
+    //MoveWindow(window_handle, x, y, width, height, redraw_window);-
+    MoveWindow(console, r.left, r.top, 1050, 900, TRUE);
+    */// nie dzia≈Ça nie wiem dla czego 
     char d;
-	cout<<"program tabliczka mnoøenie od do. Prog"<<endl;  
-    while(r==true)
+	int a[2]={0,16};
+    string c[2]={"min","max"};
+    int i;
+    int x;
+    int y;
+    int l=5;
+    cout<<"program tabliczka mnoÔøΩenie od do.\n Program przymuje warto≈õci <-15;15>"<<endl;  
+    while(true)
     {
     
-    cout<<"podaj a:";
-    int a=0;cin>>a;
-    if(cin.fail()){r=false;cout<<endl<<"podana warto≈õƒá jest nie poprawna"<<endl;}
-    cout<<"podaj b:";
-    int b=0;cin>>b;
-    if(cin.fail()){r=false;cout<<endl<<"podana warto≈õƒá jest nie poprawna"<<endl;}
+    
+    i=0;
+    a[2]={16};
+    while(i<2){
+    cout<<"podaj "<<c[i]<<": ";
+    cin.clear();cin.sync();
+    a[i]=0;cin>>a[i];
+    if(cin.fail()||abs(a[i])>15||a[0]>a[1]){cout<<endl<<"podana warto≈õƒá jest nie poprawna"<<endl;i--;}
+ 
+    i++;
+    }
+    system("cls");
+    y=a[0];
     
     
-    //progam tu
-    
-    cout<<"nwd:"<<a<<" nww:"<<x<<endl;
-    
-		cout<<"jeszcze raz? T/N: ";
+    while (y<=a[1])
+    {
+        gotoxy((y-a[0]+1)*l,0);
+        cout<<y<<",";
+        
+        
+        y++;
+    }
+    cout<<endl;
+    y=a[0];
+    while (y<=a[1])
+    {
+        
+        cout<<"-";
+        gotoxy((y-a[0]+1)*l,1);
+        y++;
+    }
+    cout<<endl;
+
+    y=a[0];
+    while (y<=a[1])
+    {
+        x=a[0];
+        ;
+        cout<<y;
+        gotoxy(3,y-a[0]+2);
+        cout<<"|";
+        while (x<=a[1])
+        {
+            gotoxy((x-a[0]+1)*l,y-a[0]+2);
+            cout<<y*x<<",";
+            x++;
+        }
+        cout<<endl;
+        y++;
+    }
+    	cout<<"jeszcze raz? T/N: ";
 		do{
 		cin.clear();cin.sync();
 		cin>>d;
 		d=toupper(d);
 		if(d=='N'){return 0;}
 		else if(d=='T'){break;}
-		else{cout<<"podana wartoúÊ jest nie poprawna. PonÛw prubÍ"<<endl;}
+		else{cout<<"podana wartoÔøΩÔøΩ jest nie poprawna. PonÔøΩw prubÔøΩ"<<endl;}
 		}while(true);
     }
     
