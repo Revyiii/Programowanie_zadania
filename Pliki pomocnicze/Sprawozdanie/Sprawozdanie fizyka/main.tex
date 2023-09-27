@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tikz}
+\usepackage{pgfplots}%wykresy
+\usepackage{multicol}
+\usepackage{gensymb}%ohm
+\usepackage{circuitikz}%obwody
+\pgfplotsset{compat=1.18}
+
+\usepackage{fancyhdr}%heders and footers
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\setlength{\footskip}{5pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{baskervillef}
+%\usepackage[T1]{fontenc}
+
+
+\usepackage[bottom=0.5in,top=0.5in, left=0.5in ,right=0.5in]{geometry}
+
+
+\usepackage{titlesec}%alternatywne sekcje tytułowe
+\titleformat{\section}{
+  \it\vspace{3pt}
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+\pdfgentounicode=1
+
+
+\definecolor{1}{RGB}{128, 147, 241}
+\definecolor{2}{RGB}{114, 221, 247}
+\definecolor{3}{RGB}{179, 136, 235}
+\definecolor{4}{RGB}{247, 174, 248}
+
+
+\title{Sprawozdanie fizyka}
+\author{Tymon Łazowy}
+\date{September 2023}
+
+
+\begin{document}
+\begin{center}
+    \begin{multicols}{2}
+    \begin{flushleft}
+    \large{Tymon Łazowy IIID} \\
+    \end{flushleft}
+    
+    \begin{flushright}
+    \large{23.09.2023}\\
+    \end{flushright}
+    \end{multicols}
+    {\LARGE Badanie zależności natężenia prądu od napięcia dla odcinaka obwodu} \\ \vspace{0pt}
+\end{center}
+
+\section{Teza}
+\section{Doświadczenie}
+\subsection{sprzęt doświadczalny}
+
+\input c1
+\input c2
+
+\subsection{przebieg doświadczalny }
+\begin{center}
+
+\input w1
+\input w2
+\input w3
+
+\end{center}
+\section{Wnioski}
+
+
+
+\end{document}

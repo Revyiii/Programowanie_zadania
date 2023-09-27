@@ -1,0 +1,24 @@
+
+\begin{tikzpicture}[scale=1.5]
+\begin{axis}[
+title={Zależność natęrzenia od napięcia},
+title style={text width=16em,text centered},
+xlabel={\textit{U} [V]},
+ylabel={\textit{I} [A$*10^{-3}$]},
+xmin=0,xmax=5.5,
+ymin=0,ymax=55,
+legend pos=north west,
+ymajorgrids=true,grid style=dashed
+]
+
+\addplot[color=1,mark=square] table[x =  napięcie,y =natęrzenie] {1.dat};
+\addplot[color=2,mark=square] table[x =  napięcie,y =natęrzenie] {2.dat};
+\addplot[color=3,mark=square] table[x =  napięcie,y =natęrzenie] {3.dat};
+
+\legend{100\ohm,220\ohm,330\ohm}
+
+
+
+\end{axis}
+\end{tikzpicture}
+

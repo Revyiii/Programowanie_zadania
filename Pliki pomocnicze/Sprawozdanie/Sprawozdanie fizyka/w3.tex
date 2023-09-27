@@ -1,0 +1,25 @@
+
+\begin{tikzpicture}[scale=1.5]
+\begin{axis}[
+title={Zależność natęrzenia od napięcia w ukłądzie drugim},
+title style={text width=16em,text centered},
+xlabel={\textit{U} [V]},
+ylabel={\textit{I} [A]},
+xmin=0,xmax=5.5,
+ymin=0,ymax=0.25,
+legend pos=north west,
+ymajorgrids=true,grid style=dashed
+]
+
+\addplot[color=1] table[x =  napięcie,y =natęrzenie] {7.dat};
+\addplot[only marks,color=2,mark=square] table[x =  napięcie,y =natęrzenie] {5.dat};
+%\addplot [blue,no marks]    {0.110335*min(sqrt(abs(x)),1.03324*x)};
+%\addplot+[only marks,scatter,mark=halfcircle*,mark size=2.9pt] table[meta=ma]{scattered_example.dat};
+
+\legend{$5W$}
+
+
+
+\end{axis}
+\end{tikzpicture}
+

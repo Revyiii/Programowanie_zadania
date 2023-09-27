@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{minted}
+\begin{document}
+\begin{minted}[frame=lines, framesep=1mm, baselinestretch=1.2,linenos]{cpp}
+#include <iostream> // input out put stream
+#include <cstdlib>
+#include <iomanip>
+#include <conio.h>
+#include <math.h>
+#include <string>
+#include <cstring>
+#include <Windows.h>
+#include <locale.h>//do zawarcia polskicg znaków
+using namespace std;
+
+//polskie znaki 
+setlocale(LC_CTYPE,"Polish");
+
+//zmienne
+int n=0;
+char* pow_arr = new char[pow.length()];
+float bok = 5.875; // zminna zmieno przecinkowa
+string pow ("witam w programie"); //sÅ‚owa w zmiennej
+
+//funkje
+Sleep(2000);//czekaj (windows.h)
+delete[] pow_arr;// usuÅ„ obiekt
+strcpy(pow_arr, pow.c_str());
+n++ //zmiena dodaÄ‡ 1  
+cout << pow_arr[n]; // wyÅ›wietl na konsoli
+system("cls");//czyszczenie konsoli
+cout << setprecision(5) << "p="<< pole << "; obj=" << obj; //wyÅ›wietl zmiennÄ… z precyzjÄ… do n liczb po przecinky
+return 0; // zwrÃ³Ä‡ zero (kniec)
+cin.get();// czeka na enter #iostream
+getch(); // ndk #conio.h
+
+//pÄ™tle
+while(n<=pow.length()){} //pÄ™tla 
+
+// funkje, definicje
+int main(){}
+\end{minted}
+%\inputminted[frame=lines, framesep=1mm, baselinestretch=1.2,linenos,]{cpp}{szyfrownik.cpp}
+
+
+
+
+\end{document}
