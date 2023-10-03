@@ -14,10 +14,10 @@ int main()
     bool tt=b%c;
     int n=(b-a)/c+(1-t*tt);
     
-    cout<<"przdzial "<<a<<" - "<<b<<" zawiera "<<n<<" liczb podzielnych przez "<<c<<endl;
+    cout<<"przdzial "<<a<<" ; "<<b<<" zawiera "<<n<<" liczb podzielnych przez "<<c<<endl;
     for(int i=t;i<n+t;i++)  
     { 
-        cout<<c*i+a-a%c<<", "; 
+        cout<<c*i+a-(a%c+c)%c<<", "; 
     }
 	cin.get();
     return 0;

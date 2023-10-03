@@ -7,11 +7,11 @@ int main()
 cout<<"program do liczenina średniaj z n liczb dwucyfrowych, dodatnich"<<endl;
 char d;
 do{
-float sum=0;
-float e=0;
+	float sum=0;
+	float e=0;
 
 
-cout<<"podaj n: ";int n=0;cin>>n;
+	cout<<"podaj n: ";int n=0;cin>>n;
     for(int i=1;i<=n;i++)
 	{
 		cin.clear();cin.sync();
@@ -22,6 +22,8 @@ cout<<"podaj n: ";int n=0;cin>>n;
 		sum=sum+e;
 	}
 	cout<<setprecision(2)<<"srednia "<<n<<" dwucyfrowych liczb jest rowna: "<<sum/n<<endl;
+	
+	
 	cout<<"jeszcze raz? T/N: ";
 	do{
 	cin.clear();cin.sync();
