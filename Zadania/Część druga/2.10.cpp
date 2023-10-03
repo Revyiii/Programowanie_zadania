@@ -12,35 +12,17 @@ cord.X = x;
 cord.Y = y;
 SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cord);
 }
-int wherey()
-{
-    CONSOLE_SCREEN_BUFFER_INFO csbi;
-    COORD                      result;
-    if (!GetConsoleScreenBufferInfo(
-        GetStdHandle( STD_OUTPUT_HANDLE ),
-        &csbi
-        ))
-    return -1;
-    return result.Y;
-  }
 
 int main()
 {
-   /*
-    HWND console = GetConsoleWindow();
-    RECT r;
-     GetWindowRect(console, &r); //stores the console's current dimensions
-
-    //MoveWindow(window_handle, x, y, width, height, redraw_window);-
-    MoveWindow(console, r.left, r.top, 1050, 900, TRUE);
-    */// nie działa nie wiem dla czego 
+   
     char d;
 	int a[2]={0,16};
     string c[2]={"min","max"};
     int i;
     int x;
     int y;
-    int l=5;
+    int l=4;
     cout<<"program tabliczka mno�enie od do.\n Program przymuje wartości <-15;15>"<<endl;  
     while(true)
     {
@@ -90,7 +72,7 @@ int main()
         while (x<=a[1])
         {
             gotoxy((x-a[0]+1)*l,y-a[0]+2);
-            cout<<y*x<<",";
+            cout<<y*x;
             x++;
         }
         cout<<endl;

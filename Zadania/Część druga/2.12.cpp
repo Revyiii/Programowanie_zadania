@@ -1,4 +1,5 @@
 #include <iostream>
+#include<math.h>
 using namespace std;
 
 int main()
@@ -6,15 +7,25 @@ int main()
     bool r = true;  
     char d;
 	cout<<"program do nwd i nww"<<endl;  
-    while(r==true)
+    
+    int i;
+    char l='a';
+    int g[2]={0,0};
+    
+	while(r==true)
     {
     
-    cout<<"podaj a:";
-    int a=0;cin>>a;
-    if(cin.fail()){r=false;cout<<endl<<"podana wartość jest nie poprawna"<<endl;}
-    cout<<"podaj b:";
-    int b=0;cin>>b;
-    if(cin.fail()){r=false;cout<<endl<<"podana wartość jest nie poprawna"<<endl;}
+    i=0;
+	while(i<2){
+    cout<<"podaj "<<l<<": ";
+    cin.clear();cin.sync();
+    g[i]=0;cin>>g[i];
+    if(cin.fail()){cout<<endl<<"podana wartość jest nie poprawna"<<endl;i--;l--;}
+    i++;l++;
+    }
+	
+	int a=abs(g[0]);
+	int b=abs(g[1]);
     
     int x=a;
     int y=b;
