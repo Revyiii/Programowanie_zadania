@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=io] (1) at (0, -3) {a[0];a[1]};
+		\node [style=process] (2) at (0, -4.5) {cls;y=a[0];};
+		\node [style=process] (5) at (0, -1.5) {a={0;16};c={min,max};i;x;y;l=5};
+		\node [style=decision] (6) at (0, -6.75) {y<=a[1]};
+		\node [style=none] (9) at (0, -5.25) {};
+		\node [style=process] (10) at (1.5, -8.25) {x=a[0];y++};
+		\node [style=decision] (11) at (1.5, -10.75) {x<=a[1]};
+		\node [style=process] (12) at (2.75, -12.5) {gotoxy((x-a[0]+1)*l,y-a[0]+2);x++;};
+		\node [style=io] (13) at (2.75, -13.75) {y*x};
+		\node [style=none] (14) at (6.25, -14.5) {};
+		\node [style=none] (15) at (1.5, -9) {};
+		\node [style=none] (16) at (-2.75, -5.25) {};
+		\node [style=startstop] (17) at (-1.25, -8.25) {Stop};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=arrow] (0) to (5);
+		\draw [style=arrow] (5) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (2) to (6);
+		\draw [style=arrow] (6) to (10);
+		\draw [style=arrow] (10) to (11);
+		\draw [style=arrow] (11) to (12);
+		\draw [style=arrow] (12) to (13);
+		\draw [style=arrow] (6) to (17);
+		\draw (13) to (14.center);
+		\draw (14.center) to (15.center);
+		\draw (16.center) to (9.center);
+		\draw (11) to (16.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

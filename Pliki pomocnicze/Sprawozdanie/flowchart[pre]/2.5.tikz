@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=io] (1) at (0, -2.75) {n};
+		\node [style=process] (2) at (0, -1.5) {n;sum;e};
+		\node [style=decision] (3) at (0, -4.5) {i<=n};
+		\node [style=io] (4) at (1.5, -5.5) {e};
+		\node [style=process] (5) at (1.5, -7) {sum=sum+e};
+		\node [style=io] (6) at (-1.75, -5.5) {sum/n};
+		\node [style=startstop] (7) at (-1.75, -7) {Stop};
+		\node [style=none] (8) at (3.25, -8) {};
+		\node [style=none] (9) at (0, -3.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=arrow] (0) to (2);
+		\draw [style=arrow] (2) to (1);
+		\draw [style=arrow] (1) to (3);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=arrow] (4) to (5);
+		\draw [style=arrow] (5) to (8.center);
+		\draw [style=arrow] (8.center) to (9.center);
+		\draw [style=arrow] (3) to (6);
+		\draw [style=arrow] (6) to (7);
+	\end{pgfonlayer}
+\end{tikzpicture}

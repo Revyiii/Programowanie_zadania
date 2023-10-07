@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=io] (1) at (0, -1.5) {sum=0;e=0;};
+		\node [style=io] (2) at (0, -2.75) {n};
+		\node [style=process] (3) at (0, -4) {i=1};
+		\node [style=decision] (4) at (0, -6) {i<=n};
+		\node [style=io] (5) at (1.5, -7) {e};
+		\node [style=decision] (6) at (1.5, -9.75) {e<10|| cin.fail()||  e>=100};
+		\node [style=process] (7) at (3.5, -11) {i--;e=0};
+		\node [style=process] (8) at (1.5, -12.5) {sum=sum+e;};
+		\node [style=none] (9) at (1.5, -11.75) {};
+		\node [style=none] (10) at (-0.75, -11.75) {};
+		\node [style=none] (11) at (4.25, -13.25) {};
+		\node [style=none] (12) at (0, -4.75) {};
+		\node [style=io] (13) at (-1.5, -7) {sum/n};
+		\node [style=startstop] (14) at (-1.5, -8.5) {Stop};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=arrow] (2) to (3);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=arrow] (4) to (5);
+		\draw [style=arrow] (5) to (6);
+		\draw [style=arrow] (6) to (7);
+		\draw (7) to (9.center);
+		\draw (6) to (10.center);
+		\draw (10.center) to (9.center);
+		\draw [style=arrow] (9.center) to (8);
+		\draw (8) to (11.center);
+		\draw (11.center) to (12.center);
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (4) to (13);
+		\draw [style=arrow] (13) to (14);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=io] (1) at (0, -1.5) {a;b;};
+		\node [style=process] (2) at (0, -3) {d;c;x=a,y=b;};
+		\node [style=process] (3) at (0, -4.5) {c=a%b;a=b;b=c;};
+		\node [style=decision] (4) at (0, -6) {b!=a};
+		\node [style=none] (5) at (2, -3.75) {};
+		\node [style=none] (6) at (0, -3.75) {};
+		\node [style=process] (7) at (-1, -7.5) {x=(x*y)/a;};
+		\node [style=io] (8) at (-1, -9) {a;x};
+		\node [style=startstop] (9) at (-1, -10.5) {stop};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (2) to (3);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=arrow] (8) to (9);
+		\draw (4) to (5.center);
+		\draw (5.center) to (6.center);
+		\draw [style=arrow] (4) to (7);
+		\draw [style=arrow] (7) to (8);
+	\end{pgfonlayer}
+\end{tikzpicture}

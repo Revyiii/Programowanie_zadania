@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=startstop] (0) at (-7, 5.5) {};
+		\node [style=process] (1) at (1.5, 5) {dsa};
+		\node [style=process] (2) at (-3, 3.25) {};
+		\node [style=process] (3) at (2.25, 0.5) {};
+		\node [style=process] (4) at (4.75, 3) {};
+	\end{pgfonlayer}
+\end{tikzpicture}

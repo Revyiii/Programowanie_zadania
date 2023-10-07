@@ -1,0 +1,64 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=startstop] (0) at (0, -0.5) {Start};
+		\node [style=io] (1) at (0, -2) {num};
+		\node [style=decision] (3) at (0, -5) {'l'};
+		\node [style=decision] (4) at (0, -6.75) {1};
+		\node [style=decision] (5) at (0, -8.25) {2};
+		\node [style=decision] (6) at (0, -9.75) {3};
+		\node [style=decision] (7) at (0, -11.25) {4};
+		\node [style=process] (8) at (0, -3.5) {l=num.lenght()};
+		\node [style=decision] (9) at (0, -12.75) {5};
+		\node [style=decision] (10) at (0, -14.25) {6};
+		\node [style=decision] (11) at (0, -15.75) {7};
+		\node [style=decision] (12) at (0, -17.25) {8};
+		\node [style=io] (14) at (2, -7.5) {1 cyfra};
+		\node [style=io] (15) at (2, -9) {2cyfty};
+		\node [style=io] (16) at (2, -10.5) {3cyfry};
+		\node [style=io] (17) at (2, -12) {4 cyfr};
+		\node [style=io] (18) at (2, -13.5) {5 cyfr};
+		\node [style=io] (19) at (2, -15) {6 cyfr};
+		\node [style=io] (20) at (2, -16.5) {7 cyfr};
+		\node [style=io] (21) at (2, -18) {8 cyfr};
+		\node [style=startstop] (22) at (0, -19) {stop};
+		\node [style=none] (23) at (3.5, -8) {};
+		\node [style=none] (24) at (3.5, -9.5) {};
+		\node [style=none] (25) at (3.5, -11) {};
+		\node [style=none] (26) at (3.5, -12.5) {};
+		\node [style=none] (27) at (3.5, -14) {};
+		\node [style=none] (28) at (3.5, -15.5) {};
+		\node [style=none] (29) at (3.5, -17) {};
+		\node [style=none] (30) at (3.5, -18.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (8);
+		\draw [style=arrow] (8) to (3);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=arrow] (4) to (5);
+		\draw [style=arrow] (5) to (6);
+		\draw [style=arrow] (6) to (7);
+		\draw [style=arrow] (7) to (9);
+		\draw [style=arrow] (9) to (10);
+		\draw [style=arrow] (10) to (11);
+		\draw [style=arrow] (11) to (12);
+		\draw [style=arrow] (4) to (14);
+		\draw [style=arrow] (5) to (15);
+		\draw [style=arrow] (6) to (16);
+		\draw [style=arrow] (7) to (17);
+		\draw [style=arrow] (9) to (18);
+		\draw [style=arrow] (10) to (19);
+		\draw [style=arrow] (11) to (20);
+		\draw [style=arrow] (12) to (21);
+		\draw (14) to (23.center);
+		\draw (15) to (24.center);
+		\draw (16) to (25.center);
+		\draw (17) to (26.center);
+		\draw (18) to (27.center);
+		\draw (19) to (28.center);
+		\draw (20) to (29.center);
+		\draw (21) to (30.center);
+		\draw (23.center) to (30.center);
+		\draw [style=arrow] (30.center) to (22);
+	\end{pgfonlayer}
+\end{tikzpicture}
