@@ -1,0 +1,10 @@
+print('ile jest liczb podzielnych przez c w przdziale a-b')
+a=int(input('podaj a:'))
+b=int(input('podaj b:'))
+c=int(input('podaj c:'))
+t=bool(a%c)
+a=a+(c*t-a%c)
+b=b-b%c
+n=int((b-a)/c+1)
+print(n,' liczb podzielnych przez ',c)
+for i in range(0,n):print(a+c*i,',',end="")

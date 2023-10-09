@@ -1,0 +1,16 @@
+import msvcrt
+import math
+a=int(input('podaj długość boku:'))
+print('dostępne figury:\n1.kwadrat\n2.trójkąt\n3.pięcokąt\n4.sześciokąt')
+fig=msvcrt.getche().upper()
+match fig:
+    case b'1': 
+        print("\nobwód jest równy ",a*4," a pole ",a*a)
+    case b'2':
+        print("\nobwód jest równy ",a*3," a pole ",a*a*math.sqrt(3)/4)
+    case b'3':
+        print("\nobwód jest równy ",a*4," a pole ",(math.sqrt(25+10*math.sqrt(5))/4)*a*a)
+    case b'4':
+        print("\nobwód jest równy ",a*5," a pole ",(a*a*math.sqrt(3)/4)*6)
+    case _:
+        print("\nzłą opcja")

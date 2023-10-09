@@ -7,11 +7,11 @@
 		\node [style=io] (8) at (-1.75, -8.25) {a;x};
 		\node [style=startstop] (9) at (-1.75, -9.75) {stop};
 		\node [style=decision] (10) at (0, -5) {a!=b};
-		\node [style=decision] (11) at (1.5, -6) {a>b};
-		\node [style=process] (12) at (2.5, -7) {a=a-b};
-		\node [style=process] (13) at (0.5, -7) {b=b-a};
-		\node [style=none] (14) at (1.5, -8.25) {};
-		\node [style=none] (16) at (3.75, -9) {};
+		\node [style=decision] (11) at (1.75, -6.25) {a>b};
+		\node [style=process] (12) at (3.25, -7.25) {a=a-b};
+		\node [style=process] (13) at (0.5, -7.25) {b=b-a};
+		\node [style=none] (14) at (1.75, -8.5) {};
+		\node [style=none] (16) at (4, -9.25) {};
 		\node [style=none] (17) at (0, -3.75) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}

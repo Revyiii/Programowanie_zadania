@@ -1,0 +1,10 @@
+print('program do liczenia śrdniej z n liczb')
+n=int(input('podaj n:'))
+sum=float(0)
+for i in range(0,n):
+    print('podaj ',i+1,':',end="")
+    e=int(input())
+    sum=sum+e
+sum=round(sum/n,2)
+print('średnia',n,'liczba jest równa: ',sum)
+

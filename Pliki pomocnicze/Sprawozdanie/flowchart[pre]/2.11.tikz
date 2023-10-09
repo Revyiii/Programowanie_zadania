@@ -6,14 +6,14 @@
 		\node [style=io] (3) at (2.25, -4.25) {a};
 		\node [style=process] (4) at (2.25, -5.5) {i++};
 		\node [style=decision] (5) at (2.25, -7) {a==0};
-		\node [style=decision] (6) at (1, -8.25) {a<min};
-		\node [style=process] (7) at (-0.25, -9.75) {a=min};
+		\node [style=decision] (6) at (0.75, -8.5) {a<min};
+		\node [style=process] (7) at (-0.5, -10) {a=min};
 		\node [style=decision] (8) at (-1.75, -5) {min=100;};
-		\node [style=io] (9) at (-0.25, -6.25) {$\emptyset$};
-		\node [style=io] (10) at (-3.25, -6.25) {min};
-		\node [style=startstop] (11) at (-1.75, -8.25) {Stop};
-		\node [style=none] (12) at (-1.75, -7.25) {};
-		\node [style=none] (13) at (3.75, -7) {};
+		\node [style=io] (9) at (0, -6.25) {$\emptyset$};
+		\node [style=io] (10) at (-3.5, -6.25) {min};
+		\node [style=startstop] (11) at (-2, -8.25) {Stop};
+		\node [style=none] (12) at (-2, -7.25) {};
+		\node [style=none] (13) at (4, -7) {};
 		\node [style=none] (14) at (0, -2.25) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
@@ -22,7 +22,7 @@
 		\draw [style=arrow] (2) to (3);
 		\draw [style=arrow] (2) to (8);
 		\draw [style=arrow] (8) to (10);
-		\draw [style=arrow, in=135, out=-45] (8) to (9);
+		\draw [style=arrow, in=120, out=-15, looseness=4.25] (8) to (9);
 		\draw [style=arrow] (12.center) to (11);
 		\draw (9) to (12.center);
 		\draw (10) to (12.center);

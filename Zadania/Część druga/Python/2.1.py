@@ -1,0 +1,22 @@
+import msvcrt
+def dis(argument):
+    switcher = {
+        'E': print("EUR:",saldo/e,'\n'),
+        'U': print("USD:",saldo/u,'\n'),
+        'F': print("CHF:",saldo/f,'\n'),
+        'P': print("PLN:",saldo/p,'\n'),
+    }
+e=4;u=3;f=5;p=1
+saldo=int(input('Ile masz pieniedzy:'))
+print('w jakiej walucie')
+c=msvcrt.getche().upper()
+print(c)
+match c:
+    case b'E': 
+        saldo=saldo*e; dis('E'),
+    case b'U':
+        saldo=saldo*u; dis('U'),
+    case b'F':
+        saldo=saldo*f; dis('F'),
+    case b'P':
+        saldo=saldo*p; dis('p'),
