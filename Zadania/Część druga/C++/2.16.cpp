@@ -7,7 +7,7 @@ int main()
 {
     bool r = true;  
     char d;
-	cout<<"program do sprawdzania czy liczba jest pierwsza"<<endl;  
+	cout<<"program do sprawdzania jaka jest suma cyfr n"<<endl;  
     
 
     long long int n;
@@ -22,7 +22,6 @@ int main()
         cin.clear();cin.sync();cin>>n;
         while(true)
         {   
-            cout<<"test"<<n<<endl;
             if(n==0){break;}
             s=s+n%10;
             n=n/10;   

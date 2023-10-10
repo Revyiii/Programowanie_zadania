@@ -12,3 +12,4 @@
 
 % Edge styles
 \tikzstyle{arrow}=[thick, ->, >=stealth]
+\tikzstyle{con}=[-]

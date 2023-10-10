@@ -1,0 +1,28 @@
+import msvcrt as m
+import sys
+print('program do liczenina Å›redniaj z n liczb dwucyfrowych, dodatnich')
+while True:
+    n=int(input('podaj n:'))
+    sum=float(0)
+    e=int(0)
+    i=int(1)
+    while i <= n:
+        try:   
+            print('podaj',i,'liczbe:')
+            e=int(input())
+            if e<10 or e>=100: 
+                i=i-1
+                print('poza zakresem :(')    
+            else:sum=sum+e
+        except ValueError:
+            print('zła wartość')
+            i=i-1
+        i=i+1
+    sum=round(sum/n,2)
+    print('średnia',n,'liczb jest równa: ',sum)
+    
+    while True:
+        print('kontynować? T/N')
+        s=m.getche().upper()
+        if s==b'T':break
+        elif s==b'N':sys.exit(0)

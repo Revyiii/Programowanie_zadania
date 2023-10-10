@@ -19,14 +19,14 @@ int main()
         
     while(a!=0)
     {
-        
         i++;
         cin.clear();cin.sync();
         cout<<"podaj "<<i<<":";
         a=0;cin>>a;
         
         if(a==0){break;}
-        else if(cin.fail()||abs(a)<10||abs(a)>99){cout<<"podana wartość jest nie poprawna"<<endl;i--;}
+        else if(cin.fail()||abs(a)<10||abs(a)>99)
+		{cout<<"podana wartość jest nie poprawna"<<endl;i--;}
         else{if(a<min){min=a;}}
     }
     a=100;
