@@ -1,0 +1,72 @@
+\renewcommand{\thefigure}{1}
+\begin{figure}[H]
+  \centering  
+\begin{tikzpicture}[scale=0.7,transform shape,node distance=1.5cm]
+
+\node (start) [startstop] {Start};
+\node (in1) [io, below of=start] {saldo;c};
+\node (s1) [process, below of=in1] {c};
+
+\node (c1) [decision, below of=s1,yshift=-0.3cm] {'E'};
+\node (p1) [process, below of=c1, xshift=2cm,yshift=0.8cm] {saldo=saldo*e};
+\node (out1) [io, right of=p1, xshift=2.3cm, yshift=-1.5cm] {dis('U');dis('F');dis('P')};
+
+\node (c2) [decision, below of=c1,yshift=-0.5cm] {'U'};
+\node (p2) [process, below of=c2, xshift=2cm,yshift=0.8cm] {saldo=saldo*u};
+\node (out2) [io, right of=p2, xshift=2.3cm, yshift=-1.5cm] {dis('E');dis('F');dis('P')};
+
+\node (c3) [decision, below of=c2,yshift=-0.5cm] {'F'};
+\node (p3) [process, below of=c3, xshift=2cm,yshift=0.8cm] {saldo=saldo*f};
+\node (out3) [io, right of=p3, xshift=2.3cm, yshift=-1.5cm] {dis('U');dis('E');dis('P')};
+
+\node (c4) [decision, below of=c3,yshift=-0.5cm] {'P'};
+\node (p4) [process, below of=c4, xshift=2cm,yshift=0.8cm] {saldo=saldo*p};
+\node (out4) [io, right of=p4, xshift=2.3cm, yshift=-1.5cm] {dis('U');dis('F');dis('E')};
+
+\node (e1)[coordinate,below of=c1,xshift=4.5cm]{};
+\node (e2)[coordinate,below of=c2,xshift=4.5cm]{};
+\node (e3)[coordinate,below of=c3,xshift=4.5cm]{};
+\node (e4)[coordinate,below of=c4,xshift=4.5cm]{};
+\node (e5)[coordinate,below of=out1,yshift=0.6cm,xshift=3cm]{};
+\node (e6)[coordinate,below of=out2,yshift=0.6cm,xshift=3cm]{};
+\node (e7)[coordinate,below of=out3,yshift=0.6cm,xshift=3cm]{};
+\node (e8)[coordinate,below of=out4,yshift=0.6cm,xshift=3cm]{};
+
+\node (stop) [startstop, below of =c4,yshift=-2.5cm]{stop};
+
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (s1);
+\draw [arrow] (s1) -- (c1);
+\draw [arrow] (c1) -- (c2)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c2) -- (c3)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c3) -- (c4)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c1) -| (p1)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c2) -| (p2)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c3) -| (p3)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c4) -| (p4)node[pos=0.25,fill=white,inner sep=3]{Tak};
+
+\draw [thick] (p1) |- (e1);
+\draw [thick] (p2) |- (e2);
+\draw [thick] (p3) |- (e3);
+\draw [thick] (p4) |- (e4);
+
+\draw [arrow] (e1) -| (out1);
+\draw [arrow] (e2) -| (out2);
+\draw [arrow] (e3) -| (out3);
+\draw [arrow] (e4) -| (out4);
+
+\draw [thick] (out1) |- (e5);
+\draw [thick] (out2) |- (e6);
+\draw [thick] (out3) |- (e7);
+\draw [thick] (out4) |- (e8);
+
+\draw [thick] (e5) |- (e8);
+
+
+\draw [arrow] (e8) -| (stop);
+
+
+\end{tikzpicture}
+    \caption{2.1 flowchart}
+    \label{flow1}
+\end{figure}

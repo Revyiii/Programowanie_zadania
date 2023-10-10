@@ -1,0 +1,45 @@
+    \renewcommand{\thefigure}{11}
+\begin{figure}[H]
+    \centering 
+    %text width=1cm
+\begin{tikzpicture}[scale=0.9,transform shape]
+		\node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=process] (1) at (0, -1.5) {i=0;a=100;min=100;};
+		\node [style=decision] (2) at (0, -3.25) {a!=0};
+		\node [style=io] (3) at (2.25, -4.25) {a};
+		\node [style=process] (4) at (2.25, -5.5) {i++};
+		\node [style=decision] (5) at (2.25, -7) {a==0};
+		\node [style=decision] (6) at (0.75, -8.5) {a<min};
+		\node [style=process] (7) at (-0.5, -10) {a=min};
+		\node [style=decision] (8) at (-1.75, -5) {min=100;};
+		\node [style=io] (9) at (0, -6.25) {$\emptyset$};
+		\node [style=io] (10) at (-3.5, -6.25) {min};
+		\node [style=startstop] (11) at (-2, -8.25) {Stop};
+		\node [style=none] (12) at (-2, -7.25) {};
+		\node [style=none] (13) at (3.8, -7) {};
+		\node [style=none] (14) at (0, -2.25) {};
+
+        % node[pos=0.4,fill=white,inner sep=3]{nie};
+		% node[pos=0.25,fill=white,inner sep=3]{Tak};
+
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (2) -| (3)node[pos=0.25,fill=white,inner sep=3]{Tak};
+		\draw [style=arrow] (2) -| (8)node[pos=0.3,fill=white,inner sep=3]{nie};
+		\draw [style=arrow] (8) -| (10)node[pos=0.4,fill=white,inner sep=3]{nie};
+		\draw [style=arrow, in=135, out=-45] (8) -| (9)node[pos=0.6,fill=white,inner sep=3]{Tak};
+		\draw [style=arrow] (12.center) to (11);
+		\draw [style=con] (9) |- (12.center);
+		\draw [style=con] (10) |- (12.center);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=arrow] (4) to (5);
+		\draw [style=arrow] (6) -| (7)node[pos=0.7,fill=white,inner sep=3]{nie};
+		\draw [style=arrow] (5) -| (6)node[pos=0.4,fill=white,inner sep=3]{nie};
+		\draw [style=con] (5) -| (13.center)node[pos=0.24,fill=white,inner sep=3]{Tak};
+		\draw [style=con] (13.center) |- (14.center);
+		\draw [style=con] (6) -| (13.center)node[pos=0.1,fill=white,inner sep=3]{Tak};
+		\draw [style=con] (7) -| (13.center);
+\end{tikzpicture}
+\caption{2.11 flowchart}        
+    \label{flow11}
+\end{figure}

@@ -1,0 +1,16 @@
+\begin{minted}[framesep=1mm, baselinestretch=1.,linenos]{cpp}
+cout<<"program do sprawdzania sumy cyfr n"<<endl;     
+long long int n;
+int s;
+
+n=1;s=0;
+cout<<"podaj n:";
+cin.clear();cin.sync();cin>>n;
+while(true)
+{   
+    if(n==0){break;}
+    s=s+n%10;
+    n=n/10;   
+}
+cout<<"suma wszystki cyfro to:"<<s<<endl;  
+\end{minted}

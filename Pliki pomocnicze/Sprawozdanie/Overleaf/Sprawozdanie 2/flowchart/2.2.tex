@@ -1,0 +1,58 @@
+\renewcommand{\thefigure}{2}
+\begin{figure}[H]
+    \centering  
+\begin{tikzpicture}[scale=0.7,transform shape,node distance=1.5cm]
+
+\node (start) [startstop] {Start};
+\node (in1) [io, below of=start] {a,fig};
+\node (s1) [process, below of=in1] {fig};
+
+\node (c1) [decision, below of=s1,yshift=-0.3cm] {'1'};
+\node (out1) [io, right of=c1, xshift=1cm, yshift=-0.8cm] {obw=$4a$, p=$a^2$};
+
+\node (c2) [decision, below of=c1,yshift=-0.5cm] {'2'};
+\node (out2) [io, right of=c2, xshift=1cm, yshift=-0.8cm] {obw=$3a$, p=$\frac{a^2\sqrt{3}}{4}$};
+
+\node (c3) [decision, below of=c2,yshift=-0.5cm] {'3'};
+\node (out3) [io, right of=c3, xshift=1.4cm, yshift=-0.8cm] {obw=$5a$, p=$a^2\frac{\sqrt{25+10\sqrt{5}}}{4}$};
+
+\node (c4) [decision, below of=c3,yshift=-0.5cm] {'4'};
+\node (out4) [io, right of=c4, xshift=1cm, yshift=-0.8cm] {obw=$6a$, p=$6\frac{a^2\sqrt{3}}{4}$};
+
+\node (c5) [io, below of=c4, yshift=-0.3cm] {źle};
+
+\node (e1)[coordinate,below of=c1,xshift=5.5cm]{};
+\node (e2)[coordinate,below of=c2,xshift=5.5cm]{};
+\node (e3)[coordinate,below of=c3,xshift=5.5cm]{};
+\node (e4)[coordinate,below of=c4,xshift=5.5cm]{};
+\node (e5)[coordinate,below of=c5,yshift=0.9cm]{};
+
+\node (stop) [startstop, below of =c5,yshift=0cm]{stop};
+
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (s1);
+\draw [arrow] (s1) -- (c1);
+
+\draw [arrow] (c1) -- (c2)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c2) -- (c3)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c3) -- (c4)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c4) -- (c5)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c1) -| (out1)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c2) -| (out2)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c3) -| (out3)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c4) -| (out4)node[pos=0.25,fill=white,inner sep=3]{Tak};
+
+\draw [thick] (out1) |- (e1);
+\draw [thick] (out2) |- (e2);
+\draw [thick] (out3) |- (e3);
+\draw [thick] (out4) |- (e4);
+
+\draw [thick] (e1) |- (e4);
+\draw [thick] (out4) |- (e5);
+
+\draw [arrow] (c5) -- (stop);
+
+\end{tikzpicture}
+    \caption{2.2 flowchart}
+    \label{flow2}
+\end{figure}

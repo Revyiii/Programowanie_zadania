@@ -1,0 +1,34 @@
+\renewcommand{\thefigure}{7}
+\begin{figure}[H]
+    \centering 
+    %text width=1cm
+\begin{tikzpicture}[scale=0.9,transform shape]
+		\node [style=startstop] (0) at (0, 0.25) {Start};
+		\node [style=process] (1) at (0, -1.25) {d='N'};
+		\node [style=process] (2) at (0, -3) {2.6};
+		\node [style=io] (3) at (0, -4.75) {toupper(d)};
+		\node [style=decision,text width=1cm] (4) at (0, -6.75) {d='T'|| d='N'};
+		\node [style=decision] (5) at (1.5, -8.5) {d!='N'};
+		\node [style=startstop] (6) at (0, -9.75) {Stop};
+		\node [style=none] (7) at (0, -2) {};
+		\node [style=none] (8) at (2.75, -2) {};
+		\node [style=none] (9) at (-1.75, -3.75) {};
+		\node [style=none] (10) at (0, -3.75) {};
+
+        % node[pos=0.4,fill=white,inner sep=3]{Nie};
+		% node[pos=0.25,fill=white,inner sep=3]{Tak};
+
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (2) to (3);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=arrow] (4) -| (5)node[pos=0.7,fill=white,inner sep=3]{Tak};
+		\draw [style=arrow] (5) -| (6)node[pos=0.5,fill=white,inner sep=3]{Nie};
+		\draw [style=con] (5) -| (8.center)node[pos=0.55,fill=white,inner sep=3]{Tak};
+		\draw [style=con] (8.center) to (7.center);
+		\draw [style=con] (4) -| (9.center)node[pos=0.4,fill=white,inner sep=3]{nie};
+		\draw [style=con] (9.center) to (10.center);     
+\end{tikzpicture}
+\caption{2.7 flowchart}
+    \label{flow7}
+\end{figure}

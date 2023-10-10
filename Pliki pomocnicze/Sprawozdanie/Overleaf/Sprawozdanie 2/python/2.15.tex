@@ -1,0 +1,19 @@
+\begin{minted}[framesep=1mm, baselinestretch=1.,linenos]{python}
+import math
+print('sprawdzanie czy liczba jest pierwsza')
+i=int(2)
+n=int(1)
+odp='tak'
+while True:
+    try:
+        n=int(input('podaj a liczbe:'))
+        break   
+    except ValueError:print('zła wartość')
+
+while i<=math.sqrt(n):
+    if n%i==0:
+        odp='nie'
+        break
+    i=i+1
+print(odp)
+\end{minted}

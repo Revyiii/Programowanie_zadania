@@ -1,0 +1,19 @@
+\begin{minted}[framesep=1mm, baselinestretch=1.,linenos]{python}
+import math
+
+print('program do sprawdzania jaka jest suma cyfr n')
+s=int(0)
+n=int(1)
+while True:
+    try:
+        n=round(int(input('podaj a liczbe:')))
+        break   
+    except ValueError:print('zła wartość')
+
+while True:
+    if n==0:
+        break
+    s=s+n%10
+    n=round(n/10)
+print('Suma wszystkich cyfr to', s)
+\end{minted}

@@ -1,0 +1,16 @@
+\begin{minted}[framesep=1mm, baselinestretch=1.,linenos]{cpp}
+cout<<"program do liczenina Å›redniaj z\
+n liczb dwucyfrowych, dodatnich"<<endl;
+float sum=0;float e=0;
+cout<<"podaj n: ";int n=0;cin>>n;
+for(int i=1;i<=n;i++)
+{cin.clear();cin.sync();
+cout<<"podaj "<<i<<" liczbe: ";
+cin>>e;
+if (cin.fail()||e<10||e>=100)
+{cout<<"podana wartosc jest nie poprawna\
+sprubuj ponownie"<<endl;i--;e=0;}
+sum=sum+e;}
+cout<<setprecision(2)<<"srednia "<<n<<"\
+dwucyfrowych liczb jest rowna: "<<sum/n<<endl;
+\end{minted}

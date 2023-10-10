@@ -1,0 +1,28 @@
+\begin{minted}[framesep=1mm, baselinestretch=1.,linenos]{cpp}
+int e=4;int u=3;int f=5;int p=1;int saldo;
+int main() 
+char c;
+cout<<"ile masz pieniêdzy?:";
+cin>>saldo;
+cout<<"w jakiej walucie? \n EUR=E\n\
+USD=U\n CHF=F\n PLN=P";
+c=toupper(getch());
+switch (c)
+{case 'E':
+	saldo=saldo*e;
+	dis('U');dis('F');dis('P');
+	break; 
+case 'U':
+	saldo=saldo*u;
+	dis('E');dis('F');dis('P');
+	break; 
+case 'F':
+	saldo=saldo*f;
+	dis('U');dis('E');dis('P');
+	break; 
+case 'P':
+	saldo=saldo*p;
+	dis('U');dis('F');dis('E');
+	break; 
+}
+\end{minted}

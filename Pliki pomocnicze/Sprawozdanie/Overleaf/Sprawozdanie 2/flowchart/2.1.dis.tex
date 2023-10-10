@@ -1,0 +1,51 @@
+\renewcommand{\thefigure}{1.0}
+\begin{figure}[H]
+    \centering  
+\begin{tikzpicture}[scale=0.8,transform shape,node distance=1.5cm]
+
+\node (start) [startstop] {Start};
+\node (s1) [process, below of=start] {a};
+
+\node (c1) [decision, below of=s1,yshift=-0.3cm] {'E'};
+\node (out1) [io, right of=c1, xshift=0.5cm, yshift=-0.8cm] {saldo/e};
+
+\node (c2) [decision, below of=c1,yshift=-0.5cm] {'U'};
+\node (out2) [io, right of=c2, xshift=0.5cm, yshift=-0.8cm] {saldo/u};
+
+\node (c3) [decision, below of=c2,yshift=-0.5cm] {'F'};
+\node (out3) [io, right of=c3, xshift=0.5cm, yshift=-0.8cm] {saldo/f};
+
+\node (c4) [decision, below of=c3,yshift=-0.5cm] {'P'};
+\node (out4) [io, right of=c4, xshift=0.5cm, yshift=-0.8cm] {saldo/p};
+
+\node (e1)[coordinate,below of=c1,xshift=3.5cm]{};
+\node (e2)[coordinate,below of=c2,xshift=3.5cm]{};
+\node (e3)[coordinate,below of=c3,xshift=3.5cm]{};
+\node (e4)[coordinate,below of=c4,xshift=3.5cm]{};
+
+\node (stop) [startstop, below of =c4,yshift=-1cm]{stop};
+
+\draw [arrow] (start) -- (s1);
+
+\draw [arrow] (s1) -- (c1);
+\draw [arrow] (c1) -- (c2)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c2) -- (c3)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c3) -- (c4)node[pos=0.4,fill=white,inner sep=3]{nie};
+\draw [arrow] (c1) -| (out1)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c2) -| (out2)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c3) -| (out3)node[pos=0.25,fill=white,inner sep=3]{Tak};
+\draw [arrow] (c4) -| (out4)node[pos=0.25,fill=white,inner sep=3]{Tak};
+
+\draw [thick] (out1) |- (e1);
+\draw [thick] (out2) |- (e2);
+\draw [thick] (out3) |- (e3);
+\draw [thick] (out4) |- (e4);
+
+\draw [thick] (e1) |- (e4);
+
+\draw [arrow] (e4) -| (stop);
+
+\end{tikzpicture}
+    \caption{funcion dis() flowchart}
+    \label{flow1.2}
+\end{figure}

@@ -1,0 +1,35 @@
+\renewcommand{\thefigure}{4}
+\begin{figure}[H]
+    \centering 
+\begin{tikzpicture}[scale=0.7,transform shape]
+		\node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=io] (1) at (0, -1.5) {a,b,c};
+		\node [style=io] (2) at (0, -3) {a;b };
+		\node [style=process] (3) at (0, -4.5) {t=a\%c;a=a+(c*t-(a\%c+c)\%c);b=b-b\%c;};
+		\node [style=io] (4) at (0, -6) {(b-a)/c+1};
+		\node [style=process] (5) at (0, -7.5) {i=0};
+		\node [style=decision] (6) at (0, -9.25) {i<n};
+		\node [style=io] (7) at (1.25, -11.5) {a+c*i ", "};
+		\node [style=startstop] (8) at (-1.75, -11) {Stop};
+		\node [style=none] (9) at (3.25, -12.25) {};
+		\node [style=none] (10) at (0, -8.25) {};
+		\node [style=process] (11) at (1.25, -10.25) {i++;};
+
+        % node[pos=0.4,fill=white,inner sep=3]{nie};
+		% node[pos=0.25,fill=white,inner sep=3]{Tak};
+
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (2) to (3);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=arrow] (4) to (5);
+		\draw [style=arrow] (5) to (6);
+		\draw [style=arrow] (6) -| (11)node[pos=0.4,fill=white,inner sep=3]{Tak};
+		\draw [style=con] (7) |- (9.center);
+		\draw [style=con] (9.center) |- (10.center);
+		\draw [style=arrow] (6) -| (8)node[pos=0.25,fill=white,inner sep=3]{nie};
+        \draw [style=arrow] (11) to (7);
+\end{tikzpicture}
+\caption{2.4 flowchart}
+    \label{flow4}
+\end{figure}

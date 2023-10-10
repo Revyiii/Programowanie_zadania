@@ -1,0 +1,18 @@
+\begin{minted}[framesep=1mm, baselinestretch=1.,linenos]{cpp}
+cout<<"program do nwd i nww"<<endl;    
+int i;char l='a';int g[2]={0,0};i=0;
+while(i<2)
+{
+    cout<<"podaj "<<l<<": ";
+    cin.clear();cin.sync();
+    g[i]=0;cin>>g[i];i++;l++;
+    if(cin.fail())
+    {cout<<endl<<"podana wartość jest\
+    nie poprawna"<<endl;i--;l--;}
+}
+int a=g[0];int b=g[1];
+int c;int x=a;int y=b;
+do{c=a%b;a=b;b=c;}while (b!=0);
+x=(x*y)/a;    
+cout<<"nwd:"<<a<<" nww:"<<x<<endl;
+\end{minted}

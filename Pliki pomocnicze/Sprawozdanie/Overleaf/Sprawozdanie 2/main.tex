@@ -1,0 +1,479 @@
+\documentclass[a4paper,twoside,7pt]{book}
+
+\usepackage{latexsym}%symbole
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}%alternatywne sekcje tytułowe
+\usepackage{marvosym}%wiecej symboli
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}%wyświetlanie kodu
+\usepackage{enumitem}%zmienianie layoutu
+\usepackage[hidelinks]{hyperref}%?!?!?!
+\usepackage{fancyhdr}%heders and footers
+\usepackage[english]{babel}%znaki lokalne?
+\usepackage{tabularx}% tabeli 
+\usepackage{multicol}% wiele column
+\usepackage{minted}% syntax hilighting
+\input{glyphtounicode}
+
+\usepackage{baskervillef}
+\usepackage[T1]{fontenc}
+%flow chatry
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{pgf}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot[OR]{\thepage}
+\fancyfoot[EL]{\thepage}
+\setlength{\footskip}{5pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in,inner=2.6cm]{geometry}
+
+\urlstyle{same}
+
+%\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \it\vspace{3pt}
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+\pdfgentounicode=1
+%flowchatrts shapes
+
+\definecolor{1}{RGB}{128, 147, 241}
+\definecolor{2}{RGB}{114, 221, 247}
+\definecolor{3}{RGB}{179, 136, 235}
+\definecolor{4}{RGB}{247, 174, 248}
+
+\tikzstyle{startstop} = [ellipse, rounded corners, minimum width=2cm, minimum height=1cm,text centered, draw=black,thick,fill=4]
+\tikzstyle{io} = [trapezium,trapezium stretches=true,trapezium left angle=70,trapezium right angle=110,thick,minimum width=1cm,minimum height=0.85cm, text centered, draw=black,fill=1]
+\tikzstyle{process} = [rectangle,minimum width=1cm,minimum height=0.85cm,text centered,draw=black,thick,fill=2]
+\tikzstyle{decision} = [diamond,minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=3,thick]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{none} = [coordinate]
+\tikzstyle{con} = [thick]
+
+\begin{document}
+\raggedcolumns
+\begin{center}
+    \begin{multicols}{2}
+    \begin{flushleft}
+    \large{Tymon Łazowy 3D nr.09} \\
+    \end{flushleft}
+    
+    \begin{flushright}
+    \large{29.09.2023}\\
+    \end{flushright}
+    \end{multicols}
+    {\LARGE Sprawozdanie z informatyki nr 2} \\ \vspace{0pt}
+\end{center}
+
+\section{Treść zadanie}
+\begin{center}
+\large{Programownie część Druga}\\
+
+\begin{itemize}[ label={}]
+    \normalsize{\item{
+    {2.1 - Program przeliczający waluty}{} \\
+    {2.2 - Program obliczający pola i obwody 4 figur geometrycznych foremnych}{} \\
+    {2.3 - Program sprawdzający ile jest cyfr w liczbie całkowitej z przedziału <0,miliard> \\
+    {2.4 - Liczby podzielne z przedziału}{} \\
+    {2.5 - Średnia arytmetyczna z n liczb podanych przez użytkownika}{} \\
+    {2.6 - Wyświetlenie i zliczenie wszystkich naturalnych liczb trzycyfrowych w których suma
+cyfr wynosi n}{} \\
+    {2.7 - Przerób program 2.6 tak, aby działał w pętli}{} \\
+    {2.8 - Średnia arytmetyczna z n liczb dwucyfrowych, dodatnich podanych przez użytkownika}{} \\
+    {2.9 - Program obliczający NWD i NWW 2 liczb a i b}{} \\
+    {2.10 - Tabliczka mnożenia od-do}{} \\
+    {2.11 - Szukanie minimalnej liczby z ciągu liczb dwucyfrowych podawanych przez użytkownika}{}\\
+    {2.12 - Program obliczający NWD z 2 liczb(odejmowanie)}{}\\
+    {2.13 - Obliczanie n! dla liczby naturalnej n>=0 – algorytm iteracyjny}{}\\
+    {2.14 - Obliczanie wartości n-tego wyrazu ciągu Fibonacciego (n>=1) – algorytm iteracyjny}{}\\
+    {2.15 - Sprawdzanie czy liczba n (n>0) jest liczbą pierwszą}{}\\
+    {2.16 -  Suma cyfr liczby całkowitej n (n>0)}{}\\
+}}}
+\end{itemize}
+
+\end{center}
+%---------------------PROPONOWANE ROZWIĄZANIA-------------
+
+\section{Proponowane rozwiązania}
+\subsection*{2.1}
+%----------------2.1------------------
+\subsection*{dis()}
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.1.dis}
+    \end{flushleft}
+D: \\
+Saldo, kwota pieniedzy $\in$ $\mathbb{R}$\\
+c, waluta $\in$ \{u,f,p,e\}\\
+W: strumień, saldo w innych walutach $\in$ $\mathbb{R}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.1.dis}
+    \end{flushright}
+\end{multicols}
+\newpage
+\subsection*{Main}
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.1}
+    \end{flushleft}
+D: \\
+Saldo, kwota pieniedzy $\in$ $\mathbb{R}$\\
+c, waluta $\in$ \{u,f,p,e\}\\
+W: strumień, saldo w innych walutach $\in$ $\mathbb{R}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.1.tex}
+    \end{flushright}
+\end{multicols}
+
+\subsection*{2.2}
+%----------------2.2------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.2}
+    \end{flushleft}
+D: a, długość boku >= 0 $\in$ $\mathbb{R}$\\
+fig, typ figury $\in$ \{1;2;3;4\}\\
+W: p, pole >= 0 $\in$ $\mathbb{R}$\\
+obw, obwód >=0 $\in$ $\mathbb{R}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.2.tex}
+    \end{flushright}    
+\end{multicols}
+\newpage
+
+\subsection*{2.3}
+%----------------2.3------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.3}
+    \end{flushleft}
+D: num, ciąg cyfra $\in$ $\mathbb{N}_0$\\
+W: l, liczba cyfr $\in$ $\mathbb{N}_0$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.3.tex}
+    \end{flushright}    
+\end{multicols}
+\subsection*{2.4}
+%----------------2.4------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.4}
+    \end{flushleft}
+D:a, dolny limit zakresu $\in$ $\mathbb{Z}$\\
+b, górny limit zakresu >a $\in$ $\mathbb{Z}$\\
+c, dzielnik $\in$ $\mathbb{Z}$\\
+W: strumień, liczby z przedziłu podzielne przez c $\in$ $\mathbb{Z}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.4.tex}
+    \end{flushright}    
+\end{multicols}
+
+\subsection*{2.5}
+%----------------2.5------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.5}
+    \end{flushleft}
+D: \\
+n, ilość liczb $\in$ $\mathbb{N}$\\
+e, n'ta liczba ciągu $\in$ $\mathbb{R}$\\
+W: strumień, średnia ciągu $\in$ $\mathbb{R}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.5.tex}
+    \end{flushright}    
+\end{multicols}
+
+\subsection*{2.6}
+%----------------2.6------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.6}
+    \end{flushleft}
+D:n, cyfra $\in$ \{1,2,3...27\}\\
+W:strumień, liczby spełniające wrunek\\
+i ich ilość $\in$ \{100,101,102...999\}
+\begin{flushright}
+
+
+    \input{Rozwiozwiozania/2.6.tex}
+\end{flushright} 
+\end{multicols}
+
+\subsection*{2.7}
+%----------------2.7------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.7}
+    \end{flushleft}
+D:n, cyfra $\in$ \{1,2,3...27\}\\
+W:strumień, liczby spełniające wrunek\\
+i ich ilość $\in$ \{100,101,102...999\}
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.7.tex}
+    \end{flushright}    
+\end{multicols}
+
+\subsection*{2.8}
+%----------------2.8------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.8}
+    \end{flushleft}
+D: \\
+n, ilość liczb $\in$ $\mathbb{N}$\\
+e, n'ta liczba ciągu $\in$ \{10,11,12...99\}\\
+W: strumień, średnia ciągu $\in$ $\mathbb{R}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.8.tex}
+    \end{flushright}    
+\end{multicols}
+
+\subsection*{2.9}
+%----------------2.9------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.9}
+    \end{flushleft}
+D:a i b, liczby do nww i nwd $\in$ $\mathbb{N}$\\
+W:a i x, nww i nwd $\in$ $\mathbb{N}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.9.tex}
+    \end{flushright}    
+\end{multicols}
+
+\subsection*{2.10}
+%----------------2.10------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.10}
+    \end{flushleft}
+D: a[], przedział tabliczki mnożenia $\in$ \{-15,-14,-13...15\}\\
+W: strumień, tabliczka mnożenia od a[0] do a[1] $\in$ \{-225,-224,-223...225\}
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.10.tex}
+    \end{flushright}    
+\end{multicols}
+\newpage
+
+\subsection*{2.11}
+%----------------2.11------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.11}
+    \end{flushleft}
+D: a, n'ta liczba ciągu $\in$ $\mathbb{R}$\\
+W: min, najmniejszu element ciągu $\in$ $\mathbb{R}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.11.tex}
+    \end{flushright}    
+\end{multicols}
+
+\subsection*{2.12}
+%----------------2.12------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.12}
+    \end{flushleft}
+D:a i b, liczby do nww i nwd $\in$ $\mathbb{N}$\\
+W:a i x, nww i nwd $\in$ $\mathbb{N}$
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.12.tex}
+    \end{flushright}    
+\end{multicols}
+\newpage
+\subsection*{2.13}
+%----------------2.13------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+  \input{flowchart/2.13}
+D: n, liczba do silni $\in$ $\mathbb{N}$\\
+W: s, silnia n $\in$ $\mathbb{N}$
+\input{flowchart/2.13.op.tex}
+    \end{flushleft}
+
+    \begin{flushright}
+    \input{Rozwiozwiozania/2.13.tex}
+    \end{flushright}    
+\end{multicols}
+
+\subsection*{2.14}
+%----------------2.14------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+\input{flowchart/2.14}
+D: n, index liczby fibonaciego $\in$ $\mathbb{N}$\\
+W: s, n'ta liczba ciągu fibonaciego $\in$ $\mathbb{N}$
+\end{flushleft}
+\begin{minipage}{3cm}
+%\vspace{1cm}
+\input{flowchart/2.14.op}   
+\end{minipage}
+\begin{flushright}
+\end{flushright}    
+\end{multicols}
+\hspace{3cm}
+\begin{minipage}{3cm}
+\input{Rozwiozwiozania/2.14.tex}  
+\end{minipage}
+
+    
+
+
+\newpage
+\subsection*{2.15}
+%----------------2.15------------------
+\begin{multicols}{2}
+  \begin{flushleft}
+
+
+D: n, liczba do sprawdzenia $\in$ $\mathbb{N}$\\
+W: odp, czy liczba jest pierwsza $\in$ $\{"tak";"nie"\}$
+
+\hspace{0.4cm}
+\begin{minipage}{3cm}
+\vspace{0.6cm}
+\small
+\input{flowchart/2.15.op}
+\normalsize
+\input{Rozwiozwiozania/2.15.tex}
+\end{minipage}
+
+    \end{flushleft}
+
+    \begin{flushright}
+    \input{flowchart/2.15}
+   
+    \end{flushright}    
+\end{multicols}
+\subsection*{2.16}
+
+%----------------2.16------------------
+\normalsize
+\begin{multicols}{2}
+  \begin{flushleft}
+D: n, liczba $\in$ $\mathbb{N}_0$\\
+W: s, ilość cyfr w n $\in$ $\mathbb{N}_0$
+
+\hspace{0.4cm}
+\begin{minipage}{3cm}
+\vspace{0.6cm}
+\input{flowchart/2.16.op}
+\input{Rozwiozwiozania/2.16.tex}
+\end{minipage}
+
+
+    \end{flushleft}
+
+    \begin{flushright}
+    
+    \input{flowchart/2.16}
+    \end{flushright}    
+\end{multicols}
+\newpage
+%-------------alternatywne rozwiązamnia
+\section{Alternatywne rozwiązania}
+\begin{center}
+\large \textbf{python}
+\end{center}
+\small
+\begin{multicols}{2}
+\begin{flushleft}
+    \hspace{1cm}
+    \begin{minipage}{3cm}
+        \subsection*{2.1}
+        \input{python/2.1}    
+
+        \subsection*{2.2}
+        \input{python/2.2}
+
+        \subsection*{2.3}
+        \input{python/2.3}   
+        \end{minipage}  
+\end{flushleft}
+\subsection*{2.4}
+\input{python/2.4}
+\subsection*{2.5}
+\input{python/2.5}
+\vspace{7.05cm}
+\subsection*{2.6}
+\input{python/2.6}
+\end{multicols}
+\newpage
+
+\begin{multicols}{2}
+\begin{flushleft}
+    \hspace{1cm}
+    \begin{minipage}{3cm}
+        \subsection*{2.7}
+        \input{python/2.7}    
+
+        \subsection*{2.8}
+        \input{python/2.8}
+        
+        \subsection*{2.9}
+        \input{python/2.9}
+ 
+        \end{minipage}  
+\end{flushleft}
+\begin{minipage}{3cm}
+\vspace{10cm}
+\subsection*{2.10}
+\input{python/2.10}
+\end{minipage}
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+\begin{flushleft}
+    \hspace{1cm}
+    \begin{minipage}{3cm}
+        \subsection*{2.11}
+        \input{python/2.11}    
+
+        \subsection*{2.12}
+        \input{python/2.12}
+        
+        \subsection*{2.13}
+        \input{python/2.13}
+ 
+        \end{minipage}  
+\end{flushleft}
+\begin{minipage}{3cm}
+\vspace{10.81cm}
+\subsection*{2.14}
+\input{python/2.14}
+\end{minipage}
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+\hspace{0.4cm}
+\begin{minipage}{3cm}
+\subsection*{2.15}
+\input{python/2.15}  
+\end{minipage}
+
+\subsection*{2.16}
+\input{python/2.16}   
+\end{multicols}
+
+
+
+
+%--------------Programy użyte----------
+\section{Programy użyte do wykonoania zadań}  
+\LaTeX, tikzit, firefox, overleaf, dev c++, c++, python, visual studio code, notepad++, git, github, Sumatra PDF, Total comander  
+\section{Wnioski i uwagi} 
+\begin{center}
+ \large{Zadanie mi się bardzo podobało i nie mam żadnych uwag.}   
+\end{center}
+ 
+\end{document}

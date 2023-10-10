@@ -1,0 +1,27 @@
+\begin{minted}[framesep=1mm, baselinestretch=1.,linenos]{python}
+print("program do szukania minimalne liczby z ciągu liczb dwu cyfrowych")
+print("aby zakończyć podawanie ciągu podaj liczbę 0")
+i = 0
+a=1
+min_val = 100
+while a != 0:
+    
+    i += 1
+    while True:
+        try:
+            a=int(input('podaj liczbe:'))
+            if abs(a) > 10 and abs(a) < 99:break
+            if a==0:break   
+            print("podana wartość jest nie poprawna")
+        except ValueError:
+            print('zła wartość')
+            i=i-1
+    if a == 0:
+        break
+    elif a < min_val: min_val=a
+print("minimalną liczbą z ciągu:")
+if min_val == 100:
+    print("najmniejsza liczba ciągu należy do zbioru pustego")
+else:
+    print("jest: ", min_val)
+\end{minted}

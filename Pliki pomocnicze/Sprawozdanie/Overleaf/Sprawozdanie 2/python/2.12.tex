@@ -1,0 +1,25 @@
+\begin{minted}[framesep=1mm, baselinestretch=1.,linenos]{python}
+print('program do nwd i nww')
+a=int(0)
+b=int(0)
+i=int(1)
+while True:
+    try:
+        a=int(input('podaj a liczbe:'))
+        break   
+    except ValueError:print('zła wartość')
+while True:
+    try:
+        b=int(input('podaj b liczbe:'))
+        break   
+    except ValueError:print('zła wartość')
+
+x=a
+y=b
+while a!=b:
+    if a>b:
+        a=a-b
+    else :b=b-a
+x=int((x*y)/a)
+print("nwd:", a, "nww:", x)
+\end{minted}

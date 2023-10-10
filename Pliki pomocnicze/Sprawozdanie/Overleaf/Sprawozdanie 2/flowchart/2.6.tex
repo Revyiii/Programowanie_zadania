@@ -1,0 +1,57 @@
+\renewcommand{\thefigure}{6}
+\begin{figure}[H]
+    \centering 
+\begin{tikzpicture}[scale=0.7,transform shape]
+		\node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=process] (1) at (0, -1.5) {n};
+		\node [style=process] (2) at (0, -3) {a=1;sum};
+		\node [style=decision] (3) at (0, -5) {a<10};
+		\node [style=process] (4) at (1.75, -6.25) {a++;b=0;};
+		\node [style=decision] (5) at (1.75, -9) {b<10};
+		\node [style=process] (6) at (3.75, -10.5) {b++;c=0;};
+		\node [style=decision] (7) at (3.75, -12.5) {c<10};
+		\node [style=process] (8) at (5.25, -13.5) {c++;};
+		\node [style=decision] (9) at (5.25, -15.75) {a+b+c=n};
+		\node [style=io] (10) at (7.25, -17.5) {a*100+b+10+c};
+		\node [style=process] (11) at (7.25, -19) {sum++};
+		\node [style=io] (12) at (-1.5, -6) {n};
+		\node [style=none] (13) at (9, -19.75) {};
+		\node [style=none] (14) at (3.75, -11.25) {};
+		\node [style=none] (15) at (0.5, -8.75) {};
+		\node [style=none] (16) at (0, -3.75) {};
+		\node [style=none] (17) at (0.5, -9.25) {};
+		\node [style=none] (18) at (-3, -9) {};
+		\node [style=none] (19) at (3.25, -19.75) {};
+		\node [style=none] (20) at (7.25, -19.75) {};
+		\node [style=none] (21) at (1.75, -7.75) {};
+		\node [style=startstop] (22) at (-1.5, -7.5) {stop};
+
+        % node[pos=0.4,fill=white,inner sep=3]{nie};
+		% node[pos=0.25,fill=white,inner sep=3]{Tak};
+
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (2) to (3);
+		\draw [style=arrow] (3) -| (12)node[pos=0.4,fill=white,inner sep=3]{nie};
+		\draw [style=arrow] (3) -| (4)node[pos=0.25,fill=white,inner sep=3]{Tak};
+		\draw [style=arrow] (4) to (5);
+		\draw [style=arrow] (5) -| (6)node[pos=0.25,fill=white,inner sep=3]{Tak};
+		\draw [style=arrow] (6) to (7);
+		\draw [style=arrow] (7) -| (8)node[pos=0.4,fill=white,inner sep=3]{Tak};
+		\draw [style=arrow, in=90, out=-90] (8) to (9);
+		\draw [style=arrow] (9) -| (10)node[pos=0.25,fill=white,inner sep=3]{Tak};
+		\draw [style=arrow] (10) to (11);
+		\draw [style=con](11) |- (13.center);
+		\draw [style=con](13.center) |- (14.center);
+		\draw [style=con](7) -| (17.center)node[pos=0.4,fill=white,inner sep=3]{nie};
+        \draw [style=con, bend left=90, looseness=2.00] (17.center) to (15.center);
+		\draw [style=con](5) -| (18.center)node[pos=0.2,fill=white,inner sep=3]{nie};
+		\draw [style=con](18.center) |- (16.center);
+		\draw [style=con](9) -| (19.center)node[pos=0.25,fill=white,inner sep=3]{nie};
+		\draw [style=con](19.center) |- (20.center);
+        \draw [style=con](15.center) |- (21.center);
+        \draw [style=arrow] (12) to (22);
+\end{tikzpicture}
+\caption{2.6 flowchart}
+    \label{flow6}
+\end{figure}

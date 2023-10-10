@@ -1,0 +1,30 @@
+\renewcommand{\thefigure}{16}
+\begin{figure}[H]
+    \centering 
+    %text width=1cm
+\begin{tikzpicture}
+	    \node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=process] (1) at (0, -1.5) {n=1;s=0};
+		\node [style=io] (2) at (0, -3) {n};
+		\node [style=decision] (3) at (0, -5) {n==0};
+		\node [style=io] (4) at (1.25, -6) {s};
+		\node [style=startstop] (5) at (1.25, -7.5) {Stop};
+		\node [style=process,text width=1.5cm] (6) at (-1.5, -6.25) {s=s+n\%10; n=n/10};
+		\node [style=none] (7) at (-2.75, -7.5) {};
+		\node [style=none] (8) at (0, -3.75) {};
+
+        % node[pos=0.4,fill=white,inner sep=3]{nie};
+		% node[pos=0.25,fill=white,inner sep=3]{Tak};
+
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (2) to (3);
+		\draw [style=arrow] (3) -| (4)node[pos=0.5,fill=white,inner sep=3]{Tak};
+		\draw [style=arrow] (4) to (5);
+		\draw [style=arrow] (3) -| (6)node[pos=0.4,fill=white,inner sep=3]{nie};
+		\draw [style=con] (6) |- (7.center);
+		\draw [style=con] (7.center) |- (8.center);
+\end{tikzpicture}
+\caption{2.16 flowchart}
+    \label{flow16}
+\end{figure}
