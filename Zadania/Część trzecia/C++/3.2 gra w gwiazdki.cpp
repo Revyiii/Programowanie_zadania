@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include <windows.h>
+#include <string.h>
 
 using namespace std;
 
@@ -51,13 +52,20 @@ void clearLine(int y)
     }
 }
 
-int get(int n){
+int los(int x)
+{
+	int a = 1+rand()%(x);
+	return a;
+}
+
+int get(int n,int max){
 int a;
 while(true){
-cout<<"gracz nr."<<n<<" podaj liczbe calkowita od 1 do 50:";
+//clearLine(gety());
+cout<<"gracz nr."<<n<<" podaj liczbe calkowita od 1 do "<<max<<":";
 cin.clear();cin.sync();cin>>a;
-if(cin.fail()||a>50||a<1){clearLine(gety()-1);gotoxy(0,gety());cout<<"podana wartosc jest zla spruboj ponownie ";}
-else{gotoxy(0,gety()-1);cout<<"gracz nr."<<n<<" podaj liczbe calkowita od 1 do 50:##"<<endl;return a;}
+if(cin.fail()||a>max||a<1){clearLine(gety()-1);gotoxy(0,gety());cout<<"podana wartosc jest zla spruboj ponownie ";}
+else{clearLine(gety()-1);gotoxy(0,gety());cout<<"gracz nr."<<n<<" podaj liczbe calkowita od 1 do 50:##"<<endl;return a;}
 }
 }
 
@@ -65,10 +73,10 @@ void komentarz(int x,int y, int n){
     gotoxy(x,y);
     switch (n)
     {
-    case 0:cout<<"wygral!!!"<<endl;break;
-    case 1:cout<<"przegral podal zamalo"<<endl;break;
-    case 2:cout<<"przegral podal za duzo"<<endl;break;
-    case 3:cout<<"remis"<<endl;break;
+    case 0:cout<<"jestes super!"<<endl;break;
+    case 1:cout<<"smielej!"<<endl;break;
+    case 2:cout<<"nie przesadaj!"<<endl;break;
+    case 3:cout<<"ojej!"<<endl;break;
     default:cout<<"cos poszło nie tak"<<endl;break;
     }
 }
@@ -86,13 +94,23 @@ void sprawdz(int k,int g1,int g2, int &o1, int &o2)
 {
 bool a=floor(g1/k);
 bool b=floor(g2/k);
-if (a+b==2){o1=3;o2=3;}
+if (a+b==2){o1=2;o2=2;}
 else if(a==1){o1=2;o2=0;}
 else if(b==1){o1=0;o2=2;}
 else if(g1>g2){o1=0;o2=1;}
 else if(g1<g2){o1=1;o2=0;}
 else if(g1==g2){o1=3;o2=3;}
 else{cout<<"coś poszło nie tak"<<endl;}
+}
+
+string kto_wygral(int &o1,int &o2)
+{
+	string wniosek;
+	if(o2==0){wniosek="gracz 2";}
+	else if(o1==0){wniosek="gracz 1";}
+	else if(o1==3){wniosek="remis";}
+	else{wniosek="nikt";}		
+	return wniosek;
 }
 
 int main(){
@@ -107,9 +125,9 @@ int main(){
     int k;
     while(true)
     {
-        g1=get(1);
-        g2=get(2);
-        k=1+rand()%(50);
+        g1=get(1,50);
+        g2=get(2,50);
+        k=los(50);
         cout<<"k:";gwiazdki(4,gety(),k);
         cout<<endl<<"P1:";gwiazdki(4,gety(),g1);
         cout<<endl<<"P2:";gwiazdki(4,gety(),g2);
@@ -119,8 +137,10 @@ int main(){
         gotoxy(0,gety()+1);
         cout<<"gracz 1 ";komentarz(8,gety(),o1);
         cout<<"gracz 2 ";komentarz(8,gety(),o2);
-        if(o1==0){w1++;}
+        cout<<"Wygral "<<kto_wygral(o1,o2)<<endl;
+		if(o1==0){w1++;}
         else if(o2==0){w2++;}
+        
 
     cout<<"jeszcze raz? T/N: ";
     do{cin.clear();cin.sync();cin>>d;d=toupper(d);
