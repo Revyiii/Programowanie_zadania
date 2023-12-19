@@ -78,10 +78,7 @@ def Fibonacci(r):
 #main
 print("Witam w zadaniu 3.3")
 while True:
-    print("Opcje: \n1.Silnia\n2.NWD\n3.Fibonacci")
-    w=get(2)
-    print("Opcje: \n1.Rekurencyjnie \n2.Iteracyjnie")
-    r=get(3)
+ 
     if(w==1):print(f"{silnia(r)}")
     elif(w==2):print(f"{NWD(r)}")
     elif(w==3):print(f"{Fibonacci(r)}") 
