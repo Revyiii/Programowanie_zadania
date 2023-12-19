@@ -6,11 +6,13 @@ using namespace std;
 void RL(float a,float b)
 {	
  if(a==0){
- if(b==0){cout<<"R�wnanie to�samo��owe"<<endl;}
- else{cout<<"r�wnanie sprzeczne"<< endl;}}
- else{
+    if(b==0){cout<<"R�wnanie to�samo��owe"<<endl;}
+    else{cout<<"r�wnanie sprzeczne"<< endl;}
+}
+else{
  if(b==0){cout<<"x jest r�wny:0"<<endl; }
- else{a=b/a;cout<<"x jest r�wny: "<<a<<endl;}}
+ else{a=b/a;cout<<"x jest r�wny: "<<a<<endl;}
+}
 }
 void RK(float a, float b, float c)
 {
@@ -18,14 +20,16 @@ float delta=b*b-(4.0*a*c);
 
 if(delta==0)
 {
-a=((-b)/(2*a));
-cout<<"x jest r�wny: "<< a <<endl;
-}else{
-if(delta>0)
-{cout<<"x1 jest r�wny: "<< ((-b-sqrt(delta))/(2*a))<<endl;
-cout<<"x2 jest r�wny: "<<((-b+sqrt(delta))/(2*a))<<endl;
-}else
-{cout<<"brak rozwi�z�"<<endl;}}
+    a=((-b)/(2*a));
+    cout<<"x jest r�wny: "<< a <<endl;
+}
+else{
+    if(delta>0)
+    {
+        cout<<"x1 jest r�wny: "<< ((-b-sqrt(delta))/(2*a))<<endl;
+        cout<<"x2 jest r�wny: "<<((-b+sqrt(delta))/(2*a))<<endl;
+    }
+    else{cout<<"brak rozwi�z�"<<endl;}}
 }
 
 int main()
@@ -34,7 +38,7 @@ int main()
     char d;    
     int i; 
     char l;
-    int x[10];
+    int x[4];
     while(true)
     {
     l='a';

@@ -4,6 +4,17 @@
 #include <string.h>
 
 using namespace std;
+int input(char n)
+{
+	int a; 
+	while(true)
+	{
+		cout<<endl<<"podaj "<<n<<":";
+		cin.clear();cin.sync();cin>>a;
+		if(cin.good()){return a;}
+	}
+}
+
 int rekurnecja1(int n)
 		{
 			if (n==0){return 1;}
@@ -12,42 +23,73 @@ int rekurnecja1(int n)
 		
 int rekurnecja2(int a,int b)
 		{
-			if (n==0){return 1;}
+			if (b==0){return a;}
 			else return rekurnecja2(b,a%b);
 		}
 		
 int rekurnecja3(int n)
 		{
 			if (n==1 || n==2){return 1;}
-			else return rekurnecja3(n-1)+rekurnecja3(n+1);
+			else return rekurnecja3(n-1)+rekurnecja3(n-2);
 		}
 
-int silnia (int r){
-	int n;
-	while(true)
+long long silnia (int r){
+	long long n=input('n');	
+	cout<<"sinia:";
+	if (r==1){n=rekurnecja1(n);return n;}			
+	if(r==2)
 	{
-		cout<<endl<<"podaj n:";
-		cin.clear();cin.sync();cin>>n;
-		if(cin.good()){break;}
-	}
-	if (r==1){return 1;}		
-		n=rekurnecja1(n);	
+		int i;long long s;
+		i=1;s=1;
+		while(i<=n){s=s*i;i++;}
+		return s;
+	}	
 	}
 	
-int NWD (int r){}
-int Fibonacci (int r){}
-	
+int NWD (int r){
+		
+	int a=input('a');
+	int b=input('b');
+	cout<<"nwd:";
+	if (r==1){a=rekurnecja2(a,b);}			
+	if(r==2)
+	{
+		int c;
+		do
+		{
+			c=a%b;a=b;b=c;
+		}while (b!=0);
+	}	
+	return a;
+	}
+
+int Fibonacci(int r)
+{
+	int n=input('n');	
+	cout<<"Fibonacci:";
+	if (r==1){n=rekurnecja3(n);return n;}			
+	if(r==2)
+	{
+		int i = 0;
+		double a=0;double b=1;double c=0;
+		while (n>i)
+		{c=a+b;a=b;b=c;i++;}
+		return a; 
+	}	
+}
+
 int main(){
-    cout<<endl<<"Witam w zadaniu 3.3"<<endl;//fancy intro maybe?
+    cout<<endl<<"Witam w zadaniu 3.3"<<endl;
     char d;
-	    
-	    
-    
+
     while(true)
     {
     	int w;
     	int r;
-    	cout<<"Opcje: \n1.Silnia\n2.NWD\n3.Fibonacci";
+    	// int t=input('t');
+		// cout<<t<<" Test";
+		
+		cout<<"Opcje: \n1.Silnia\n2.NWD\n3.Fibonacci";
     	
 		while(true)
 		{
@@ -56,7 +98,7 @@ int main(){
 			if(cin.good() && w>=1 && w<=3){break;}
 		}
 		
-		cout<<"Opcje: \n1.Iteracyjnie \n2.Rekurencyjnie";
+		cout<<"Opcje: \n1.Rekurencyjnie \n2.Iteracyjnie";
     	
 		while(true)
 		{
@@ -65,10 +107,10 @@ int main(){
 			if(cin.good() && r>=1 && r<=2){break;}
 		}
 		
-		if(w==1){cout<<"sinia:"<<silnia(r)<<endl;}
-		else if(w==2){cout<<"nwd:"<<NWD(r)<<endl;}
-		else if(w==3){cout<<"Fibonacci:"<<Fibonacci(r)<<endl;}
-		else{cout<<"coœ posz³o nie tak"<<endl;}		
+		if(w==1){cout<<silnia(r)<<endl;}
+		else if(w==2){cout<<NWD(r)<<endl;}
+		else if(w==3){cout<<Fibonacci(r)<<endl;}
+		else{cout<<"coï¿½ poszï¿½o nie tak"<<endl;}		
     	
 		
     cout<<"jeszcze raz? T/N: ";
