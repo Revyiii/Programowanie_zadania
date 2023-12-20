@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=startstop] (0) at (0, 0) {Start};
+		\node [style=process] (1) at (0, -1.5) {x[4],l='a',i};
+		\node [style=decision] (2) at (0, -4) {i<size(x)};
+		\node [style=io] (3) at (1.5, -5.5) {x[i]};
+		\node [style=process] (4) at (1.5, -6.75) {i++};
+		\node [style=none] (5) at (2.5, -7.75) {};
+		\node [style=none] (6) at (0, -2.5) {};
+		\node [style=process] (7) at (-1.75, -5.5) {x[2]=x[2]-x[3]};
+		\node [style=decision] (8) at (-1.75, -7.5) {x[0]=0};
+		\node [style=process] (9) at (0, -8.75) {RL(x[1],x[2])};
+		\node [style=process] (10) at (-3.75, -8.75) {RK(x[0],x[1],x[2])};
+		\node [style=startstop] (11) at (-1.75, -10.75) {Stop};
+		\node [style=none] (12) at (-1.75, -9.75) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=arrow] (0) to (1);
+		\draw [style=arrow] (1) to (2);
+		\draw [style=arrow] (2) to (3);
+		\draw [style=arrow] (2) to (7);
+		\draw [style=arrow] (3) to (4);
+		\draw [style=con] (4) to (5.center);
+		\draw [style=con] (5.center) to (6.center);
+		\draw [style=arrow] (7) to (8);
+		\draw [style=arrow] (8) to (9);
+		\draw [style=arrow] (8) to (10);
+		\draw [style=con] (9) to (12.center);
+		\draw [style=con] (10) to (12.center);
+		\draw [style=arrow] (12.center) to (11);
+	\end{pgfonlayer}
+\end{tikzpicture}
