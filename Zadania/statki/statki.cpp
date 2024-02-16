@@ -1,10 +1,21 @@
 #include <iostream>
 #include <windows.h>
 #include <ctime>
+#include <fstream>
+#include <cstdlib>
+
 using namespace std;
 
 const int maxs = 12;
 const int blue = 3;
+
+void gotoxy(int x, int y)
+{
+    COORD cord;
+    cord.X = x;
+    cord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cord);
+}
 
 int input(string n,int max)
 {
@@ -25,12 +36,14 @@ void zero(int p[maxs][maxs])
 	}
 }
 
-void wypisz(int p[maxs][maxs])
+void wypisz(int p[maxs][maxs],bool s)
 {
 	for (int i=1; i<=10; i++)
 	{for (int ii=1; ii<=10; ii++)
-	{cout.width(2);
+	{
+		//cout.width(2);
 		//cout<<p[i][ii];
+		gotoxy(i*2+maxs*s*2,3+ii);
 		switch (p[i][ii])
 		{
 			case 0:cout<<" ";break;
@@ -78,11 +91,12 @@ void losx(int p[maxs][maxs],int n)
 	{
 		p[x+i*(1-k)][y+i*k]=n;
 	}
-
 }
 void SG(int T[maxs][maxs])
 {
+	gotoxy(0,maxs+10);
 	int x=input("kordynat strzalu x:",10)+1;
+	gotoxy(0,maxs+10);
 	int y=input("kordynat strzalu y:",10)+1;
 
 	if(T[x][y]==1||T[x][y]==2||T[x][y]==3||T[x][y]==4){T[x][y]=6;}
@@ -116,31 +130,52 @@ int TEST(int T[maxs][maxs])
 	}
 	return c;
 }
+void plane()
+{
+	char letter ='a';
+	system("cls");
+	cout<<"statki";
+	gotoxy(maxs/2+2,2);
+	cout<<"gracz";
+	gotoxy(maxs*2.5,2);
+	cout<<"komputer";
+	for(int i=1;i<=maxs-2;i++){
+		gotoxy(1,3+i);cout<<i;
+		gotoxy(maxs*2,3+i);cout<<i;
+		gotoxy(i*2,3);cout<<letter;
+		gotoxy(i*2+maxs*2,3);cout<<letter;
+		letter++;
+	}
+}
 int main(){
 	srand(time(NULL));
 	cout<<endl<<"Witam w grze w statki"<<endl;
 	char d;
-
+	ofstream save;
+	save.open("save1.txt");
+	save << "staatr";
+	save.close();
+	
 	while(true)
 	{
-		
 		int g[maxs][maxs];
 		int k[maxs][maxs];
 
 		int cof[]={1,1,1,1};
 		los(g,k,cof);
-	
-		while(true){
-			wypisz(k);
+		plane();
+		while(true)
+		{
+			wypisz(k,1);
 			cout<<endl;
-			wypisz(g);
+			wypisz(g,0);
 			cout<<endl;
 			SG(k);
 			SK(g);
 			
 			if(TEST(k)==0||TEST(g)==0){break;}
 		}
-
+		gotoxy(0,20);
 		cout<<"jeszcze raz? T/N: ";
 		do{cin.clear();cin.sync();cin>>d;d=toupper(d);
 			if(d=='N'){return 0;}
