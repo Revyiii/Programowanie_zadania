@@ -8,19 +8,12 @@
 //#include <math.h>
 
 using namespace std;
+#include "getxy().cpp"
+
 
 const int maxs = 12;
 int norm = 12;
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-
-void gotoxy(int x, int y)
-{
-    COORD cord;
-    cord.X = x;
-    cord.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cord);
-}
 
 int input(string n,int max)
 {
@@ -37,20 +30,6 @@ int input(string n,int max)
 	}
 }
 
-//int input(string g,int max){
-//	bool k = false;
-//	int x = 0;
-//	do{
-//		cout<<g;cin>>x;
-//		if(cin.fail()){cout<<"wartosc nieprawidlowa\n";}
-//		else{
-//			if(x<=0 or x>max){cout<<"liczba poza zakresem";}
-//			else{k = true;}
-//		}
-//	cin.clear();cin.sync();
-//	}while(k==false);
-//	return x;
-//}
 void zero(int p[maxs][maxs])
 {
 	for (int i=1; i<=10; i++)
@@ -125,20 +104,25 @@ void SG(int T[maxs][maxs])
 {
 	int x;
 	int y;
+	char j =maxs+94;
 	while(true){
-	gotoxy(0,maxs+10);
-	cout<<"podaj kolumne<a-j>:";
-	x=tolower(getche())-96;
-	if(x+96=='q'){exit(EXIT_SUCCESS);}
-	if(x>=1&&x<=maxs-2){break;}
-	else{cout<<"zla wartsc";}
+		clearLine(maxs+10);
+		gotoxy(0,maxs+10);
+		cout<<"podaj kolumne<a-"<<j<<">:";
+		x=tolower(getche())-96;
+		if(x+96=='q'){exit(EXIT_SUCCESS);}
+		if(x>=1&&x<=maxs-2){break;}
 	}
-
-	gotoxy(0,maxs+10);
-	cout<<"podaj wiersz<1-10>(10=:):";
-	y=tolower(getche())-64;
-	if(y+64=='q'){exit(EXIT_SUCCESS);}
-
+	while(true){
+		clearLine(maxs+10);
+		gotoxy(0,maxs+10);
+		cout<<"podaj wiersz<1-10>(10=:):";
+		y=tolower(getche())-48;
+		if(y+48=='q'){exit(EXIT_SUCCESS);}
+		if(y>=1&&y<=maxs-2){break;}
+		clearLine(maxs+9);
+		if(y==0){gotoxy(0, maxs+9);cout<<"10 jest pod [:]";}
+	}
 	if(T[x][y]==1||T[x][y]==2||T[x][y]==3||T[x][y]==4){T[x][y]=6;}
 	else{T[x][y]=7;}
 }
@@ -218,7 +202,6 @@ void czytaj(int g[maxs][maxs],int k[maxs][maxs]){
 	save>>k[x][y];
 	}
 	save.close();
-	getch();
 }
 void wpisz(int g[maxs][maxs],int k[maxs][maxs])
 {
