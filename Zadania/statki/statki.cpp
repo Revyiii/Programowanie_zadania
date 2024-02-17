@@ -1,13 +1,18 @@
+#include <cctype>
 #include <iostream>
 #include <windows.h>
 #include <ctime>
 #include <fstream>
 #include <cstdlib>
+#include <conio.h>
+//#include <math.h>
 
 using namespace std;
 
 const int maxs = 12;
-const int blue = 3;
+int norm = 12;
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
 
 void gotoxy(int x, int y)
 {
@@ -21,13 +26,31 @@ int input(string n,int max)
 {
 	int a; 
 	while(true)
-	{
+	{	a=0;
 		cout<<endl<<n;
-		cin.clear();cin.sync();cin>>a;
-		if(cin.good()&& a<=max&&a>=0){return a;}
+		cin>>a;
+		//if(a=='q'||'Q'==a){exit(EXIT_SUCCESS);}
+		cout<<a;
+		if(!cin.fail()&& a<=max&&a>=0){return a;}
 		cout<<"zla wartosc"<<endl;
+		cin.clear();cin.sync();
 	}
 }
+
+//int input(string g,int max){
+//	bool k = false;
+//	int x = 0;
+//	do{
+//		cout<<g;cin>>x;
+//		if(cin.fail()){cout<<"wartosc nieprawidlowa\n";}
+//		else{
+//			if(x<=0 or x>max){cout<<"liczba poza zakresem";}
+//			else{k = true;}
+//		}
+//	cin.clear();cin.sync();
+//	}while(k==false);
+//	return x;
+//}
 void zero(int p[maxs][maxs])
 {
 	for (int i=1; i<=10; i++)
@@ -38,23 +61,29 @@ void zero(int p[maxs][maxs])
 
 void wypisz(int p[maxs][maxs],bool s)
 {
+	int b =9;
 	for (int i=1; i<=10; i++)
 	{for (int ii=1; ii<=10; ii++)
 	{
-		//cout.width(2);
+		//cout.width(2);za
 		//cout<<p[i][ii];
 		gotoxy(i*2+maxs*s*2,3+ii);
+		SetConsoleTextAttribute(hConsole, b);
 		switch (p[i][ii])
 		{
+			
 			case 0:cout<<" ";break;
 			case 1:cout<<"*";break;
 			case 2:cout<<"*";break;
 			case 3:cout<<"*";break;
 			case 4:cout<<"*";break;
 			case 5:cout<<" ";break;
-		    default:cout<<" ";break;
+			case 6:cout<<"x";break;
+			case 7:cout<<"+";break;
+			default:cout<<" ";break;
 
 		}
+		SetConsoleTextAttribute(hConsole, norm);
 	}cout<<endl;
 	}
 }
@@ -94,10 +123,21 @@ void losx(int p[maxs][maxs],int n)
 }
 void SG(int T[maxs][maxs])
 {
+	int x;
+	int y;
+	while(true){
 	gotoxy(0,maxs+10);
-	int x=input("kordynat strzalu x:",10)+1;
+	cout<<"podaj kolumne<a-j>:";
+	x=tolower(getche())-96;
+	if(x+96=='q'){exit(EXIT_SUCCESS);}
+	if(x>=1&&x<=maxs-2){break;}
+	else{cout<<"zla wartsc";}
+	}
+
 	gotoxy(0,maxs+10);
-	int y=input("kordynat strzalu y:",10)+1;
+	cout<<"podaj wiersz<1-10>(10=:):";
+	y=tolower(getche())-64;
+	if(y+64=='q'){exit(EXIT_SUCCESS);}
 
 	if(T[x][y]==1||T[x][y]==2||T[x][y]==3||T[x][y]==4){T[x][y]=6;}
 	else{T[x][y]=7;}
@@ -132,6 +172,7 @@ int TEST(int T[maxs][maxs])
 }
 void plane()
 {
+	int b = 311;
 	char letter ='a';
 	system("cls");
 	cout<<"statki";
@@ -140,46 +181,111 @@ void plane()
 	gotoxy(maxs*2.5,2);
 	cout<<"komputer";
 	for(int i=1;i<=maxs-2;i++){
-		gotoxy(1,3+i);cout<<i;
-		gotoxy(maxs*2,3+i);cout<<i;
-		gotoxy(i*2,3);cout<<letter;
-		gotoxy(i*2+maxs*2,3);cout<<letter;
+		SetConsoleTextAttribute(hConsole, b);
+		gotoxy(0,3+i);
+		cout<<"  ";
+		gotoxy(0,3+i);
+		cout<<i;
+		gotoxy(maxs*2,3+i);
+		cout<<"  ";
+		gotoxy(maxs*2,3+i);
+		cout<<i;
+		gotoxy(i*2,3);
+		cout<<' '<<letter;
+		gotoxy(i*2+maxs*2,3);
+		cout<<" "<<letter;
+		SetConsoleTextAttribute(hConsole, norm);
 		letter++;
+	}
+	gotoxy(0, maxs+5);
+	cout<<"Aby wyjsc wcisnij [Q]";
+
+	SetConsoleTextAttribute(hConsole, 0);
+}
+void czytaj(int g[maxs][maxs],int k[maxs][maxs]){
+	int x;int y;
+	fstream save;
+	save.open("save1.txt",ios::in);
+	if(!save.is_open()){cout<<"nie ma pliku";getch();exit(EXIT_FAILURE);}
+	int test;
+	save>>test;
+	if(test!=maxs){cout<<"plik i program maja inna plansze";getch();exit(EXIT_FAILURE);}
+	for(int i=0;i<(maxs-2)*(maxs-2);i++)
+	{
+	x=i+1-i/(maxs-2)*(maxs-2);
+	y=i/(maxs-2)+1;
+	save>>g[x][y];
+	save>>k[x][y];
+	}
+	save.close();
+	getch();
+}
+void wpisz(int g[maxs][maxs],int k[maxs][maxs])
+{
+	int x;
+	int y;
+	fstream save;
+	save.open("save1.txt",ios::out);
+	save<<maxs;
+	for(int i=0;i<(maxs-2)*(maxs-2);i++)
+	{
+	save<<"\n";
+	x=i+1-i/(maxs-2)*(maxs-2);
+	y=i/(maxs-2)+1;
+//	cout<<"x:"<<x<<" y:"<<y<<endl;
+	save<<g[x][y];
+	save<<"\n";
+	save<<k[x][y];
 	}
 }
 int main(){
 	srand(time(NULL));
 	cout<<endl<<"Witam w grze w statki"<<endl;
+	
+	int g[maxs][maxs];
+	int k[maxs][maxs];
+	
+	zero(g);
+	zero(k);
 	char d;
+	
+	int cof[]={4,3,2,1};
+	cout<<"Czy chcesz wczytac zapis(T/N):";
+	
+	while(true){
+	d=toupper(getch());
+	if(d=='T'){czytaj(g,k);break;}
+	else if(d=='N'){
 	ofstream save;
 	save.open("save1.txt");
-	save << "staatr";
 	save.close();
-	
+	break;
+	}
+	else{cout<<"zla wartosc"<<endl;}
+	}
 	while(true)
 	{
-		int g[maxs][maxs];
-		int k[maxs][maxs];
-
-		int cof[]={1,1,1,1};
-		los(g,k,cof);
+		if(d=='T'){d='N';}
+		else{los(g,k,cof);}
 		plane();
 		while(true)
 		{
+
+			SetConsoleTextAttribute(hConsole, 12);
 			wypisz(k,1);
 			cout<<endl;
 			wypisz(g,0);
 			cout<<endl;
 			SG(k);
 			SK(g);
-			
+			wpisz(g,k);//nie optymalne zrob tak aby sg() i sk() same updatowaly	
 			if(TEST(k)==0||TEST(g)==0){break;}
 		}
 		gotoxy(0,20);
 		cout<<"jeszcze raz? T/N: ";
 		do{cin.clear();cin.sync();cin>>d;d=toupper(d);
 			if(d=='N'){return 0;}
-		else if(d=='T'){break;}
+			else if(d=='T'){d='N';break;}
 			else{cout<<"podana wartartość jest nie poprawna. Ponów prubu"<<endl;}
 		}while(true);
 	}
