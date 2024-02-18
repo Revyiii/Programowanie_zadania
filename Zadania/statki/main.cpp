@@ -10,7 +10,7 @@
 using namespace std;
 #include "getxy().cpp"
 
-const int maxs = 14;
+const int maxs = 17;
 int norm = 12;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -45,16 +45,18 @@ int main(){
 		if(d=='T'){d='N';}
 		else{los(g,k,cof,sizeof(cof)/sizeof(cof[0]));}
 		plane();
+
+			wypisz(k,1);
+			wypisz(g,0);
 		while(true)
 		{
-
 			SetConsoleTextAttribute(hConsole, 12);
-			wypisz(k,1);
 			cout<<endl;
-			wypisz(g,0);
 			cout<<endl;
 			SG(k);
+			wypisz(k,1);
 			SK(g);
+			wypisz(g,0);
 			wpisz(g,k);//nie optymalne zrob tak aby sg() i sk() same updatowaly	
 			if(TEST(k)==0||TEST(g)==0){break;}
 		}

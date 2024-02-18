@@ -1,4 +1,5 @@
 
+//#include <consoleapi2.h>
 int input(string n,int max)
 {
 	int a; 
@@ -21,18 +22,9 @@ void zero(int p[maxs][maxs])
 		p[i][ii]=0;
 	}
 }
-
-void wypisz(int p[maxs][maxs],bool s)
+void trans(int i)
 {
-	int b =9;
-	for (int i=1; i<=maxs-2; i++)
-	{for (int ii=1; ii<=maxs-2; ii++)
-	{
-		//cout.width(2);za
-		//cout<<p[i][ii];
-		gotoxy(i*2+maxs*s*2,3+ii);
-		SetConsoleTextAttribute(hConsole, b);
-		switch (p[i][ii])
+		switch (i)
 		{
 			
 			case 0:cout<<" ";break;
@@ -46,6 +38,18 @@ void wypisz(int p[maxs][maxs],bool s)
 			default:cout<<" ";break;
 
 		}
+}
+void wypisz(int p[maxs][maxs],bool s)
+{
+	int b =9;
+	for (int i=1; i<=maxs-2; i++)
+	{for (int ii=1; ii<=maxs-2; ii++)
+	{
+		//cout.width(2);za
+		//cout<<p[i][ii];
+		gotoxy(i*2+maxs*s*2,3+ii);
+		SetConsoleTextAttribute(hConsole, b);
+		trans(p[i][ii]);
 		SetConsoleTextAttribute(hConsole, norm);
 	}cout<<endl;
 	}
@@ -94,6 +98,16 @@ void los(int g[maxs][maxs],int k[maxs][maxs],int s[maxs],int n)
 			losx(k,i+1);
 	}}
 }
+void highlight(int n,int T[maxs][maxs])
+{
+	cout<<"\x1b[4;37;41m";
+	for(int i=1;i<maxs-1;i++){
+		gotoxy(n*2+maxs*2,i+3);
+		
+		trans(T[n][i]);
+	}
+	SetConsoleTextAttribute(hConsole, norm);
+}
 void SG(int T[maxs][maxs])
 {
 	int x;
@@ -108,6 +122,7 @@ void SG(int T[maxs][maxs])
 		if(x+96=='q'){exit(EXIT_SUCCESS);}
 		if(x>=1&&x<=maxs-2){break;}
 	}
+	highlight(x,T);
 	while(true){
 		clearLine(maxs+10);
 		gotoxy(0,maxs+10);
@@ -162,9 +177,9 @@ void plane()
 		gotoxy(maxs*2,3+i);
 		cout<<i;
 		gotoxy(i*2,3);
-		cout<<' '<<letter;
+		cout<<letter<<' ';
 		gotoxy(i*2+maxs*2,3);
-		cout<<" "<<letter;
+		cout<<letter<<' ';
 		SetConsoleTextAttribute(hConsole, norm);
 		letter++;
 	}
@@ -208,3 +223,4 @@ void wpisz(int g[maxs][maxs],int k[maxs][maxs])
 	save<<k[x][y];
 	}
 }
+
