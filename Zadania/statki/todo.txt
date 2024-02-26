@@ -1,0 +1,35 @@
+##funk 
+[x]losx nadpisuje kratki
+[x]losx zeby używał innnej numeru niż 5 na pola nie tylkalne 
+[x]test sie nie skalje z statkami 
+[x]przepisac trans do funk i zwraca który zwraca char
+
+## stream
+[x]podswietlanie ruchu komputera
+[x]napisac na nowo trans aby sie scalowalo z dluszymi statkiami
+[x]SG SK tez sie nie skaluja z wiekszymi statkami
+[x]Sk aby nie trafial w puste pola 
+[x]SG poprawa txt bo zly jest
+[x]plane rogi zapelnione
+[x]wypisz boat backround
+[x]hilght boat backround
+	##main 	[]win state do poprawu 
+			[]cls na koncu pentli 	
+
+##render
+[]napisac glowna pentle
+[]
+
+##new trans 
+-3|pole gdzie statk nie mogą być
+-2|trafine pust pole 
+-1|trafiony statek
+0|puste pole
+1|
+2|
+3|
+4|Statki
+5|
+6|
+7|
+>|

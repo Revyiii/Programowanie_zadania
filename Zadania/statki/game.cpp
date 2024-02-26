@@ -8,16 +8,16 @@
 //#include <math.h>
 
 using namespace std;
-#include "getxy().cpp"
+#include "getxy().h"
 
-const int maxs = 14;
+const int maxs = 17;
 int norm = 12;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+#include "render.h"
 #include "funk.h"
 int main(){
 	srand(time(NULL));
-	cout<<endl<<"Witam w grze w statki"<<endl;
 	
 	int g[maxs][maxs];
 	int k[maxs][maxs];
@@ -27,6 +27,7 @@ int main(){
 	char d;
 	
 	int cof[]={4,3,2,1};
+	
 	cout<<"Czy chcesz wczytac zapis(T/N):";
 	
 	while(true){
@@ -44,21 +45,7 @@ int main(){
 	{
 		if(d=='T'){d='N';}
 		else{los(g,k,cof,sizeof(cof)/sizeof(cof[0]));}
-		plane();
-		while(true)
-		{
-
-			SetConsoleTextAttribute(hConsole, 12);
-			wypisz(k,1);
-			cout<<endl;
-			wypisz(g,0);
-			cout<<endl;
-			SG(k);
-			SK(g);
-			wpisz(g,k);//nie optymalne zrob tak aby sg() i sk() same updatowaly	
-			if(TEST(k)==0||TEST(g)==0){break;}
-		}
-		gotoxy(0,20);
+		//main game loop
 		cout<<"jeszcze raz? T/N: ";
 		do{cin.clear();cin.sync();cin>>d;d=toupper(d);
 			if(d=='N'){return 0;}

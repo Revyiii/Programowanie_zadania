@@ -8,13 +8,14 @@
 //#include <math.h>
 
 using namespace std;
-#include "getxy().cpp"
+#include "getxy().h"
 
-const int maxs = 17;
+const int maxs = 12;
 int norm = 12;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 #include "funk.h"
+#include "stream.h"
 int main(){
 	srand(time(NULL));
 	cout<<endl<<"Witam w grze w statki"<<endl;
@@ -42,6 +43,7 @@ int main(){
 	}
 	while(true)
 	{
+		cout << "\033[2J\033[1;1H";//clear screen
 		if(d=='T'){d='N';}
 		else{los(g,k,cof,sizeof(cof)/sizeof(cof[0]));}
 		plane();
@@ -55,12 +57,13 @@ int main(){
 			cout<<endl;
 			SG(k);
 			wypisz(k,1);
-			SK(g);
 			wypisz(g,0);
+			SK(g);
 			wpisz(g,k);//nie optymalne zrob tak aby sg() i sk() same updatowaly	
 			if(TEST(k)==0||TEST(g)==0){break;}
 		}
 		gotoxy(0,20);
+		cout << "\033[2J\033[1;1H";//clear screen
 		cout<<"jeszcze raz? T/N: ";
 		do{cin.clear();cin.sync();cin>>d;d=toupper(d);
 			if(d=='N'){return 0;}
