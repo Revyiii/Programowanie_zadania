@@ -32,32 +32,14 @@ int input(string n,int max)
 		cout<<"zla wartosc"<<endl;
 	}
 }
-
-int main(){
-	srand(time(NULL));
-	cout<<endl<<"Witam w zadaniu 4.6"<<endl;
-	char d;
-	int n;
-	int m;
-	int l;
-	int p;
+void minmax(int tab[maxs][maxs],int n, int m)
+{
 	int i;
 	int ii;
 	int min;
 	int max;
 	int pos[4];
-	string odp;
-	while(true)
-	{
-		n=input("rozmiar tablicy x:",100);
-		m=input("rozmiar tablicy y:",100);
-		int tab[n][maxs];
-		l=input("Los czy nie\n1.los\n2.uzytkownik podaje\n",2);
-		if(l==1){lost2(tab,n,m);}
-		else if(l==2){czytajt2(tab,n,m);}
-		else{cout<<"cos poszlo nie tak"<<endl;}
-
-		piszt2(tab,n,m);
+	
 		min=tab[0][0];
 		max=tab[0][0];
 		i=0;
@@ -73,8 +55,31 @@ int main(){
 			i++;
 		}
 		cout<<endl<<"min:"<<min<<" pos "<< pos[0]+1<<":"<<pos[1]+1<<" max:"<<max<<" pos "<< pos[2]+1<<":"<<pos[3]+1<<endl;
+	
+}
+int main(){
+	srand(time(NULL));
+	cout<<endl<<"Witam w zadaniu 4.6"<<endl;
+	char d;
+	int n;
+	int m;
+	int l;
+	int p;
+	
+	string odp;
+	while(true)
+	{
+		n=input("rozmiar tablicy x:",100);
+		m=input("rozmiar tablicy y:",100);
+		int tab[n][maxs];
+		l=input("Los czy nie\n1.los\n2.uzytkownik podaje\n",2);
+		if(l==1){lost2(tab,n,m);}
+		else if(l==2){czytajt2(tab,n,m);}
+		else{cout<<"cos poszlo nie tak"<<endl;}
+
+		piszt2(tab,n,m);
 		
-		
+		minmax(tab,n,m);
 
 		cout<<"jeszcze raz? T/N: ";
 		do{cin.clear();cin.sync();cin>>d;d=toupper(d);

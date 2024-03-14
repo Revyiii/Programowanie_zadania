@@ -2,6 +2,7 @@
 #include <windows.h>
 
 #include <ctime>
+//#include <cmath>
 // #include <cstdlib>
 // #include <conio.h>
 
@@ -32,6 +33,22 @@ int input(string n,int max)
         cout<<"zla wartosc"<<endl;
     }
 }
+bool prime(int n)
+{
+    int i;
+    bool odp;
+
+        odp=true;
+        i=3;
+        if (n%2==0 && n!=2){odp=false;}
+
+        while(i<n/2)
+        {
+            if(n%i==0){odp=false;break;}
+            i=i+2;
+        }
+        return odp;
+}
 
 int main(){
     srand(time(NULL));
@@ -43,7 +60,6 @@ int main(){
     int p;
     int i;
     int ii;
-    int P[25]={2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
     int pos[4];
     int sum;
     int num;
@@ -68,10 +84,7 @@ int main(){
             ii=0;
             while (ii<m)
             {
-                for(int iii=0;iii<25;iii++)
-                {
-                    if(tab[i][ii]==P[iii]){cout<<P[iii]<<":("<<i+1<<":"<<ii+1<<")"<<endl;sum=sum+P[iii];num++;break;}
-                }
+                    if(prime(tab[i][ii])){cout<<tab[i][ii]<<":("<<i+1<<":"<<ii+1<<")"<<endl;sum=sum+tab[i][ii];num++;break;}
                 ii++;
             }
             i++;
