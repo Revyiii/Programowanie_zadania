@@ -1,4 +1,4 @@
-#include <cctype>
+	#include <cctype>
 #include <iostream>
 #include <windows.h>
 #include <ctime>
@@ -28,6 +28,7 @@ int main(){
 	char d;
 	
 	int cof[]={4,3,2,1};
+	cout<<sizeof(cof)/sizeof(cof[0])<<endl;//debug
 	cout<<"Czy chcesz wczytac zapis(T/N):";
 	
 	while(true){

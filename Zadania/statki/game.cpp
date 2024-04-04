@@ -10,7 +10,7 @@
 using namespace std;
 #include "getxy().h"
 
-const int maxs = 17;
+const int maxs = 12;
 int norm = 12;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
