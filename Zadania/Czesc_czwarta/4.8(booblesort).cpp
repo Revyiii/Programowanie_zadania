@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -52,6 +53,7 @@ int main(){
 	int l;
 	int p;
 	int i;
+	int c;
 	string odp;
 	while(true)
 	{
@@ -65,11 +67,18 @@ int main(){
 		CZYTAJT(tab,n);
 		cout<<endl;
 
-		for(int i=0;i<n;i++)
-		{for(int j=0;j<n;j++)
-			{if(tab[i]<tab[j])
-				{swap(tab[i],tab[j]);}}}
-		
+//		while (true)
+//		{
+//			c=0;
+//			for(int i=0;i<n-1;i++)
+//			{
+//				if(tab[i]>tab[i+1]){swap(tab[i],tab[i+1]);c=1;}
+//			}
+//			if(c==0){break;}
+//		}
+//		
+
+		sort(tab,tab+n);
 		CZYTAJT(tab,n);
 
 		cout<<endl;
