@@ -29,17 +29,17 @@ int input(string n,int max)
 	}
 }
 
-CZYTAJT(int T[maxs],int n){
+void CZYTAJT(int T[maxs],int n){
 int i =0;
 while(i<n){cout<<T[i]<<",";i++;}
 }
 
-PISZT(int T[maxs],int n){
+void PISZT(int T[maxs],int n){
 int i =0;
 while(i<n){cout<<"podaj "<<i+1<<" element:";cin>>T[i];i++;}	
 }
 
-LOST(int T[maxs],int n){
+void LOST(int T[maxs],int n){
 int i=0;
 while(i<n){T[i]=rand()%(100);i++;}
 }

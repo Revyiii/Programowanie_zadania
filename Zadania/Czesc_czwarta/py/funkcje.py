@@ -18,7 +18,7 @@ def jeszcze():
 def los(x):
     return randint(0,x) 
 
-def inputh(g):
+def inputt(g):
     k = False
     x = 0
     while True:
@@ -31,18 +31,18 @@ def inputh(g):
             break 
     return x
 
-def piszt(tab,n):
+def PISZT(tab,n):
     print("Elementy Tablicy:",end="")
     for i in range(0,n):
         print(F"{tab[i]},",end="")
     print()
 
-def czytajt(tab,n):
+def CZYTAJT(tab,n):
     for i in range(0,n):
-        x = inputh(f"elemnt nr {i+1}:")
+        x = inputt(f"elemnt nr {i+1}:")
         tab[i] = x;
 
-def lost(tab,n):
+def LOST(tab,n):
     for i in range(0,n):
         tab[i] = los(9)
 
@@ -56,12 +56,12 @@ def piszt2(tab, n, m):
 def czytajt2(tab,n, m):
     for i in range(0,n):
         for j in range(0,m):
-            x = inputh(f"elemnt ({i+1},{j+1}):")
+            x = inputt(f"elemnt ({i+1},{j+1}):")
             tab[i][j] = x; 
 
 def lost2(tab,n, m):
     for i in range(0,n):
         buff = [0]*m
-        lost(buff,m)
+        LOST(buff,m)
         tab[i] = buff
 

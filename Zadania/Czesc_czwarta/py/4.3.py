@@ -6,7 +6,7 @@ from funkcje import *
 while True:
     
     #main 
-    print('Witam w zadaniu 4.2')
+    print('Witam w zadaniu 4.3')
     n=inputt("rozmiar tablicy:")
     tab=[0,]*n
     l=inputt("Los czy nie\n1.los\n2.uzytkownik podaje\n")
@@ -15,7 +15,7 @@ while True:
     elif l==2: 
         CZYTAJT(tab,n)
     PISZT(tab,n)
-    p=inputt("zobacz czy licza jest w tablicy")
+    p=inputt("zobacz czy licza jest w tablicy:")
     
     i=0
     odp="NIE"
@@ -24,7 +24,7 @@ while True:
             odp="TAK"
             break
         i=i+1
-    print(odp)
+    print(f"{odp}, pozycja:{i+1}")
 
     while True:
         print('kontynować? T/N')

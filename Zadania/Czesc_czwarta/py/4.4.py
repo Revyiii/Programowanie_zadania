@@ -2,11 +2,11 @@ import math as m
 import msvcrt as ms
 import sys
 from funkcje import *
-
+print('Witam w zadaniu 4.4')
 while True:
     
     #main 
-    print('Witam w zadaniu 4.2')
+    
     n=inputt("rozmiar tablicy:")
     tab=[0,]*n
     l=inputt("Los czy nie\n1.los\n2.uzytkownik podaje\n")
@@ -15,16 +15,19 @@ while True:
     elif l==2: 
         CZYTAJT(tab,n)
     PISZT(tab,n)
-    p=inputt("zobacz czy licza jest w tablicy")
+    p=inputt("zobacz czy licza jest w tablicy:")
     
     i=0
     odp="NIE"
+    time=0
     while i<n:
         if p==tab[i]:
             odp="TAK"
-            break
+            time=time+1
+            print(f"{time}.{i}")
         i=i+1
-    print(odp)
+    if odp=="NIE":
+        print("Nie wystepuje")
 
     while True:
         print('kontynować? T/N')

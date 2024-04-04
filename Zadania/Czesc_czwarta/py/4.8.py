@@ -3,10 +3,10 @@ import msvcrt as ms
 import sys
 from funkcje import *
 
+print('Witam w zadaniu 4.8')
+
 while True:
-    
     #main 
-    print('Witam w zadaniu 4.2')
     n=inputt("rozmiar tablicy:")
     tab=[0,]*n
     l=inputt("Los czy nie\n1.los\n2.uzytkownik podaje\n")
@@ -15,17 +15,12 @@ while True:
     elif l==2: 
         CZYTAJT(tab,n)
     PISZT(tab,n)
-    p=inputt("zobacz czy licza jest w tablicy")
     
-    i=0
-    odp="NIE"
-    while i<n:
-        if p==tab[i]:
-            odp="TAK"
-            break
-        i=i+1
-    print(odp)
-
+    for i in range(0,n):
+        for ii in range(0,n):
+            if tab[i]<tab[ii]:
+                tab[i],tab[ii] = tab[ii],tab[i]
+    PISZT(tab,n)
     while True:
         print('kontynować? T/N')
         s=ms.getche().upper()

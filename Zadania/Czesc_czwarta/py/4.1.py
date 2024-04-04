@@ -7,10 +7,10 @@ while True:
     
     #main 
     print('Witam w programie z Tablicami')
-    m = int(input("Liczba elementow:"))
+    m = int(inputt("Liczba elementow:"))
     a=[0,]*m
-    czytajt(a,m)
-    piszt(a,m)
+    CZYTAJT(a,m)
+    PISZT(a,m)
     i=m
     while 0<=i-1:
         print(f"{a[i-1]},",end="")

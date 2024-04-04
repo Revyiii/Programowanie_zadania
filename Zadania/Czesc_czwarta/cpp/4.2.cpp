@@ -8,6 +8,7 @@ const int maxs = 100;
 
 int input(string n)
 {
+	//cout<<"test";
 	int a; 
 	while(true)
 	{
@@ -29,17 +30,17 @@ int input(string n,int max)
 	}
 }
 
-CZYTAJT(int T[maxs],int n){
+void CZYTAJT(int T[maxs],int n){
 int i =0;
 while(i<n){cout<<T[i]<<",";i++;}
 }
 
-PISZT(int T[maxs],int n){
+void PISZT(int T[maxs],int n){
 int i =0;
 while(i<n){cout<<"podaj "<<i+1<<" element:";cin>>T[i];i++;}	
 }
 
-LOST(int T[maxs],int n){
+void LOST(int T[maxs],int n){
 int i=0;
 while(i<n){T[i]=rand()%(100);i++;}
 }
@@ -58,19 +59,20 @@ int main(){
 		n=input("rozmiar tablicy:",100);
 		int tab[n];
 		l=input("Los czy nie\n1.los\n2.uzytkownik podaje\n",2);
+		
 		if(l==1){LOST(tab,n);}
 		else if(l==2){PISZT(tab,n);}
 		else{cout<<"cos poszlo nie tak"<<endl;}
-
+		
 		CZYTAJT(tab,n);
-
+		
 		p=input("zobacz czy liczba jest w tablicy:");
 
 		i=0;
 		odp="NIE";
 		while(i<n)
 		{
-			if(p==tab[i]){odp="TAK"<<endl;break;}
+			if(p==tab[i]){odp="TAK";break;}
 			i++;
 		}
 		cout<<odp;
