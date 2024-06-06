@@ -31,6 +31,17 @@ void zero(int p[maxs][maxs])
 		p[i][ii]=0;
 	}
 }
+
+char trans(int i)
+{
+	if(i==0){return ' ';}
+	if(i>=1&&i<5){return '*';}
+	else if(i==5){return '_';}
+	else if(i==-1){return 'x';}
+	else if(i==-2){return '+';}
+	else{return ' ';}
+}
+
 void wypisz(int p[maxs][maxs],bool s)
 {
 	//int b =144;
@@ -42,7 +53,7 @@ void wypisz(int p[maxs][maxs],bool s)
 		gotoxy(i*2+maxs*s*2,3+ii);
 		SetConsoleTextAttribute(hConsole, b);
 		if(p[i][ii]>=1){SetConsoleTextAttribute(hConsole, c);}
-		cout<<p[i][ii]<<' ';
+		cout<<trans(p[i][ii])<<' ';
 		SetConsoleTextAttribute(hConsole, norm);
 	}cout<<endl;
 	}
@@ -100,7 +111,11 @@ int main(){
 		
 		losx(g,4);
 		losx(k,4);
-	
+		losx(g,3);
+		losx(k,3);
+		losx(g,3);
+		losx(k,3);
+		
 		wypisz(k,1);
 		wypisz(g,0);
 	
