@@ -1,0 +1,2726 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 9">
+<meta name="Originator" content="Microsoft Word 9">
+<link rel="File-List" href="http://uriasz.am.szczecin.pl/dydaktyka/access/baza_krok_po_kroku/tworzenie_kwerendy_pliki/filelist.xml">
+<link rel="Edit-Time-Data" href="http://uriasz.am.szczecin.pl/dydaktyka/access/baza_krok_po_kroku/tworzenie_kwerendy_pliki/editdata.mso">
+<link rel="OLE-Object-Data" href="http://uriasz.am.szczecin.pl/dydaktyka/access/baza_krok_po_kroku/tworzenie_kwerendy_pliki/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Tworzenie kwerendy</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Janusz</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Janusz</o:LastAuthor>
+  <o:Revision>6</o:Revision>
+  <o:TotalTime>2966</o:TotalTime>
+  <o:LastPrinted>2006-11-13T22:44:00Z</o:LastPrinted>
+  <o:Created>2006-11-26T15:23:00Z</o:Created>
+  <o:LastSaved>2007-12-12T07:39:00Z</o:LastSaved>
+  <o:Pages>31</o:Pages>
+  <o:Words>5134</o:Words>
+  <o:Characters>29269</o:Characters>
+  <o:Company> </o:Company>
+  <o:Lines>243</o:Lines>
+  <o:Paragraphs>58</o:Paragraphs>
+  <o:CharactersWithSpaces>35944</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>90</w:Zoom>
+  <w:HyphenationZone>21</w:HyphenationZone>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:238;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129279 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;
+	mso-font-charset:238;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	mso-bidi-font-weight:bold;}
+h3
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	mso-bidi-font-weight:bold;}
+h4
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.4pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+h5
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+h6
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.4pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Garamond;
+	mso-bidi-font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:8.65pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	tab-stops:27.0pt;
+	background:white;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:8;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:9;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	mso-pagination:widow-orphan;
+	mso-list:l0 level1 lfo2;
+	tab-stops:list 36.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex2, li.MsoIndex2, div.MsoIndex2
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex3, li.MsoIndex3, div.MsoIndex3
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex4, li.MsoIndex4, div.MsoIndex4
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex5, li.MsoIndex5, div.MsoIndex5
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex6, li.MsoIndex6, div.MsoIndex6
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex7, li.MsoIndex7, div.MsoIndex7
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex8, li.MsoIndex8, div.MsoIndex8
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndex9, li.MsoIndex9, div.MsoIndex9
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:108.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-12.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:right dotted 453.15pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 8.0cm right 16.0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 8.0cm right 16.0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoIndexHeading, li.MsoIndexHeading, div.MsoIndexHeading
+	{mso-style-next:"Indeks 1";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-next:Standardowy;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-bidi-font-weight:bold;}
+p.MsoTof, li.MsoTof, div.MsoTof
+	{mso-style-next:Standardowy;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-24.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:DE;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.45pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:DE;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.4pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:45.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-9.6pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:14.15pt;
+	margin-right:.5pt;
+	margin-bottom:0cm;
+	margin-left:39.1pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	background:white;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:navy;
+	font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";}
+p.t, li.t, div.t
+	{mso-style-name:t;
+	margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";
+	color:black;}
+p.rtt, li.rtt, div.rtt
+	{mso-style-name:rtt;
+	margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";
+	color:black;}
+p.lt1, li.lt1, div.lt1
+	{mso-style-name:lt1;
+	margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";
+	color:black;}
+@page Section1
+	{size:595.45pt 841.7pt;
+	margin:70.9pt 70.9pt 70.9pt 70.9pt;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-footer:url("./tworzenie_kwerendy_pliki/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:86508748;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1201676560 -329060958 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l0:level1
+	{mso-level-style-link:"Indeks 1";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:339548541;
+	mso-list-type:hybrid;
+	mso-list-template-ids:586053648 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l2
+	{mso-list-id:661587638;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-795974168 185120360 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l3
+	{mso-list-id:787354681;
+	mso-list-type:hybrid;
+	mso-list-template-ids:220728790 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l4
+	{mso-list-id:958293088;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-78740580 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l5
+	{mso-list-id:1219515246;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-141554464 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l6
+	{mso-list-id:1303194320;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1887467404 189574680 68485125 68485125 68485121 68485123 68485125 68485121 68485123 68485125;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F02D;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l6:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:1392541262;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1269373514 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l8
+	{mso-list-id:1405834677;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1282785754 185120360 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l9
+	{mso-list-id:1506092369;
+	mso-list-type:hybrid;
+	mso-list-template-ids:950300210 189574680 68485135 -2065685934 597700670 580581216 -413380440 -1669314096 450923988 -1955156746;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F02D;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:1508254910;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1955465854 185120360 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l11
+	{mso-list-id:2067803120;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1898172624 68485135 68485145 68485147 68485135 68485145 68485147 68485135 68485145 68485147;}
+@list l11:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l12
+	{mso-list-id:2069724222;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1157419872 189574680 68485123 68485125 68485121 68485123 68485125 68485121 68485123 68485125;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F02D;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l13
+	{mso-list-id:2138334802;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1169614366 189574680 68485123 68485125 68485121 68485123 68485125 68485121 68485123 68485125;}
+@list l13:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F02D;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1092">
+  <o:colormru v:ext="edit" colors="#eaeaea"/>
+  <o:colormenu v:ext="edit" fillcolor="white"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+  <o:regrouptable v:ext="edit">
+   <o:entry new="1" old="0"/>
+   <o:entry new="2" old="0"/>
+   <o:entry new="3" old="0"/>
+   <o:entry new="4" old="0"/>
+   <o:entry new="5" old="0"/>
+   <o:entry new="6" old="0"/>
+   <o:entry new="7" old="0"/>
+   <o:entry new="8" old="0"/>
+   <o:entry new="9" old="0"/>
+   <o:entry new="10" old="0"/>
+   <o:entry new="11" old="0"/>
+   <o:entry new="12" old="0"/>
+   <o:entry new="13" old="0"/>
+   <o:entry new="14" old="0"/>
+   <o:entry new="15" old="0"/>
+   <o:entry new="16" old="0"/>
+   <o:entry new="17" old="0"/>
+   <o:entry new="18" old="0"/>
+   <o:entry new="19" old="0"/>
+  </o:regrouptable>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body style="tab-interval:35.4pt" vlink="purple" lang="PL" link="blue" bgcolor="white">
+
+<div class="Section1">
+
+<p class="MsoNormal" style="text-align:justify"><a name="_Toc150791802"><b>Kwerenda<o:p></o:p></b></a></p>
+
+<p class="MsoNormal"><span style="mso-bookmark:_Toc150791802"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-bookmark:_Toc150791802">Punkt zawiera
+następujące pozycje:</span></p>
+
+<p class="MsoToc1"><span style="mso-bookmark:_Toc150791802"></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc150791802'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Toc150791802'><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;font-weight:normal'><span style="mso-spacerun: yes"> </span>TOC \o
+&quot;1-3&quot; \n \p &quot; &quot; \h \z </span><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321933"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt;font-weight:normal">5. Tworzenie kwerendy</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt;font-weight:normal"><o:p></o:p></span></span></p>
+
+<p class="MsoToc2" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321934"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.1. Kwerenda wybierająca</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc2" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321935"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.2. Kwerenda parametryczna</span></span><span style="mso-bookmark:
+_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc2" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321936"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.3. Kwerenda krzyżowa</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc2" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321937"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.4. Kwerenda funkcjonalna</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc3" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321938"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.4.1. Kwerenda aktualizująca</span></span><span style="mso-bookmark:
+_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc3" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321939"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.4.2. Kwerenda dołączająca</span></span><span style="mso-bookmark:
+_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc3" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321940"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.4.3. Kwerenda usuwająca</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc3" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321941"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.4.4. Kwerenda tworząca tabelę</span></span><span style="mso-bookmark:
+_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc2" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321942"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.5. Kwerenda wyszukująca duplikaty</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc2" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321943"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.6. Kwerenda wyszukująca niepasujące dane</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc2" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321944"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.7. Kwerenda Autoodnośnika automatycznego</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc2" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321945"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.8. Kwerenda SQL</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoToc3" style="tab-stops:right dotted 453.15pt"><span style="mso-bookmark:_Toc150791802"></span><a href="#_Toc152321946"><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt">5.8.1. Kwerenda składająca</span></span><span style="mso-bookmark:_Toc150791802"></span></a><span style="mso-bookmark:_Toc150791802"><span style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal"><span style="mso-bookmark:_Toc150791802"></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc150791802'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Toc150791802"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></span></p>
+
+<h1 style="line-height:normal"><span style="mso-bookmark:_Toc150791802"><a name="_Toc152320393"></a><a name="_Toc152321933"><span style="mso-bookmark:
+_Toc152320393"><span style="mso-ansi-language:PL">5. Tworzenie </span></span></a></span><span style="mso-bookmark:_Toc152321933"><span style="mso-bookmark:_Toc152320393"><span style="mso-ansi-language:PL">kwerendy</span></span></span><span style="mso-ansi-language:PL"><o:p></o:p></span></h1>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Kwerenda jest zapytaniem
+skierowanym do tabeli lub innej kwerendy. W wyniku jej wykonania wyświetlone
+zostaną rekordy tabeli w liczbie i kolejności spełniających warunki zapytania.
+Kwerendy pozwalają na różne sposoby oglądać, zmieniać i analizować dane. Można
+ich również używać jako źródeł rekordów dla następnych obiektów (formularzy,
+raportów i stron dostępu do danych). Najczęściej używanym typem kwerendy jest <b>kwerenda
+wybierająca</b>. </p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h2><a name="_Toc152320394"></a><a name="_Toc152321934"><span style="mso-bookmark:
+_Toc152320394"><b style="mso-bidi-font-weight:normal">5.1. Kwerenda wybierająca</b></span></a><b style="mso-bidi-font-weight:normal"><o:p></o:p></b></h2>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Kwerenda wybierająca pobiera dane
+z jednej lub kilku tabel przy użyciu kryteriów określonych przez użytkownika a
+następnie wyświetla je w żądanym porządku.</p>
+
+<p class="MsoNormal" style="text-align:justify">Aby utworzyć kwerendę wybierającą
+klikamy na opcję „utwórz kwerendę w widoku projekt” w obiekcie KWERENDY (<span style="mso-field-code:&quot;REF _Ref151221324 \\h&quot;">Rys. 1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200320031003300320034000000</w:data>
+</xml><![endif]--></span>). W otwartym oknie zawierającym spis wszystkich tabel
+i utworzonych do tej pory kwerend wskazujemy tabelę do której utworzymy
+zapytanie (niech to będzie tabela STATKI)</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:4in;
+ height:150.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image001.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image002.jpg" v:shapes="_x0000_i1025" width="384" height="201" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151221324"><span style="mso-ansi-language:
+PL">Rys. <span style="mso-field-code:&quot;SEQ Rys\. \\* ARABIC&quot;">1</span></span></a><span style="mso-ansi-language:PL">. Tworzenie kwerendy<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">W dalszej kolejności przenosimy
+pola z tabeli statki do poszczególnych kolumn kwerendy (chwytamy i upuszczamy
+lub podwójne klikamy na nazwie pola, lub wybieramy pole w wierszu POLE
+kwerendy). Możemy uwzględnić w kwerendzie dowolną liczbę dostępnych pól z tabeli
+– w przykładzie przenosimy wszystkie pola (<span style="mso-field-code:&quot;REF _Ref151221675 \\h&quot;">Rys.
+2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200320031003600370035000000</w:data>
+</xml><![endif]--></span>). </p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-ansi-language:EN-US" lang="EN-US"><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:453pt;height:199.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image003.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image004.jpg" v:shapes="_x0000_i1026" width="604" height="266" border="0"><!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoCaption"><a name="_Ref151221675"><span style="mso-ansi-language:
+PL">Rys. <span style="mso-field-code:&quot;SEQ Rys\. \\* ARABIC&quot;">2</span></span></a><span style="mso-ansi-language:PL">. Kwerenda wybierająca – wybór pól<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Kwerenda zawiera następujące
+wiersze:</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l12 level1 lfo4;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->pole – nazwa wybranego pola z tabeli</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l12 level1 lfo4;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->tabela – nazwa tabeli z której pochodzi wybrane pole</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l12 level1 lfo4;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->sortuj – do wyboru rosnąco/malejąco, domyślnie bez
+sortowania</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l12 level1 lfo4;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->pokaż – do wyboru tak/nie</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l12 level1 lfo4;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->kryteria – wiersz w którym wpisujemy parametry
+zapytania</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l12 level1 lfo4;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->lub – wiersz w którym wpisujemy parametry zapytania</p>
+
+<p class="MsoNormal" style="text-align:justify">W przypadku braku parametrów
+zapytań i porządku sortowania, po uruchomieniu kwerendy wyświetlona zostanie
+cała zwartość tabeli STATKI. </p>
+
+<p class="MsoNormal" style="text-align:justify">Aby uruchomić kwerendę należy w
+MENU WIDOK wybrać opcję WIDOK ARKUSZ DANYCH lub kliknąć na przycisku <!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:20.25pt;height:15pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image005.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image006.jpg" v:shapes="_x0000_i1027" width="27" height="20" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>na pasku narzędzi „projekt kwerendy”.
+Utworzoną kwerendę należy zamknąć i zapisać (podaj nazwę np. wg bandery). W ten
+sposób powstała kwerenda jako nowy obiekt dostępna będzie w oknie głównym bazy
+danych. Uruchamiamy ją kliknięciem lub przyciskiem OTWÓRZ (<span style="mso-field-code:&quot;REF _Ref151223067 \\h&quot;">Rys. 3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200320033003000360037000000</w:data>
+</xml><![endif]--></span>).</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:297pt;height:167.25pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image007.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image008.jpg" v:shapes="_x0000_i1028" width="396" height="223" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151223067"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151223067'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151223067'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151223067"></span><span style="mso-bookmark:_Ref151223067"><span style="mso-ansi-language:PL">3</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151223067'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151223067"></span><span style="mso-bookmark:_Ref151223067"></span><span style="mso-ansi-language:PL">. Uruchamianie kwerendy<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Uruchomiona kwerenda WG BANDERY
+wyświetli wszystkie rekordy (w kolejności zgodnej z ich wpisem) z tabeli
+STATKI. Oczywiście znacznie częściej tworzymy kwerendy które wyświetlają część
+rekordów - tych spełniających kryteria zapytań. Parametry zapytań wprowadzamy w
+wierszu „kryteria” oraz „lub” w widoku projekt kwerendy. </p>
+
+<p class="MsoNormal" style="text-align:justify">Dobrą zasadą jest dla każdego
+zapytania tworzyć oddzielną kwerendę (nawet jeżeli zapytanie dotyczy tej samej
+tabeli). Wtenczas na większość pytań będziemy mieli gotowe odpowiedzi w formie
+kwerend. Przypomnijmy, iż dane wyświetlone można dowolnie edytować
+(modyfikacja, usuwaniem, dodawanie) i zaktualizowane w tabelach. Parametry
+zapytań mogą mieć różnoraką formę i wyróżniamy:</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo6;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->stałe-konkretne wartości. Np. kwerenda, której widok
+przedstawiono na poniższym rysunku (<span style="mso-field-code:&quot;REF _Ref151223822 \\h&quot;">Rys.
+4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200320033003800320032000000</w:data>
+</xml><![endif]--></span>) wyświetli wszystkie statki bandery norweskiej
+(parametr poszukiwany - NORWEGIAN) w kolejności alfabetycznej (utworzoną
+kwerendę zapisz „statki norweskie”). </p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1029" type="#_x0000_t75"
+ style='width:396pt;height:341.25pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image009.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image010.jpg" v:shapes="_x0000_i1029" width="528" height="455" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151223822"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151223822'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151223822'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151223822"></span><span style="mso-bookmark:_Ref151223822"><span style="mso-ansi-language:PL">4</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151223822'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151223822"></span><span style="mso-bookmark:_Ref151223822"></span><span style="mso-ansi-language:PL">. Kwerenda wybierająca – stały parametr (widok
+projekt oraz arkusz danych)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->możemy stosować znaki specjalne (* - zastępuje ciąg
+znaków, ? – zastępuje jeden znak). Dla przykładu parametr <b><span style="color:red">k</span></b><span style="color:red">*</span> wprowadzony jako
+kryterium dla pola NAZWA STATKU spowoduje wyświetlenie wszystkich statków o
+nazwach rozpoczynających się na k (LIKE jest automatycznie dodawane przez
+program). Utworzoną kwerendę zachowaj jako „statki na k”</p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoIndexHeading"><!--[if gte vml 1]><v:shape id="_x0000_i1030" type="#_x0000_t75"
+ style='width:453.75pt;height:252.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image011.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image012.jpg" v:shapes="_x0000_i1030" width="605" height="337" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">5</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Kwerenda wybierająca – znak specjalny (widok projekt oraz arkusz danych)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->w polach typu liczbowego/walutowego/data/godzina do
+formułowania zapytań stosować możemy operatory porównań znane np. z arkusza
+kalkulacyjnego: <span style="color:blue">&gt;,&lt;,&gt;=,&lt;=,&lt;&gt;,</span>
+operatorów porównania <span style="color:blue">IS, LIKE</span> oraz operatorów
+logicznych <span style="color:blue">AND, OR, NOT</span> a także wyrażenia
+języka Microsoft Jet SQL np. <span style="color:blue">BETWEEN...AND</span>. Dla
+przykładu w wyniku zapytania przedstawionego na <span style="mso-field-code:
+&quot;REF _Ref151224755 \\h&quot;">Rys. 6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200320034003700350035000000</w:data>
+</xml><![endif]--></span> program wyświetli nam statki o długości większej bądź
+równej 100 metrów znajdujących się w naszej bazie. Utworzoną kwerendę zachowaj
+jako „statki dłuższe od 100 m”</p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1031" type="#_x0000_t75"
+ style='width:306pt;height:253.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image013.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image014.jpg" v:shapes="_x0000_i1031" width="408" height="338" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151224755"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151224755'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151224755'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151224755"></span><span style="mso-bookmark:_Ref151224755"><span style="mso-ansi-language:PL">6</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151224755'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151224755"></span><span style="mso-bookmark:_Ref151224755"></span><span style="mso-ansi-language:PL">. Kwerenda wybierająca – wyrażenie (widok projekt)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->zapytania oczywiście mogą być bardziej złożone i dotyczyć
+większej liczby pól. Przedstawiona na poniższym rysunku kwerenda wyświetli te
+masowce które mają długość mniejszą od 125 metrów. Utworzoną kwerendę zachowaj
+podając nazwę „drobnicowce o długości do 125 metrów”</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1032" type="#_x0000_t75"
+ style='width:387pt;height:200.25pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image015.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image016.jpg" v:shapes="_x0000_i1032" width="516" height="267" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">7</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Kwerenda wybierająca – zapytanie złożone (widok projekt)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->zapytanie złożone -kwerenda wybierająca. W poniższym
+przykładzie (<span style="mso-field-code:&quot;REF _Ref151264676 \\h&quot;">Rys. 8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200360034003600370036000000</w:data>
+</xml><![endif]--></span>) kwerenda wyświetli statki inne niż drobnicowiec o
+długości w przedziale (50,150) i szerokości w przedziale (12,13). Utworzoną
+kwerendę zachowaj podając nazwę „statki inne niż drobnicowce o długości i
+szerokości w zadanym przedziale”</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1033" type="#_x0000_t75"
+ style='width:453pt;height:3in'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image017.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image018.jpg" v:shapes="_x0000_i1033" width="604" height="288" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151264676"><span style="mso-ansi-language:
+PL">Rys. <span style="mso-field-code:&quot;SEQ Rys\. \\* ARABIC&quot;">8</span></span></a><span style="mso-ansi-language:PL">. Kwerenda wybierająca <o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->kwerenda wybierająca dodatkowo dla każdego rekordu może
+wykonać obliczenia w oparciu o dane zawarte w poszczególnych polach rekordu.
+Dla przykładu obliczmy objętość podwodzia naszych statków. W tym celu utworzymy
+nową kwerendę do której z tabeli STATKI pobierzemy interesujące nas pola
+(id_statku, nazwa_statku...,długość, szerokość, zanurzenie_max). Kwerendę
+zapisujemy (nazwa objętość) i następnie otwieramy w widoku projekt. W
+nowej-pustej kolumnie klikamy w wierszu POLE i wybieramy opcję BUDUJ (<span style="mso-field-code:&quot;REF _Ref151265685 \\h&quot;">Rys. 9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200360035003600380035000000</w:data>
+</xml><![endif]--></span>). Uruchomiony zostanie KONSTRUKOTR WYRAŻEŃ w którym
+poprzez kliknięcia na odpowiednie pola kwerendy OBJETOSC budujemy wyrażenie
+(iloczyn długości, szerokości i zanurzenia) </p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><span style="mso-ansi-language:EN-US" lang="EN-US"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:450pt;height:257.25pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image019.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image020.jpg" v:shapes="_x0000_i1034" width="600" height="343" border="0"><!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoCaption"><a name="_Ref151265685"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151265685'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151265685'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151265685"></span><span style="mso-bookmark:_Ref151265685"><span style="mso-ansi-language:PL">9</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151265685'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151265685"></span><span style="mso-bookmark:_Ref151265685"></span><span style="mso-ansi-language:PL">. Kwerenda wybierająca – konstruowanie wyrażenia<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Zatwierdzamy utworzone wyrażenie, następnie wybieramy
+właściwości pola (<span style="mso-field-code:&quot;REF _Ref151265685 \\h&quot;">Rys. 9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200360035003600380035000000</w:data>
+</xml><![endif]--></span>). Tam dokonujemy ustawień formatu pola (format:
+standardowy, miejsca dziesiętne 2, tytuł: objętość podwodzia). Możemy także
+zimnic nazwę utworzonego pola z „Wyr 1”: na „Objętość podwodzia:” Nowoutworzone
+pole możemy jak każde inne przefiltrować wg dowolnie zdefiniowanego parametru
+(w przykładzie: &gt;10000, sortowanie: rosnąco). W efekcie (<span style="mso-field-code:&quot;REF _Ref151265685 \\h&quot;">Rys. 9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003200360035003600380035000000</w:data>
+</xml><![endif]--></span>) po uruchomieniu kwerendy w każdym rekordzie zostanie
+dokonane wyliczenie objętości, wyświetlone zostaną wyłącznie te spełniające
+kryterium. Utworzoną kwerendę zachowaj podając nazwę „wg wyrażenia - statki o
+pojemności większej niż 10000”</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1035" type="#_x0000_t75"
+ style='width:453pt;height:289.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image021.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image022.jpg" v:shapes="_x0000_i1035" width="604" height="386" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">10</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Kwerenda wybierająca – konstruowanie wyrażenia, format, filtr. Widok
+arkusz danych <o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->obliczenia wykonywane przez kwerendę wybierającą mogą
+być wykonywane z wykorzystaniem wbudowanych funkcji. Wiemy z kursu
+stateczności, iż współczynnik pełnotliwości podwodzia <span style="mso-text-raise:
+-12.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75"
+ style='width:62.25pt;height:30.75pt' o:ole="">
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image023.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image024.gif" v:shapes="_x0000_i1036" width="83" height="41" border="0"><!--[endif]--></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1036"
+  DrawAspect="Content" ObjectID="_1258953896">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun: yes">&nbsp;</span>przyjmuje wartości w
+pewnych przedziałach dla określonych typów statków. Możemy zgrubnie przyjąć, iż
+dla statków towarowych małych współczynnik ten osiągnie wartość do 0.7.
+Wartości wyższe będą posiadały statki towarowe duże. Znajdźmy te statki przy
+czym współczynnik pełnotliwości wyliczymy przy pomocy formuły <span style="mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1037"
+ type="#_x0000_t75" style='width:93.75pt;height:33pt' o:ole="">
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image025.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image026.gif" v:shapes="_x0000_i1037" width="125" height="44" border="0"><!--[endif]--></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1037"
+  DrawAspect="Content" ObjectID="_1258953897">
+ </o:OLEObject>
+</xml><![endif]-->. Statki duże i małe znajdziemy wykorzystując funkcję
+IIF(WYRAŻENIE; WARTOŚĆ JEŻELI PRAWDA; WARTOŚĆ JEŻELI FAŁSZ). Budujemy nową
+kwerendę do w której uwzględnimy pola: id_statku, nazwa_statku, nośność,
+długość, szerokość, zanurzenie_max. Kwerendę zapisujemy podając nazwę wg
+pełnotliwości, następnie otwieramy ją w widoku projekt. Podobnie jak w
+poprzednim przykładzie w nowej-pustej kolumnie wskazujemy na opcję BUDUJ. W oknie
+konstruktora wyrażeń otwieramy katalog FUNKCJE WBUDOWANE i odnajdujemy funkcję <b>IIF</b>.
+Po jej wyborze budujemy wyrażenie zgodnie wg <span style="mso-field-code:&quot;REF _Ref151309620 \\h&quot;">Rys.
+11<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003300300039003600320030000000</w:data>
+</xml><![endif]--></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1038"
+ type="#_x0000_t75" style='width:361.5pt;height:276.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image027.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image028.jpg" v:shapes="_x0000_i1038" width="482" height="369" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151309620"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151309620'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151309620'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151309620"></span><span style="mso-bookmark:_Ref151309620"><span style="mso-ansi-language:PL">11</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151309620'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151309620"></span><span style="mso-bookmark:_Ref151309620"></span><span style="mso-ansi-language:PL">. Konstruktor wyrażeń<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Nowopowstałe pole dodatkowo formatujemy (przykład
+poprzedni). Kwerenda gotowa jest do uruchomienia. Wynik wyliczenia widoczny
+jest na poniższym rysunku (<!--[if supportFields]><span lang=EN-US
+style='mso-ansi-language:EN-US'><span style='mso-element:field-begin'></span></span><span
+lang=EN-US> </span>REF _Ref151310092 \h <span lang=EN-US style='mso-ansi-language:
+EN-US'><span style='mso-element:field-separator'></span></span><![endif]-->Rys.
+12<span style="mso-ansi-language:EN-US" lang="EN-US"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003300310030003000390032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span lang=EN-US
+style='mso-ansi-language:EN-US'><span style='mso-element:field-end'></span></span><![endif]-->).
+Utworzoną kwerendę zachowaj podając nazwę „wg wyrażenia - podział statków na
+małe i duże”</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><span style="mso-ansi-language:EN-US" lang="EN-US"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1039" type="#_x0000_t75" style='width:413.25pt;height:259.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image029.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image030.jpg" v:shapes="_x0000_i1039" width="551" height="346" border="0"><!--[endif]--><o:p></o:p></span></p>
+
+<p class="MsoCaption"><a name="_Ref151310092"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151310092'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151310092'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151310092"></span><span style="mso-bookmark:_Ref151310092"><span style="mso-ansi-language:PL">12</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151310092'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151310092"></span><span style="mso-bookmark:_Ref151310092"></span><span style="mso-ansi-language:PL">. Kwerenda wybierająca – wynik wyliczenia<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->kwerenda wybierająca może korzystać z danych zawartych
+w większej liczbie tabel (budowaliśmy m.in. w tym celu relacje). Warunkiem jest
+istnienie pól łączących w wybieranych tabelach. Zbudujmy zapytanie korzystając
+z tabel ZAWINIĘCIA oraz STATKI. Przy budowie kwerendy wskazujemy dwie tabele z
+których będziemy korzystali. Jeżeli utworzono wcześniej relacje między tabelami
+wtenczas system sam połączy pola łączące tabel. W przeciwnym przypadku sami
+wskazujemy pola łączące poprzez przeciągnięcie jednego z nich na drugie. W
+kwerendzie możemy uwzględnić dowolne pola z obydwu tabel. Dokonać możemy także
+dowolnego filtrowania (patrz. poprzednie przykłady). Dla przykładu kwerenda na
+poniższym rysunku (<span style="mso-field-code:&quot;REF _Ref151312455 \\h&quot;">Rys. 13<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003300310032003400350035000000</w:data>
+</xml><![endif]--></span>) wyświetli wszystkie statki cumujące w roku 2004
+(Between #2004-01-01# And #2004-12-31#), które przypłynęły z ładunkiem (Not
+"ballast"). Utworzoną kwerendę zachowaj podając nazwę „zawinięcia
+statków do portu w wybranym okresie – dwie tabele”</p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1040" type="#_x0000_t75"
+ style='width:399.75pt;height:276.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image031.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image032.jpg" v:shapes="_x0000_i1040" width="533" height="369" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151312455"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151312455'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151312455'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151312455"></span><span style="mso-bookmark:_Ref151312455"><span style="mso-ansi-language:PL">13</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151312455'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151312455"></span><span style="mso-bookmark:_Ref151312455"></span><span style="mso-ansi-language:PL">. Kwerenda wybierająca – dwie tabele<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->kwerenda wybierająca – agregująca. Kwerendy mogą
+wybierać rekordy spełniających określone kryteria. Dodatkowo wybrane rekordy
+mogą być grupowane wg wartości znajdujących się w polach. Dla grup kwerenda
+dokonać dodatkowe wyliczenia. Omówię je na przykładzie. Zbudujmy kwerendę do
+tabeli statki. Uwzględnimy w niej pola: id_statku, bandera, długość, szerokość,
+zanurzenie_max. Następie klikamy na przycisk sumy <!--[if gte vml 1]><v:shape
+ id="_x0000_i1041" type="#_x0000_t75" style='width:20.25pt;height:18.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image033.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image034.jpg" v:shapes="_x0000_i1041" width="27" height="25" border="0"><!--[endif]-->,
+który wyświetli nowy wiersz w kwerendzie – PODSUMOWANIE (<span style="mso-field-code:&quot;REF _Ref151476457 \\h&quot;">Rys. 14<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003400370036003400350037000000</w:data>
+</xml><![endif]--></span>). W wierszu tym pojawia się domyślenie opcje GRUPUJ
+WEDŁUG. </p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1042" type="#_x0000_t75"
+ style='width:453pt;height:259.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image035.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image036.jpg" v:shapes="_x0000_i1042" width="604" height="346" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151476457"><span style="mso-ansi-language:
+PL">Rys. <span style="mso-field-code:&quot;SEQ Rys\. \\* ARABIC&quot;">14</span></span></a><span style="mso-ansi-language:PL">. Kwerenda grupująca<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Oprócz grupowania możemy dla
+poszczególnych pól dokonać obliczeń w przy pomocy dostępnych funkcji
+odpowiednio: suma, średnia, minimum, maksimum, policz, odchylenie standardowe,
+wariancja, pierwszy, ostatni, wyrażenie, gdzie.</p>
+
+<p class="MsoNormal" style="text-align:justify">Ustalmy dla poszczególnych pól (<span style="mso-field-code:&quot;REF _Ref151478154 \\h&quot;">Rys. 15<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003400370038003100350034000000</w:data>
+</xml><![endif]--></span>): id_statku – policz oraz sortowanie malejąco,
+bandera – grupuj według, długość – średnia, szerokość – maksimum,
+zanurzenie_max – maksimum. Ustalamy także formaty poszczególnych pól (miejsca
+dziesiętne, tytuły pól). </p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1043" type="#_x0000_t75"
+ style='width:399.75pt;height:273.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image037.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image038.jpg" v:shapes="_x0000_i1043" width="533" height="365" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151478154"><span style="mso-ansi-language:
+PL">Rys. <span style="mso-field-code:&quot;SEQ Rys\. \\* ARABIC&quot;">15</span></span></a><span style="mso-ansi-language:PL">. Kwerenda grupująca – odpowiedź<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Po uruchomieniu kwerendy w
+efekcie zobaczymy jej odpowiedź na następujące pytanie: ile jest statków
+poszczególnych bander? Jaka jest ich średnia długość? maksymalna szerokość?
+(szerokość najszerszego) oraz największe zanurzenie statku danej bandery?
+Utworzoną kwerendę zachowaj podając nazwę „kwerenda agregująca – zestawienie
+statków wg bander”</p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><i>Uwaga!<o:p></o:p></i></p>
+
+<p class="MsoNormal"><i>Dane wyświetlone w kwerendzie grupującej nie mogą być
+edytowane.<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Parametr kryterium do
+filtracji danych w tabelach mogą przyjąć dowolną postać przedstawioną w
+poprzednich przykładach. <o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><i><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify">Dla przykładu kwerenda grupująca
+przedstawiona na poniższym rysunku odpowie na pytanie: ile masowców z bazy może
+zacumować na nabrzeżu o dostępnej głębokości 7,5 metra? Utworzoną kwerendę
+zachowaj podając nazwę „zliczenie masowców wg zanurzenia”.</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><i><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></i></p>
+
+<p class="MsoIndexHeading"><!--[if gte vml 1]><v:shape id="_x0000_i1044" type="#_x0000_t75"
+ style='width:365.25pt;height:97.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image039.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image040.jpg" v:shapes="_x0000_i1044" width="487" height="130" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">16</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Kwerenda grupująca – kryterium<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><a href="#_top">góra</a></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></b></p>
+
+<h2><a name="_Toc152320395"></a><a name="_Toc152321935"><span style="mso-bookmark:
+_Toc152320395"><b style="mso-bidi-font-weight:normal">5.2. Kwerenda
+parametryczna</b></span></a><b style="mso-bidi-font-weight:normal"><o:p></o:p></b></h2>
+
+<p class="MsoNormal" style="text-align:justify"><b><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><i>Kwerenda parametryczna</i></b><i>
+to następna postać kwerendy. Wykonanie kwerendy parametrycznej powoduje
+wyświetlenie okna dialogowego, w którym należy podać informacje, takie jak
+kryteria wyszukiwania rekordów czy wartości, które mają być wstawione w polach.
+Kwerendę można tak zaprojektować, aby użytkownik był pytany o kilka różnych
+informacji, na przykład o dwie daty. W takim przypadku zostaną znalezione
+wszystkie te rekordy, które znajdują się między dwoma podanymi datami.<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Każdą wartość parametru filtrującego dane w kwerendach
+wybierających możemy zastąpić oknem dialogowym (monitem) w którym użytkownik
+będzie wpisywał kryteria poszukiwania/filtrowania.</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Okno dialogowe kwerendy parametrycznej wywołujemy
+nawiasem <span style="color:red">[]</span> który oczywiście umieszczamy w wierszu
+KRYTERIA bądź LUB kwerendy. W nawiasie tym wpisujemy treść komunikatu, który
+powinien skłonić użytkownika do podania odpowiedniej wartości parametru
+filtracji (<span style="mso-field-code:&quot;REF _Ref151481765 \\h&quot;">Rys. 17<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003400380031003700360035000000</w:data>
+</xml><![endif]--></span>). </p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1045"
+ type="#_x0000_t75" style='width:453pt;height:385.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image041.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image042.jpg" v:shapes="_x0000_i1045" width="604" height="514" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151481765"><span style="mso-ansi-language:
+PL">Rys. <span style="mso-field-code:&quot;SEQ Rys\. \\* ARABIC&quot;">17</span></span></a><span style="mso-ansi-language:PL">. Kwerenda parametryczna (projekt kwerendy,
+uruchomienie - pytanie, arkusz danych - odpowiedź)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">Po
+uruchomieniu kwerendy w pierwszym kroku wyświetlone zostanie okno (w
+przykładzie - jakiej bandery...?). Do okna tego wpisujemy wartość parametru (w
+przykładzie – polska). Po wpisaniu parametru i jego zatwierdzeniu tabela
+zostanie przefiltrowana. Tylko rekordy spełniające (wartość w polu równa jest
+wartości poszukiwanej) kryterium zostanie wyświetlone. Kwerendę taką możemy uruchamiać
+dowolną ilość razy za każdym razem podając inną wartość parametru
+przeszukiwania. Utworzoną kwerendę zachowaj podając nazwę „monit wg bandery”.</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->W kwerendach parametrycznych stosować możemy wszystkie
+uprzednio przedstawione reguły poszukiwań jak. znaki specjalne, wyrażenia, itd.
+np.:</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level2 lfo8;tab-stops:list 36.0pt"><!--[if !supportLists]--><span style="font-family:Wingdings">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Instrukcja: <span style="color:blue">LIKE [Podaj
+początek nazwy statku] &amp; * </span>wprowadzona w polu NAZWA STATKU umożliwi
+wyszukiwać statki podając część początku ich nazwy,</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level2 lfo8;tab-stops:list 36.0pt"><!--[if !supportLists]--><span style="font-family:Wingdings">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Wyobraźmy sobie sytuację w której świadek incydentu
+nawigacyjnego zapamiętał tylko pewien fragment nazwy statku uczestniczącego w
+nim – Instrukcja postaci <span style="color:blue">LIKE * &amp; [Podaj dowolny
+człon nazwy statku] &amp; * </span>wprowadzona do pola NAZWA STATKU wyświetli
+wszystkie potencjalne podejrzane statki z naszej bazy które mogły w nim
+uczestniczyć,</p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level2 lfo8;tab-stops:list 36.0pt"><!--[if !supportLists]--><span style="font-family:Wingdings">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Instrukcja <span style="color:blue">&gt;[Podaj datę
+cumowania]</span> wprowadzona do pola DATA PRZYBYCIA i <span style="color:blue">&lt;[podaj
+datę odcumowania]</span> w prowadzona do pola DATA WYJSCIA (<span style="mso-field-code:&quot;REF _Ref151483757 \\h&quot;">Rys. 18<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003400380033003700350037000000</w:data>
+</xml><![endif]--></span>) umożliwi wyświetlić statki danego armatora (monit
+proszący o podanie nazwy armatora także się pojawi - zgodnie z wpisem
+przedstawionym na rysunku!) cumujące w porcie w podanym przez użytkownika
+przedziale. Utworzoną kwerendę zachowaj podając nazwę „monit statki armatora w
+okresie”.</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1046"
+ type="#_x0000_t75" style='width:427.5pt;height:202.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image043.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image044.jpg" v:shapes="_x0000_i1046" width="570" height="270" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151483757"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151483757'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151483757'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151483757"></span><span style="mso-bookmark:_Ref151483757"><span style="mso-ansi-language:PL">18</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151483757'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151483757"></span><span style="mso-bookmark:_Ref151483757"></span><span style="mso-ansi-language:PL">. Kwerenda parametryczna<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><a href="#_top">góra</a></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h2><a name="_Toc152320396"></a><a name="_Toc152321936"><span style="mso-bookmark:
+_Toc152320396"><b style="mso-bidi-font-weight:normal">5.3. Kwerenda krzyżowa</b></span></a><b style="mso-bidi-font-weight:normal"><o:p></o:p></b></h2>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><i>Kwerenda krzyżowa</i></b><i>
+wyświetla wartości sumowane (sumy, zliczenia i średnie) z jednego pola w tabeli
+i na podstawie jednego zestawu faktów grupuje je po lewej stronie arkusza
+danych, a na podstawie drugiego zestawu faktów w górnej części arkusza.<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Zróbmy kwerendę krzyżową na
+podstawie danych zawartych w tabeli zawinięcia. Tabela ta zawiera m.in. dane
+dotyczące zawinięć statków każdego dnia, przywożonych ładunków ich mas itd.
+Kwerenda którą sporządzimy zestawi ładunki, ich masy, sumę mas oraz zliczy
+ilość zawinięć w każdym dniu. </p>
+
+<p class="MsoNormal" style="text-align:justify">Kwerendę rozpoczynamy budować wg
+jak każdą inną do tej pory poznaną: </p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l2 level1 lfo11;
+     tab-stops:list 36.0pt">W oknie głównym bazy danych, w obiekcie kwerendy
+     klikamy na „utwórz kwerendę widoku projekt”</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l2 level1 lfo11;
+     tab-stops:list 36.0pt">Wskazujemy tabelę zawinięcia i z niej wybieramy
+     kolejno pola: data przybycia, id_zawinięcia, masa ładunku, ładunek, masa
+     ładunku.</li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1047" type="#_x0000_t75" style='width:417.75pt;height:215.25pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image045.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image046.jpg" v:shapes="_x0000_i1047" width="557" height="287" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151717768"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151717768'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151717768'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151717768"></span><span style="mso-bookmark:_Ref151717768"><span style="mso-ansi-language:PL">19</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151717768'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151717768"></span><span style="mso-bookmark:_Ref151717768"></span><span style="mso-ansi-language:PL">. Kwerend krzyżowa – widok projekt<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify">Sytuację po
+wyborze przedstawiono na powyższym (<span style="mso-field-code:&quot;REF _Ref151717768 \\h&quot;">Rys.
+19<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700310037003700360038000000</w:data>
+</xml><![endif]--></span>) rysunku. Na pasku narzędzi rozwijamy przyciskiem
+„Typ kwerendy” zawartość pola kombi (<span style="mso-field-code:&quot;REF _Ref151718092 \\h&quot;">Rys.
+20<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700310038003000390032000000</w:data>
+</xml><![endif]--></span>) i wybieramy kwerendę krzyżową. </p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1048" type="#_x0000_t75"
+ style='width:119.25pt;height:130.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image047.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image048.jpg" v:shapes="_x0000_i1048" width="159" height="174" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151718092"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151718092'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151718092'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151718092"></span><span style="mso-bookmark:_Ref151718092"><span style="mso-ansi-language:PL">20</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151718092'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151718092"></span><span style="mso-bookmark:_Ref151718092"></span><span style="mso-ansi-language:PL">. Typ kwerendy<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="3" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l2 level1 lfo11;
+     tab-stops:list 36.0pt">Wybór kwerendy krzyżowej spowodował wyświetlenie
+     dwóch dodatkowych wierszy: PODSUMOWANIE oraz KRZYŻOWE. Pasek podsumowanie
+     już znamy. W nim domyślnie ustawiona jest opcja GRUPUJ WEDŁUG. </li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l2 level1 lfo11;
+     tab-stops:list 36.0pt">Pola których wartości mają być wyświetlane jako
+     nagłówki wierszy w pozycji <b>Krzyżowe</b> ustawiamy opcję <b>Nagłówek
+     wiersza</b>. Dla nich też możemy wybrać funkcje agregujące w wierszu
+     podsumowanie. </li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify">W naszym
+przykładzie wybieramy kolejno: DATA PRZYBYCIA-KRZYŻOWE-GRUPUJ WEDŁUG;
+ID_STATKU-KRZYŻOWE-POLICZ; MASA LADUNKU-GRUPUJ WEDŁUG- SUMA</p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="5" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l2 level1 lfo11;
+     tab-stops:list 36.0pt">Pola których wartości mają być wyświetlane jako
+     nagłówki kolumn, w wierszu <b>Krzyżowe</b> wybieramy opcję <b>Nagłówek
+     kolumny</b>. Opcję <b>Nagłówek kolumny</b> można wybrać tylko dla jednego
+     pola. Podsumowanie dla tego pola musi pozostać bez zmian - domyślnie <b>Grupuj
+     według</b>. Domyślnie nagłówki kolumn są sortowane w porządku
+     alfabetycznym lub liczbowym. Jeśli mają wystąpić w innym porządku, albo
+     liczba wyświetlanych nagłówków kolumn ma być ograniczona, należy ustawić
+     odpowiednio właściwość <b>Nagłówki kolumn</b> danej kwerendy (<span style="mso-field-code:&quot;REF _Ref151719071 \\h&quot;">Rys. 21<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700310039003000370031000000</w:data>
+     </xml><![endif]--></span>). W naszym przypadku ustawienie nagłówek kolumny
+     wybieramy dla pola ŁADUNEK</li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1049" type="#_x0000_t75" style='width:359.25pt;height:300.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image049.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image050.jpg" v:shapes="_x0000_i1049" width="479" height="401" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151719071"><span style="mso-ansi-language:
+PL">Rys. <span style="mso-field-code:&quot;SEQ Rys\. \\* ARABIC&quot;">21</span></span></a><span style="mso-ansi-language:PL">. Właściwości kwerendy krzyżowej<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="6" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l2 level1 lfo11;
+     tab-stops:list 36.0pt">Pole którego wartość ma zostać użyta w kwerendzie
+     krzyżowej (przecięcie kolumny i wiersza) ustawiamy jako <b>Krzyżowe</b> z
+     opcją <b>Wartość</b>. W kwerendzie może wystąpić tylko jedno takie pole!.
+     W przykładzie dla pola MASA LADUNKU wybieramy KRZYŻOWE oraz WARTOŚĆ.
+     Postać kwerendy po ustawieniach przedstawiono na poniższym rysunku </li>
+</ol>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1050" type="#_x0000_t75"
+ style='width:418.5pt;height:312.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image051.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image052.jpg" v:shapes="_x0000_i1050" width="558" height="417" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">22</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Kwerendy krzyżowa – widok projekt oraz arkusz danych<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoToc4"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoToc4">Ostatecznie dokonamy formatowania naszej kwerendy -
+odpowiednio: zmienimy tytuły pól z „PoliczOfIdStatku” na „Dzienna liczba
+zawinięć”, „Sumaofmasa ładunku” na „Dzienna suma ładunków”, formatu liczb
+(standardowy dla pola „sumaofmasa ładunku” oraz masa ładunku). Powyższe
+ustawienia dokonujemy we właściwościach poszczególnych pól. Dodatkowo przy
+pomocy kryteriów ograniczymy zawinięcia do przedziału dat i wykluczymy
+zawinięcia pod balastem. Dla pola data przybycia ustawimy sortowanie rosnąco.
+Ustawienia oraz postać kwerendy w widoku arkusz danych przedstawiono na
+poniższym rysunku (<span style="mso-field-code:&quot;REF _Ref151722712 \\h&quot;">Rys. 23<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700320032003700310032000000</w:data>
+</xml><![endif]--></span>)</p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoIndexHeading"><!--[if gte vml 1]><v:shape id="_x0000_i1051" type="#_x0000_t75"
+ style='width:423pt;height:282.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image053.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image054.jpg" v:shapes="_x0000_i1051" width="564" height="377" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151722712"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151722712'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151722712'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151722712"></span><span style="mso-bookmark:_Ref151722712"><span style="mso-ansi-language:PL">23</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151722712'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151722712"></span><span style="mso-bookmark:_Ref151722712"></span><span style="mso-ansi-language:PL">. Kwerenda krzyżowa – postać końcowa<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoToc4">Zauważmy i w przestawionym przykładzie uwzględniliśmy dwa razy
+pole MASA ŁADUNKU. Wybór tej był świadomy i miał następujące cel. Po pierwsze
+przy ustawieniu NAGŁÓWEK WIERSZA-SUMA uzyskaliśmy dla każdego wiersza (w naszym
+przypadku dnia) sumę wszystkich ładunków przywiezionych do portu. Drugie
+zastosowanie pola MASA ŁADUNKU z opcjami KRZYŻOWE-WARTOŚĆ-SUMA pozwoliło
+uzyskać sumę masy (wynik na przecięciu wierszy i kolumn) konkretnego ładunku
+przywiezionego do portu danego dnia.</p>
+
+<p class="MsoToc4">Kwerendę zapisujemy podając nazwę „dzienne obroty ładunków”</p>
+
+<p class="MsoToc4">Dane wyświetlone przez kwerendę zablokowane są do edycji</p>
+
+<p class="MsoToc4">Kwerendę krzyżową możemy także utworzyć przy pomocy kreatora.
+W tym celu w oknie głównym bazy danych w obiekcie kwerendy klikamy na przycisk
+nowy. W otwartym oknie (<span style="mso-field-code:&quot;REF _Ref151726133 \\h&quot;">Rys.
+24<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700320036003100330033000000</w:data>
+</xml><![endif]--></span>) wybieramy pozycję „kreator kwerend krzyżowych”.
+Dalej postępujemy wg wskazówek kreatora (proszę wykonać samodzielnie). W
+utworzonej przy pomocy kreatora kwerendzie krzyżowej wszelkie kryteria,
+sortowania, formaty musimy zdefiniować samodzielnie („ręcznie”) w widoku
+projekt kwerendy. </p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoIndexHeading"><!--[if gte vml 1]><v:shape id="_x0000_i1052" type="#_x0000_t75"
+ style='width:363.75pt;height:147.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image055.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image056.jpg" v:shapes="_x0000_i1052" width="485" height="197" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151726133"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151726133'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151726133'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151726133"></span><span style="mso-bookmark:_Ref151726133"><span style="mso-ansi-language:PL">24</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151726133'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151726133"></span><span style="mso-bookmark:_Ref151726133"></span><span style="mso-ansi-language:PL">. Nowa kwerenda – kreator kwerend krzyżowych. <o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h2><a name="_Toc152320397"></a><a name="_Toc152321937"><span style="mso-bookmark:
+_Toc152320397"><b style="mso-bidi-font-weight:normal">5.4. Kwerenda
+funkcjonalna</b></span></a><b style="mso-bidi-font-weight:normal"><o:p></o:p></b></h2>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><i>Kwerenda funkcjonalna</i></b><i>
+pozwala na wprowadzenie zmian w wielu rekordach za pomocą jednej procedury.
+Istnieją cztery rodzaje kwerend funkcjonalnych: usuwająca, aktualizująca,
+dołączająca i tworząca tabele.<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h3><a name="_Toc152320398"></a><a name="_Toc152321938"><span style="mso-bookmark:
+_Toc152320398">5.4.1. Kwerenda aktualizująca</span></a></h3>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><i>Kwerenda aktualizująca<o:p></o:p></i></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Dokonuje globalnych zmian w
+grupie rekordów w tabeli lub kilku tabelach. Na przykład można zmienić
+współczynnik sztauerski wybranych ładunków w istniejących tabelach. <o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Zbudujemy kwerendę aktualizującą,
+która zmieni nazwę ładunku w tabeli ZAWINIĘCIA.</p>
+
+<p class="MsoNormal" style="text-align:justify">W tym celu tworzymy kwerendę
+która obejmie pola, który wartości zamierzamy zmodyfikować (jeżeli są to
+wartości przechowywane w kilku tabelach, które wykorzystujemy np. do łączenia
+tabel, wtenczas zaktualizować musimy dane w wszystkich tabelach). W przykładzie
+zaktualizujemy nazwy ładunków. Oto kolejne kroki:</p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l10 level1 lfo17;
+     tab-stops:list 36.0pt">Tworzymy nową kwerendę uwzględniamy w nim pole
+     ładunek z tabeli ZAWINIĘCIA</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l10 level1 lfo17;
+     tab-stops:list 36.0pt">W widoku projekt kwerendy po kliknięciu na
+     przycisku „typ kwerendy” wybieramy kwerendę aktualizującą <!--[if gte vml 1]><v:shape
+      id="_x0000_i1053" type="#_x0000_t75" style='width:27pt;height:15.75pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image057.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image058.jpg" v:shapes="_x0000_i1053" width="36" height="21" border="0"><!--[endif]-->-
+     <!--[if gte vml 1]><v:shape id="_x0000_i1054" type="#_x0000_t75" style='width:75.75pt;
+      height:15pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image059.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image060.jpg" v:shapes="_x0000_i1054" width="101" height="20" border="0"><!--[endif]-->.</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l10 level1 lfo17;
+     tab-stops:list 36.0pt">W wierszu ZMIANA NA definiujemy wartość lub
+     wyrażenie aktualizujące dane. Zmieńmy wiec nazwy ładunku „Ballast” w
+     tabeli na „Brak ładunku”.</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1055"
+ type="#_x0000_t75" style='width:262.5pt;height:236.25pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image061.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image062.jpg" v:shapes="_x0000_i1055" width="350" height="315" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">25</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Kwerenda aktualizująca – widok projekt<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="4" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l10 level1 lfo17;
+     tab-stops:list 36.0pt">Dla ZMIANA NA wpisujemy wartość „Brak ładunku” (<span style="mso-field-code:&quot;REF _Ref151736439 \\h&quot;">Rys. 30<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700330036003400330039000000</w:data>
+     </xml><![endif]--></span>). W wierszu kryteria wpisujemy „Ballast” aby
+     tylko rekordy zawierające ten wpis zostały zmodyfikowana a nie wszystkie!!</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l10 level1 lfo17;
+     tab-stops:list 36.0pt">Dane które będą modyfikowane możemy zobaczyć
+     poprzez klikniecie na opcji widok-”widok arkusza danych” lub <!--[if gte vml 1]><v:shape
+      id="_x0000_i1056" type="#_x0000_t75" style='width:33pt;height:23.25pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image063.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image064.jpg" v:shapes="_x0000_i1056" width="44" height="31" border="0"><!--[endif]-->.
+     Po kliknięciu na przycisku uruchom <!--[if gte vml 1]><v:shape id="_x0000_i1057"
+      type="#_x0000_t75" style='width:24pt;height:21pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image065.jpg" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image066.jpg" v:shapes="_x0000_i1057" width="32" height="28" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>dane spełniające kryterium zostaną
+     zaktualizowane. Widok tabel przed i po aktualizacji przedstawiono na
+     poniższym wykresie (<span style="mso-field-code:&quot;REF _Ref151736439 \\h&quot;">Rys.
+     30<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700330036003400330039000000</w:data>
+     </xml><![endif]--></span>). Zapisz kwerendę podając nazwę „aktualizacja
+     nazw ładunku”</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1058"
+ type="#_x0000_t75" style='width:428.25pt;height:456pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image067.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image068.jpg" v:shapes="_x0000_i1058" width="571" height="608" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys. \*
+ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">26</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Aktualizacja danych przy pomocy kwerendy aktualizującej<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><a href="#_top">góra</a></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h3><a name="_Toc152320399"></a><a name="_Toc152321939"><span style="mso-bookmark:
+_Toc152320399">5.4.2. Kwerenda dołączająca</span></a> </h3>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><i>Kwerenda dołączająca<o:p></o:p></i></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Dodaje grupę rekordów z tabeli
+lub tabel na końcu innej tabeli lub tabel. Na przykład jeśli otrzymalibyśmy
+tabelę zawierającą dane o statkach z innego źródła wtenczas, aby uniknąć
+wpisywania wszystkich tych informacji, można dołączyć je do tabeli STATKI.
+Kwerendy dołączające są również przydatne w następujących sytuacjach: <o:p></o:p></i></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol;mso-bidi-font-style:italic">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><i>dołączanie pól wybranych na podstawie kryteriów.<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l6 level1 lfo8;tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol;mso-bidi-font-style:italic">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><i>dołączanie rekordów w sytuacji, gdy część pól jednej
+tabeli nie ma swoich odpowiedników w drugiej tabeli. Na przykład tabela STATKI
+w naszej bazie danych 15 pól. Jeśli do tej tabeli chcemy dołączyć rekordy z
+tabeli, w której 12 z 15 pól jest takich samych, jak w tabeli STATKI, kwerenda
+dołączająca uwzględni tylko dane w dopasowanych polach, pozostałe zaś będą
+zignorowane. <o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Wykorzystamy kwerendę dołączającą
+do archiwizacji danych. Archiwizować będziemy tabelę zawinięcia. Utworzymy
+błyskawicznie pustą tabelę ZAWINIĘCIA_ARCHIWUM. Tabela ta będzie posiadała
+identyczną strukturę jak tabela pierwotna ZAWINIĘCIA. W tym celu w obiekcie
+TABELE w oknie głównym bazy danych kopiujemy tabelę zawinięcia i wklejamy ją. W
+wyświetlonym oknie zaznaczamy opcję „tylko struktura”, podajemy nazwę i
+zatwierdzamy (<span style="mso-field-code:&quot;REF _Ref151733785 \\h&quot;">Rys. 27<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700330033003700380035000000</w:data>
+</xml><![endif]--></span>). Możemy oczywiście utworzyć nową tabelę od podstaw.
+Pamiętać musimy przy tym aby typy i formaty pól odpowiadały polom z tabeli z
+której będziemy dołączać dane. Unikniemy w ten sposób niezamierzonych strat
+danych. </p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1059"
+ type="#_x0000_t75" style='width:249pt;height:163.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image069.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image070.jpg" v:shapes="_x0000_i1059" width="332" height="218" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151733785"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151733785'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151733785'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151733785"></span><span style="mso-bookmark:_Ref151733785"><span style="mso-ansi-language:PL">27</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151733785'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151733785"></span><span style="mso-bookmark:_Ref151733785"></span><span style="mso-ansi-language:PL">. Monit przy wklejaniu tabeli do bazy<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Tworząc tabelę dołączającą
+wykonujemy następujące kroki.</p>
+
+<p class="MsoToc4"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l8 level1 lfo21;
+     tab-stops:list 36.0pt">Tworzymy kwerendę pozyskującą dane z tabeli pierwotnej
+     (Tabela zawinięcia, uwzględniamy wszystkie pola).</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l8 level1 lfo21;
+     tab-stops:list 36.0pt">W widoku projekt kwerendy po kliknięciu na
+     przycisku „typ kwerendy” wybieramy kwerendę dołączającą <!--[if gte vml 1]><v:shape
+      id="_x0000_i1060" type="#_x0000_t75" style='width:35.25pt;height:19.5pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image057.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image071.jpg" v:shapes="_x0000_i1060" width="47" height="26" border="0"><!--[endif]-->-
+     <!--[if gte vml 1]><v:shape id="_x0000_i1061" type="#_x0000_t75" style='width:90pt;
+      height:15pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image072.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image073.jpg" v:shapes="_x0000_i1061" width="120" height="20" border="0"><!--[endif]-->.</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l8 level1 lfo21;
+     tab-stops:list 36.0pt">W polu <b>Nazwa tabeli</b> wpisujemy nazwę tabeli (<span style="mso-field-code:&quot;REF _Ref151734962 \\h&quot;">Rys. 28<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700330034003900360032000000</w:data>
+     </xml><![endif]--></span>), do której mają zostać dołączone rekordy
+     (Tabela zawinięcia_archiwum).</li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoToc4" style="text-indent:-36.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1062"
+ type="#_x0000_t75" style='width:279pt;height:127.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image074.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image075.jpg" v:shapes="_x0000_i1062" width="372" height="170" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151734962"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151734962'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151734962'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151734962"></span><span style="mso-bookmark:_Ref151734962"><span style="mso-ansi-language:PL">28</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151734962'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151734962"></span><span style="mso-bookmark:_Ref151734962"></span><span style="mso-ansi-language:PL">. Dołączanie do – konstrukcja kwerendy
+dołączającej<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="4" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l8 level1 lfo21;
+     tab-stops:list 36.0pt">W wierszu kryteria możemy podać dowolne kryterium
+     (wpiszmy monity ograniczające dane do okresu)</li>
+</ol>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1063" type="#_x0000_t75"
+ style='width:453.75pt;height:139.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image076.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image077.jpg" v:shapes="_x0000_i1063" width="605" height="186" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151899202"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151899202'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151899202'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151899202"></span><span style="mso-bookmark:_Ref151899202"><span style="mso-ansi-language:PL">29</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151899202'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151899202"></span><span style="mso-bookmark:_Ref151899202"></span><span style="mso-ansi-language:PL">. Kryteria kwerendy dołączającej<o:p></o:p></span></p>
+
+<p class="MsoToc4"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:36.0pt;text-align:justify">Na powyższym
+rysunku widoczny jest także nowy wiersz DOŁĄCZANIE DO powstały po wyborze
+kwerendy dołączającej</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="5" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l8 level1 lfo21;
+     tab-stops:list 36.0pt">Kwerenda jest gotowa, możemy ją zapisać podając
+     nazwę „dołącz zawinięcia do archiwum”. Po klikniecie na opcji widok ”widok
+     arkusza danych” lub <!--[if gte vml 1]><v:shape id="_x0000_i1064" type="#_x0000_t75"
+      style='width:33pt;height:23.25pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image063.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image078.jpg" v:shapes="_x0000_i1064" width="44" height="31" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>zobaczymy dane które będą dołączone do
+     tabeli. Po kliknięciu na przycisku uruchom <!--[if gte vml 1]><v:shape
+      id="_x0000_i1065" type="#_x0000_t75" style='width:24pt;height:21pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image065.jpg" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image079.jpg" v:shapes="_x0000_i1065" width="32" height="28" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>dane spełniające kryterium zostaną
+     dołączone (<span style="mso-field-code:&quot;REF _Ref151736439 \\h&quot;">Rys. 30<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700330036003400330039000000</w:data>
+     </xml><![endif]--></span>). Na rysunku poniżej przedstawiono dane dołączone
+     do tabeli „zawinięcia_archiwum” z okresu 1-31 styczeń 2003</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1066" type="#_x0000_t75"
+ style='width:369pt;height:324.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image080.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image081.jpg" v:shapes="_x0000_i1066" width="492" height="433" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151736439"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151736439'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151736439'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151736439"></span><span style="mso-bookmark:_Ref151736439"><span style="mso-ansi-language:PL">30</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151736439'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151736439"></span><span style="mso-bookmark:_Ref151736439"></span><span style="mso-ansi-language:PL">. Tabela pierwotna, kwerenda dołączająca, wynik
+uruchomienia kwerendy dołączającej – dane dołączone<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h3><a name="_Toc152320400"></a><a name="_Toc152321940"><span style="mso-bookmark:
+_Toc152320400">5.4.3. Kwerenda usuwająca</span></a></h3>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><i>Kwerenda usuwająca<o:p></o:p></i></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Usuwa grupę rekordów z jednej
+lub kilku tabel. Kwerenda usuwająca może być użyta na przykład do usunięcia
+statków, które zostały wycofane z eksploatacji. Użycie kwerendy usuwającej
+powoduje usunięcie całych rekordów, nie zaś wybranych pól w rekordach.<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">W tabeli ZAWINIĘCIA istnieją
+rekordy dla których nie podano Id_statku. Nie wiemy więc jakie statki zawinęły
+do portu. Załóżmy, iż rekordy te zostały omyłkowo wstawione. Znajdźmy te
+rekordy i usuńmy. Zadanie wykonamy przy pomocy kwerendy usuwającej. Tok postępowania
+jest następujący:</p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l5 level1 lfo26;
+     tab-stops:list 36.0pt">Tworzymy nową kwerendę w widoku projekt z tabeli z
+     której będziemy usuwali rekordy.</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l5 level1 lfo26;
+     tab-stops:list 36.0pt">Uwzględniamy pole które pozwoli nam wyselekcjonować
+     szukane rekordy (id_statku) dodatkowo możemy dodać inne pola wg uznania
+     lub tez przeciągnąć „*” z listy pól tabeli ZAWINIECIA co pozwoli wszystkie
+     pola tabeli.</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l5 level1 lfo26;
+     tab-stops:list 36.0pt">Przyciskiem „typ kwerendy” <!--[if gte vml 1]><v:shape
+      id="_x0000_i1067" type="#_x0000_t75" style='width:27pt;height:15.75pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image057.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image082.jpg" v:shapes="_x0000_i1067" width="36" height="21" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>wybieramy kwerendę usuwającą <!--[if gte vml 1]><v:shape
+      id="_x0000_i1068" type="#_x0000_t75" style='width:1in;height:15pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image083.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image084.jpg" v:shapes="_x0000_i1068" width="96" height="20" border="0"><!--[endif]--></li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l5 level1 lfo26;
+     tab-stops:list 36.0pt">Wprowadzamy kryterium dla pola id_statku
+     pozwalające wyselekcjonować szukane rekordy (wiersz kryteria: 0, wiersz
+     lub „is null” - <span style="mso-field-code:&quot;REF _Ref151899202 \\h&quot;">Rys. 29<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003800390039003200300032000000</w:data>
+     </xml><![endif]--></span>)</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1069"
+ type="#_x0000_t75" style='width:270pt;height:216.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image085.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image086.jpg" v:shapes="_x0000_i1069" width="360" height="289" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">31</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Kwerenda usuwająca – widok projekt<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="5" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l5 level1 lfo26;
+     tab-stops:list 36.0pt">Kwerenda jest gotowa. Możemy wyświetlić rekordy
+     które będą usunięte ikoną <!--[if gte vml 1]><v:shape id="_x0000_i1070"
+      type="#_x0000_t75" style='width:33pt;height:23.25pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image063.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image087.jpg" v:shapes="_x0000_i1070" width="44" height="31" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>(widok arkusz danych). Uruchamiając
+     kwerendę ikoną <!--[if gte vml 1]><v:shape id="_x0000_i1071" type="#_x0000_t75"
+      style='width:24pt;height:21pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image065.jpg" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image088.jpg" v:shapes="_x0000_i1071" width="32" height="28" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>usuniemy rekordy (<span style="mso-field-code:&quot;REF _Ref151736439 \\h&quot;">Rys. 30<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003700330036003400330039000000</w:data>
+     </xml><![endif]--></span>). </li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1072"
+ type="#_x0000_t75" style='width:6in;height:423pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image089.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image090.jpg" v:shapes="_x0000_i1072" width="576" height="564" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><span style="mso-ansi-language:PL">Rys. </span><!--[if supportFields]><span
+lang=EN-US><span style='mso-element:field-begin'></span></span><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span><![endif]--><span style="mso-ansi-language:PL">32</span><!--[if supportFields]><span lang=EN-US><span
+style='mso-element:field-end'></span></span><![endif]--><span style="mso-ansi-language:
+PL">. Kwerenda usuwająca – wynik uruchomienia<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="6" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l5 level1 lfo26;
+     tab-stops:list 36.0pt">Zapisz kwerendę podając nazwę „Usuniecie zawinięć
+     gdzie brak statków”</li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><a href="#_top">góra</a></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h3><a name="_Toc152320401"></a><a name="_Toc152321941"><span style="mso-bookmark:
+_Toc152320401">5.4.4. Kwerenda tworząca tabelę</span></a></h3>
+
+<p class="MsoNormal" style="text-align:justify"><b><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><i>Kwerenda tworząca tabelę<o:p></o:p></i></b></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Tworzy nową tabelę z
+wszystkich lub z części danych znajdujących się w jednej lub kilku tabelach.
+Kwerendy tworzące tabele są przydatne w następujących sytuacjach: <o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Tworzenie tabel, które mają
+być eksportowane do innych baz danych programu Microsoft Access. Na przykład
+można utworzyć tabelę zawierającą część pól z tabeli Pracownicy, a następnie
+wyeksportować ją do bazy danych używanej przez dział kadr.<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Tworzenie stron dostępu do danych
+zawierających dane poczynając od określonego momentu. <o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Tworząc kwerendę tworzącą tabelę
+postępujemy kolejno:</p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l4 level1 lfo31;
+     tab-stops:list 36.0pt">Tworzymy kwerendę wybierającą która pobierze
+     rekordy z tabeli (tabel), które mają znaleźć się w nowej tabeli. </li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l4 level1 lfo31;
+     tab-stops:list 36.0pt">Utworzymy więc kwerendę, która będzie zawierała
+     zawinięcia statków pod balastem w wybranym okresie (dane znajdują się w
+     dwóch tabelach: STATKI oraz ZAWINIĘCIA).</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l4 level1 lfo31;
+     tab-stops:list 36.0pt">Przyciskiem „typ kwerendy” <!--[if gte vml 1]><v:shape
+      id="_x0000_i1073" type="#_x0000_t75" style='width:27pt;height:15.75pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image057.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image091.jpg" v:shapes="_x0000_i1073" width="36" height="21" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>wybieramy kwerendę tworzącą tabelę <!--[if gte vml 1]><v:shape
+      id="_x0000_i1074" type="#_x0000_t75" style='width:120pt;height:17.25pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image092.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image093.jpg" v:shapes="_x0000_i1074" width="160" height="23" border="0"><!--[endif]--></li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l4 level1 lfo31;
+     tab-stops:list 36.0pt">Podajemy nazwę tabeli do której zostaną przekazane
+     pobrane rekordy (<span style="mso-field-code:&quot;REF _Ref151909465 \\h&quot;">Rys.
+     33<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003900300039003400360035000000</w:data>
+     </xml><![endif]--></span> - tabela może być zlokalizowana w bieżącej bazie
+     lub zewnętrznej – wtenczas podajemy także ścieżkę dostępu do bazy)</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1075"
+ type="#_x0000_t75" style='width:297pt;height:132pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image094.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image095.jpg" v:shapes="_x0000_i1075" width="396" height="176" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151909465"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151909465'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151909465'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151909465"></span><span style="mso-bookmark:_Ref151909465"><span style="mso-ansi-language:PL">33</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151909465'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151909465"></span><span style="mso-bookmark:_Ref151909465"></span><span style="mso-ansi-language:PL">. Tworzenie nowej tabeli przy pomocy kwerendy<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="5" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l4 level1 lfo31;
+     tab-stops:list 36.0pt">Kwerenda jest gotowa (<span style="mso-field-code:
+     &quot;REF _Ref151909448 \\h&quot;">Rys. 34<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003900300039003400340038000000</w:data>
+     </xml><![endif]--></span>). Zapisujemy kwerendę podając nazwę „Utwórz
+     tabelę statki pod balastem w okresie”</li>
+</ol>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1076" type="#_x0000_t75"
+ style='width:405pt;height:211.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image096.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image097.jpg" v:shapes="_x0000_i1076" width="540" height="282" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151909448"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151909448'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151909448'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151909448"></span><span style="mso-bookmark:_Ref151909448"><span style="mso-ansi-language:PL">34</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151909448'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151909448"></span><span style="mso-bookmark:_Ref151909448"></span><span style="mso-ansi-language:PL">. Kwerenda tworząca tabelę w widoku projekt<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="6" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l4 level1 lfo31;
+     tab-stops:list 36.0pt">Kwerenda jest gotowa (<span style="mso-field-code:
+     &quot;REF _Ref151909448 \\h&quot;">Rys. 34<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003900300039003400340038000000</w:data>
+     </xml><![endif]--></span>). Zapisujemy kwerendę podając nazwę „Utwórz
+     tabelę statki pod balastem w okresie”</li>
+</ol>
+
+<ol style="margin-top:0cm" start="7" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l5 level1 lfo26;
+     tab-stops:list 36.0pt">Rekordy które zostaną przekazane do nowej tabeli
+     możemy zobaczyć klikając na ikonie <!--[if gte vml 1]><v:shape id="_x0000_i1077"
+      type="#_x0000_t75" style='width:31.5pt;height:22.5pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image063.png" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image098.jpg" v:shapes="_x0000_i1077" width="42" height="30" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>(widok arkusz danych). Uruchamiając
+     kwerendę ikoną <!--[if gte vml 1]><v:shape id="_x0000_i1078" type="#_x0000_t75"
+      style='width:20.25pt;height:17.25pt'>
+      <v:imagedata src="./tworzenie_kwerendy_pliki/image065.jpg" o:title=""/>
+     </v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image099.jpg" v:shapes="_x0000_i1078" width="27" height="23" border="0"><!--[endif]--><span style="mso-spacerun: yes">&nbsp;</span>spowodujemy utworzenie tabeli o podanej
+     nazwie i wypełnieniu jej rekordami spełniającymi podane kryteria (<span style="mso-field-code:&quot;REF _Ref151911054 \\h&quot;">Rys. 35<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003900310031003000350034000000</w:data>
+     </xml><![endif]--></span>). </li>
+</ol>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape id="_x0000_i1079" type="#_x0000_t75"
+ style='width:453.75pt;height:294.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image100.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image101.jpg" v:shapes="_x0000_i1079" width="605" height="393" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151911054"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151911054'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151911054'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151911054"></span><span style="mso-bookmark:_Ref151911054"><span style="mso-ansi-language:PL">35</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151911054'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151911054"></span><span style="mso-bookmark:_Ref151911054"></span><span style="mso-ansi-language:PL">. Kwerenda tworząca tabelę – widok projekt, widok
+arkusz danych oraz utworzona przez nią tabela dla III kwartału 2004 roku.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><a href="#_top">góra</a></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h2><a name="_Toc152320402"></a><a name="_Toc152321942"><span style="mso-bookmark:
+_Toc152320402"><b style="mso-bidi-font-weight:normal">5.5. Kwerenda wyszukująca
+duplikaty</b></span></a><b style="mso-bidi-font-weight:normal"><o:p></o:p></b></h2>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Kwerenda pozwala wyszukać
+powtarzające się rekordy lub wartości pól w tabeli.<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Najprostszą metodą utworzenia
+takiej kwerendy jest wykorzystanie kreatora. W tym celu:</p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l1 level1 lfo37;
+     tab-stops:list 36.0pt">W oknie bazy danych klikamy opcję KWERENDY w polu
+     OBIEKTY, następnie na pasku narzędzi wybieramy pozycję NOWY OBIEKT.</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l1 level1 lfo37;
+     tab-stops:list 36.0pt">W otwartym oknie dialogowym NOWA KWERENDA wybieramy
+     pozycję <b>Kreator kwerend wyszukujących duplikaty</b></li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l1 level1 lfo37;
+     tab-stops:list 36.0pt">Dalej postępujemy zgodnie z wyświetlanymi
+     instrukcjami.</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h2><a name="_Toc152320403"></a><a name="_Toc152321943"><span style="mso-bookmark:
+_Toc152320403"><b style="mso-bidi-font-weight:normal">5.6. Kwerenda wyszukująca
+niepasujące dane</b></span></a><b style="mso-bidi-font-weight:normal"><o:p></o:p></b></h2>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Za pomocą kwerendy
+wyszukującej niepasujące dane można wyszukiwać w jednej tabeli rekordy, które
+nie mają swoich odpowiedników w drugiej tabeli. Można na przykład znaleźć statki
+z znajdujące się w tabeli STATKI (spis), które nie zawinęły do naszego portu
+(tabela ZAWINIĘCIA).<o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Podobnie jak w poprzednim
+przypadku najprostszą metodą utworzenia takiej kwerendy jest wykorzystanie
+kreatora. W tym celu:</p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l7 level1 lfo40;
+     tab-stops:list 36.0pt">W oknie bazy danych klikamy opcję KWERENDY w polu
+     OBIEKTY, następnie na pasku narzędzi wybieramy pozycję NOWY OBIEKT.</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l7 level1 lfo40;
+     tab-stops:list 36.0pt">W otwartym oknie dialogowym NOWA KWERENDA wybieramy
+     pozycję <b>Kreator kwerend wyszukujących niepasujące dane</b></li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l7 level1 lfo40;
+     tab-stops:list 36.0pt">Dalej postępujemy zgodnie z wyświetlanymi
+     instrukcjami.</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Oczywiście kwerendę taką możemy
+wykonać samodzielnie gdyż jest to zwykła kwerenda wybierająca z odpowiednim
+kryterium. Dla przykładu problem, który zdefiniowałem powyżej (tzn. pytanie
+następującej treści: które statki z mego spisu (tabela STATKI) nie zawinęły do
+portu (nie ma ich w tabeli ZAWINIĘCIA)) przedstawi kwerenda zaprezentowana na
+poniższym rysunku (<span style="mso-field-code:&quot;REF _Ref151993221 \\h&quot;">Rys. 36<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003900390033003200320031000000</w:data>
+</xml><![endif]--></span>)</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1080"
+ type="#_x0000_t75" style='width:350.25pt;height:411pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image102.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image103.jpg" v:shapes="_x0000_i1080" width="467" height="548" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151993221"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151993221'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151993221'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151993221"></span><span style="mso-bookmark:_Ref151993221"><span style="mso-ansi-language:PL">36</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151993221'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151993221"></span><span style="mso-bookmark:_Ref151993221"></span><span style="mso-ansi-language:PL">. Kwerenda wyszukująca niepasujące dane – widok
+projekt<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><a href="#_top">góra</a></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h2><a name="_Toc152320404"></a><a name="_Toc152321944"><span style="mso-bookmark:
+_Toc152320404"><b style="mso-bidi-font-weight:normal">5.7. Kwerenda
+Autoodnośnika automatycznego</b></span></a><b style="mso-bidi-font-weight:normal">
+<o:p></o:p></b></h2>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">Kwerenda autoodnośnika
+automatycznego (wielotabelowa) pozwala automatycznie wypełniać wartości pola
+(pól) dla nowych rekordów. Szczegółowe wymagania są następujące:</p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-bottom:12.0pt;
+margin-left:18.0pt;text-align:justify;text-indent:-18.0pt;mso-list:l9 level1 lfo42;
+tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Kwerenda musi być utworzona na podstawie więcej niż
+jednej tabeli i tabele muszą się znajdować w relacji jeden-do-wielu,</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-bottom:12.0pt;
+margin-left:18.0pt;text-align:justify;text-indent:-18.0pt;mso-list:l9 level1 lfo42;
+tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Pole sprzężenia po stronie "jeden" relacji
+musi posiadać indeks unikatowy. Indeks unikatowy oznacza, że pole jest kluczem
+podstawowym lub jego właściwość <b>Indeksowane</b> w widoku "Projekt"
+tabeli ma ustawienie <b>Tak (Bez powtórzeń)</b>,</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-bottom:12.0pt;
+margin-left:18.0pt;text-align:justify;text-indent:-18.0pt;mso-list:l9 level1 lfo42;
+tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Pole sprzężenia dodawane do siatki projektu musi być
+polem z tabeli znajdującej się po stronie "wiele" relacji
+jeden-do-wielu. Aby Autoodnośnik działał, pole to nie może być kluczem
+podstawowym i jego właściwość <b>Indeksowane</b> nie może mieć ustawienia <b>Tak
+(Bez powtórzeń)</b>. </p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-bottom:12.0pt;
+margin-left:18.0pt;text-align:justify;text-indent:-18.0pt;mso-list:l9 level1 lfo42;
+tab-stops:list 18.0pt"><!--[if !supportLists]--><span style="font-family:Symbol">-<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]-->Wartość wprowadzana w polu sprzężenia po stronie
+"wiele" relacji musi już istnieć w polu sprzężenia po stronie
+"jeden" relacji. </p>
+
+<p class="MsoNormal" style="text-align:justify">Poniżej przedstawię przykład
+kwerendy autoodnośnika wykorzystując tabele STATKI oraz ZAWINIĘCIA.
+Wprowadzając kolejne rekordy w tabeli zawinięcia (kolejne zawiniecie statku) po
+wskazaniu numeru statku zwijającego, system (kwerenda) sam wypełni pola
+szczegółami statku. Kolejność postępowania jest następująca:</p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l11 level1 lfo45;
+     tab-stops:list 36.0pt">Tworzymy kwerendę wybierającą z dwóch tabel
+     (STATKI, ZAWINIĘCIA) będących w relacji jeden do wielu (jeden statek może
+     wystąpić w wielu zawinięciach - <span style="mso-field-code:&quot;REF _Ref152174183 \\h&quot;">Rys.
+     37<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350032003100370034003100380033000000</w:data>
+     </xml><![endif]--></span>).</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1081"
+ type="#_x0000_t75" style='width:422.25pt;height:328.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image104.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image105.jpg" v:shapes="_x0000_i1081" width="563" height="438" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref152174183"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref152174183'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref152174183'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref152174183"></span><span style="mso-bookmark:_Ref152174183"><span style="mso-ansi-language:PL">37</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref152174183'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref152174183"></span><span style="mso-bookmark:_Ref152174183"></span><span style="mso-ansi-language:PL">. Kwerenda autoodnośnika – widok projekt.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="2" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l11 level1 lfo45;
+     tab-stops:list 36.0pt">Kilka warunków musi być spełnionych (zgodnie z
+     wcześniejszym opisem):</li>
+ <ol style="margin-top:0cm" start="1" type="a">
+  <li class="MsoNormal" style="text-align:justify;mso-list:l11 level2 lfo45;
+      tab-stops:list 72.0pt">Należy uwzględnić w kwerendzie pole sprzężenia ze
+      strony "wiele" relacji jeden-do-wielu (id statku z tabeli
+      zawinięcia)</li>
+  <li class="MsoNormal" style="text-align:justify;mso-list:l11 level2 lfo45;
+      tab-stops:list 72.0pt">Pole ze sprzężenia po stronie jeden (w naszym
+      przypadku id_statku z tabeli STATKI) musi być polem unikatowym tj.
+      oznaczonym kluczem podstawowym – i tak jest (sprawdź punkt - tworzenie
+      tabeli)</li>
+ </ol>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l11 level1 lfo45;
+     tab-stops:list 36.0pt">Uwzględniamy inne pola z tabel wg uznania</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l11 level1 lfo45;
+     tab-stops:list 36.0pt">Kwerenda jest gotowa możemy ją zapisać podając nazwę
+     „kwerenda autoodnośnika”. Kwerendę w widoku projekt przedstawiono na
+     poniższym wykresie (<span style="mso-field-code:&quot;REF _Ref152175647 \\h&quot;">Rys.
+     38<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350032003100370035003600340037000000</w:data>
+     </xml><![endif]--></span>).</li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1082"
+ type="#_x0000_t75" style='width:453.75pt;height:180pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image106.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image107.jpg" v:shapes="_x0000_i1082" width="605" height="240" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref152175647"><span style="mso-ansi-language:
+PL">Rys. <span style="mso-field-code:&quot;SEQ Rys\. \\* ARABIC&quot;">38</span></span></a><span style="mso-ansi-language:PL">. Kwerenda autoodnośnika – widok arkusz danych.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="5" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l11 level1 lfo45;
+     tab-stops:list 36.0pt">Kwerenda jest gotowa możemy ją zapisać podając
+     nazwę „kwerenda autoodnośnika”. Kwerendę w widoku projekt przedstawiono na
+     poniższym wykresie (<span style="mso-field-code:&quot;REF _Ref152175647 \\h&quot;">Rys.
+     38<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350032003100370035003600340037000000</w:data>
+     </xml><![endif]--></span>).</li>
+</ol>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="6" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l11 level1 lfo45;
+     tab-stops:list 36.0pt">Proszę zauważyć, iż po wyborze lub wpisaniu numeru
+     statku w polu ID STATKU pozostałe pola kwerendy (bandera, długość, szerokość,
+     zanurzenie) zostaną automatycznie wypełnione – porównaj rysunki <span style="mso-field-code:&quot;REF _Ref152175647 \\h&quot;">Rys. 38<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350032003100370035003600340037000000</w:data>
+     </xml><![endif]--></span> i <span style="mso-field-code:&quot;REF _Ref152176431 \\h&quot;">Rys.
+     39<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350032003100370036003400330031000000</w:data>
+     </xml><![endif]--></span>.</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1083"
+ type="#_x0000_t75" style='width:453.75pt;height:132pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image108.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image109.jpg" v:shapes="_x0000_i1083" width="605" height="176" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref152176431"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref152176431'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref152176431'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref152176431"></span><span style="mso-bookmark:_Ref152176431"><span style="mso-ansi-language:PL">39</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref152176431'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref152176431"></span><span style="mso-bookmark:_Ref152176431"></span><span style="mso-ansi-language:PL">. Kwerenda autoodnośnika – wypełnione dane.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><a href="#_top">góra</a></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h2><a name="_Toc152320405"></a><a name="_Toc152321945"><span style="mso-bookmark:
+_Toc152320405"><b style="mso-bidi-font-weight:normal">5.8. Kwerenda SQL</b></span></a><b style="mso-bidi-font-weight:normal"><o:p></o:p></b></h2>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Kwerendy SQL tworzymy w
+oparciu o instrukcje języka SQL (Structured Query Language) . <o:p></o:p></i></p>
+
+<p class="MsoNormal" style="text-align:justify">Każda kwerenda, którą do tej pory
+utworzyliśmy de facto jest reprezentowana poprzez instrukcje SQL. Aby zobaczyć utworzone
+do tej pory instrukcje wystarczy jakąkolwiek kwerendę wyświetlić w widoku SQL (<span style="mso-field-code:&quot;REF _Ref151995857 \\h&quot;">Rys. 40<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003900390035003800350037000000</w:data>
+</xml><![endif]--></span>).</p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1084"
+ type="#_x0000_t75" style='width:453pt;height:244.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image110.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image111.jpg" v:shapes="_x0000_i1084" width="604" height="326" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151995857"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151995857'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151995857'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151995857"></span><span style="mso-bookmark:_Ref151995857"><span style="mso-ansi-language:PL">40</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151995857'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151995857"></span><span style="mso-bookmark:_Ref151995857"></span><span style="mso-ansi-language:PL">. Kwerenda w widoku projekt oraz widoku SQL<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify">W Ms Access możemy tworzyć trzy
+rodzaje kwerend typu SQL - odpowiednio: kwerendę przekazującą, kwerendę
+definiującą dane oraz kwerendę składającą. Pierwsza z kwerend umożliwia wysyłać
+zapytania do serwera bazy danych ODBC (Open Database Connectivity). Kwerenda
+definiująca dane umożliwia tworzyć nowe tabele (Create Table), zmieniać
+istniejące tabel (Alter table), usuwać tabele (Drop Table), tworzyć indeksy
+(Create Index). W kursie przedstawię wyłącznie kwerendę składającą.</p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<h3><a name="_Toc152320406"></a><a name="_Toc152321946"><span style="mso-bookmark:
+_Toc152320406">5.8.1. Kwerenda składająca</span></a></h3>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><i>Kwerenda składająca łączy pola
+(kolumny) z jednej lub kilku tabel lub kwerend w jedno pole lub kolumnę w
+wynikach kwerendy.</i> </p>
+
+<p class="MsoNormal" style="text-align:justify">Aby utworzyć kwerendę składająca</p>
+
+<ol style="margin-top:0cm" start="1" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l3 level1 lfo51;
+     tab-stops:list 36.0pt">W obiekcie kwerendy kliknij Nowa kwerenda – utwórz
+     kwerendę w widoku projekt</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l3 level1 lfo51;
+     tab-stops:list 36.0pt">Zamknij automatycznie otwarte okno dialogowe pokaż
+     tabelę</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l3 level1 lfo51;
+     tab-stops:list 36.0pt">W menu <b>Kwerenda</b> wskaż polecenie <b>Wyłącznie
+     SQL</b>, a następnie kliknij polecenie <b>Składająca </b>(<span style="mso-field-code:&quot;REF _Ref151997372 \\h&quot;">Rys. 41<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350031003900390037003300370032000000</w:data>
+     </xml><![endif]--></span>).</li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1085"
+ type="#_x0000_t75" style='width:369pt;height:231.75pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image112.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image113.jpg" v:shapes="_x0000_i1085" width="492" height="309" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref151997372"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref151997372'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref151997372'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref151997372"></span><span style="mso-bookmark:_Ref151997372"><span style="mso-ansi-language:PL">41</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref151997372'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref151997372"></span><span style="mso-bookmark:_Ref151997372"></span><span style="mso-ansi-language:PL">. Wybór kwerendy składającej<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="4" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l3 level1 lfo51;
+     tab-stops:list 36.0pt">W otwartym oknie należy wpisać odpowiednią instrukcję
+     SQL (składnia języka SQL wykracza poza zakres tego opracowania. Nie będę
+     więc go tutaj omawiał. Polecam natomiast liczną literaturę na ten temat,
+     która czytelnik znajdzie bez trudu.)</li>
+ <li class="MsoNormal" style="text-align:justify;mso-list:l3 level1 lfo51;
+     tab-stops:list 36.0pt">W swojej bazie posiadamy tabelę ładunków oraz
+     tabelę ładunków niebezpiecznych. Gromadzone w nich dane to m.in. nazwa
+     ładunku oraz kod ładunku (<span style="mso-field-code:&quot;REF _Ref152160828 \\h&quot;">Rys.
+     42<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350032003100360030003800320038000000</w:data>
+     </xml><![endif]--></span>). Utworzymy kwerendę zawierającą jeden łączny
+     spis ładunków.</li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1086" type="#_x0000_t75" style='width:400.5pt;height:232.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image114.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image115.jpg" v:shapes="_x0000_i1086" width="534" height="310" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref152160828"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref152160828'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref152160828'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref152160828"></span><span style="mso-bookmark:_Ref152160828"><span style="mso-ansi-language:PL">42</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref152160828'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref152160828"></span><span style="mso-bookmark:_Ref152160828"></span><span style="mso-ansi-language:PL">. Tabele ładunków bezpiecznych i niebezpiecznych<br style="mso-special-character:line-break">
+<!--[if !supportLineBreakNewLine]--><br style="mso-special-character:line-break">
+<!--[endif]--><o:p></o:p></span></p>
+
+<ol style="margin-top:0cm" start="6" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l3 level1 lfo51;
+     tab-stops:list 36.0pt">Tworzymy kwerendę składającą zgodnie z krokami 1-4
+     i wpisujemy do niej instrukcję SQL postaci przedstawionej na poniższym
+     rysunku (<span style="mso-field-code:&quot;REF _Ref152165862 \\h&quot;">Rys. 43<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350032003100360035003800360032000000</w:data>
+     </xml><![endif]--></span>).</li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1087" type="#_x0000_t75"
+ style='width:402pt;height:96pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image116.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image117.jpg" v:shapes="_x0000_i1087" width="536" height="128" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref152165862"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref152165862'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref152165862'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref152165862"></span><span style="mso-bookmark:_Ref152165862"><span style="mso-ansi-language:PL">43</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref152165862'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref152165862"></span><span style="mso-bookmark:_Ref152165862"></span><span style="mso-ansi-language:PL">. Instrukcja SQL kwerendy składującej<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<ol style="margin-top:0cm" start="7" type="1">
+ <li class="MsoNormal" style="text-align:justify;mso-list:l3 level1 lfo51;
+     tab-stops:list 36.0pt">Wynik uruchomienia przedstawiono na poniższym
+     rysunku (<span style="mso-field-code:&quot;REF _Ref152161294 \\h&quot;">Rys. 44<!--[if gte mso 9]><xml>
+      <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003100350032003100360031003200390034000000</w:data>
+     </xml><![endif]--></span>). Arkusz danych kwerendy zawiera wszystkie
+     ładunki i kody z obydwu tabel, dodatkowo dodałem kolumnę „Tabela” z
+     informacją o ładunku (bezpieczny, niebezpieczny) i uporządkowałem w porządku
+     rosnącym nazwy ładunków.</li>
+</ol>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><!--[if gte vml 1]><v:shape id="_x0000_i1088"
+ type="#_x0000_t75" style='width:258pt;height:268.5pt'>
+ <v:imagedata src="./tworzenie_kwerendy_pliki/image118.png" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><img src="Tworzenie%20kwerendy_pliki/image119.jpg" v:shapes="_x0000_i1088" width="344" height="358" border="0"><!--[endif]--></p>
+
+<p class="MsoCaption"><a name="_Ref152161294"><span style="mso-ansi-language:
+PL">Rys. </span></a><!--[if supportFields]><span style='mso-bookmark:_Ref152161294'></span><span
+style='mso-element:field-begin'></span><span style='mso-bookmark:_Ref152161294'><span
+style='mso-ansi-language:PL'><span style="mso-spacerun: yes"> </span>SEQ Rys.
+\* ARABIC </span><span lang=EN-US><span style='mso-element:field-separator'></span></span></span><![endif]--><span style="mso-bookmark:_Ref152161294"></span><span style="mso-bookmark:_Ref152161294"><span style="mso-ansi-language:PL">44</span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref152161294'></span><span style='mso-element:field-end'></span><![endif]--><span style="mso-bookmark:_Ref152161294"></span><span style="mso-bookmark:_Ref152161294"></span><span style="mso-ansi-language:PL">. Kwerenda składająca – widok arkusz danych<o:p></o:p></span></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+<p class="MsoNormal"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></p>
+
+</div>
+
+
+
+
+</body></html>
