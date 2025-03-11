@@ -9,10 +9,10 @@ int main(){
 	
 	fstream plik;
 	plik.open("6.4.txt");
-    ofstream jeden("a.txt");
-    ofstream dwa("b.txt");
-    ofstream trzy("c.txt");
-    ofstream cztery("d.txt");
+    ofstream jeden("1.txt");
+    ofstream dwa("2.txt");
+    ofstream trzy("3.txt");
+    ofstream cztery("4.txt");
 	char a;
 	int one;
 	int two;
