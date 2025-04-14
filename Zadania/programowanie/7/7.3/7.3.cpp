@@ -7,8 +7,9 @@ int main(){
 	cout<<endl<<"Witam w zadaniu 7.3"<<endl;
 	
 	int i =1;
-	string s=" Blad jest przywilejem filozofow tylko glupcy nie myla sie nigdy";
-	s=" Btlltu el eoypm apjzlcyndreokyli zmfo agjy o n dewfwgisysii lei";
+	//string s=" Blad jest przywilejem filozofow tylko glupcy nie myla sie nigdy";
+	//string s=" Btlltu el eoypm apjzlcyndreokyli zmfo agjy o n dewfwgisysii lei";
+	string s=" AYRAILTZWOGMEIWO SEYRPTN";
 	string szyfr;
 	int l = ceil(sqrt(s.size()));
 	cout<<"l:"<<l<<endl;

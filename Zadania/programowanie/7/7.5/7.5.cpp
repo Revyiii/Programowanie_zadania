@@ -31,7 +31,8 @@ string deszyfr(string word,string key)
 	{
 		word[i]=(word[i]-key[i%ll])+(word[i]-key[i%ll]<=0)*26+64;
 		i++;
-	}	
+	}
+	//cout<<word<<endl;	
 	return word;
 }
 
@@ -51,6 +52,18 @@ int main()
 		plik>>word;
 		plik2>>key;
 		odp<<szyfr(word,key)<<endl;	
+	}
+	fstream plik3;
+	fstream plik4;
+	plik3.open("sz.txt");
+	plik4.open("klucze2.txt");
+	ofstream odpp("wynik4b.txt");
+	
+	while(!plik3.eof())
+	{
+		plik3>>word;
+		plik4>>key;
+		odpp<<deszyfr(word,key)<<endl;	
 	}
 	
 	

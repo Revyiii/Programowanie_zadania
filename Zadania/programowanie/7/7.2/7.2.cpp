@@ -8,7 +8,7 @@ int main(){
 	int i =0;
 	string w="";
 
-	string s="matur";
+	string s="matura";
 	while(i<=s.size())
 	{
 		w=w+s[i+1];
