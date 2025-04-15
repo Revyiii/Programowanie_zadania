@@ -3,6 +3,7 @@
 #include <fstream>
 #include <math.h>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 bool pierwsza(int n)
@@ -18,7 +19,18 @@ bool pierwsza(int n)
 	return 1;
 }
 
-
+void print(vector<string> a)
+{
+	cout<<endl;
+	int l = a.size();
+	int i=0;
+	while (i<l)
+	{
+		cout<<a[i];
+		i++;
+	}
+	cout<<endl;
+}
 
 int main(){
 	cout<<endl<<"Witam w zadaniu 7.4"<<endl;
@@ -39,38 +51,45 @@ int main(){
 	
 	while(!plik.eof())
 	{
-		
 		a=plik.get();
 		word =word+a;
 		sum = sum +a;
-		if(a<b && a!=10){rise=0;}
+		if(a<=b && a!=10){rise=0;}
 		//cout<<"a:"<<a<<" ascii:"<<int(a)<<" sum:"<<sum<<" rise:"<<rise<<endl;
 		if(a==10){if(rise){ros+=word;}pierwszy+=pierwsza(sum-10);sum=0;rise=1;all.push_back(word);word="";}
 		//if(a==10){ros=ros+rise;pierwszy=pierwszy+pierwsza(sum-10);sum=0;rise=1;word="";}
 		b=a;	
 	}
+	//cout<<endl<<word<<endl<<endl;
+	
 	cout<<pierwszy<<endl;
 	cout<<ros<<endl;
+	odp<<pierwszy<<endl;
+	odp<<ros<<endl;
+	
 	int l=all.size();
 	int i=0;
-	int ii=0;
-	int iii=0;
-	
-	while(i<l)
-	{
-		ii=0;
-		while(i+ii<l)
-		{
-			ii++;
-			if(all[i]==all[i+ii])
-			{
-				odp<<all[i];
-			}
-			
-		}
-		
+
+	string c;
+	string d;
+	while(i<l-1)
+	{	
+		c=all[i];
+		d=all[i+1];
+		//cout<<all[i];
+		if(c.compare(d)>0){iter_swap(all.begin()+i,all.begin()+i+1);i=-1;}
 		i++;	
 	}
-	cin.get();
+	i=1;
+	//print(all);
+	while(i<l-1)
+	{	
+		c=all[i];
+		d=all[i+1];
+		if(c.compare(d)==0){odp<<c;cout<<c;while(c.compare(d)==0){c=all[i];d=all[i+1];i++;}}
+		i++;	
+	}
+	
+	//cin.get();
 	return 0;
 }   
